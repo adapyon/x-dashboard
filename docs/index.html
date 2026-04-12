@@ -3,52 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1080">
+<meta name="referrer" content="no-referrer">
 <title>X Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0d0f14;
-    --bg2: #151820;
-    --bg3: #1c2030;
-    --border: #252a3a;
-    --border2: #2e3550;
-    --accent: #4f8ef7;
-    --accent2: #7c5af7;
-    --text: #e8ecf4;
-    --text2: #8890a8;
-    --text3: #555e7a;
-    --like: #f06292;
-    --rt: #4caf88;
-    --header-h: 52px;
+    --bg: #0d0f14; --bg2: #151820; --bg3: #1c2030;
+    --border: #252a3a; --border2: #2e3550;
+    --accent: #4f8ef7; --accent2: #7c5af7;
+    --text: #e8ecf4; --text2: #8890a8; --text3: #555e7a;
+    --like: #f06292; --rt: #4caf88; --header-h: 52px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body {
-    width: 1080px; height: 1920px;
-    overflow: hidden;
+    width: 1080px; height: 1920px; overflow: hidden;
     background: var(--bg); color: var(--text);
     font-family: 'Noto Sans JP', sans-serif;
     display: flex; flex-direction: column;
   }
   #header {
-    height: var(--header-h);
-    background: var(--bg2);
+    height: var(--header-h); background: var(--bg2);
     border-bottom: 1px solid var(--border);
-    display: flex; align-items: center;
-    padding: 0 20px; gap: 16px; flex-shrink: 0;
+    display: flex; align-items: center; padding: 0 20px; gap: 16px; flex-shrink: 0;
   }
   #header h1 {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+    font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
     background: linear-gradient(90deg, var(--accent), var(--accent2));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   }
   #updated { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text3); margin-left: auto; }
   #updated span { color: var(--text2); }
   #refresh-btn {
-    background: var(--bg3); border: 1px solid var(--border2);
-    color: var(--text2); font-size: 12px; padding: 5px 12px;
-    border-radius: 6px; cursor: pointer;
+    background: var(--bg3); border: 1px solid var(--border2); color: var(--text2);
+    font-size: 12px; padding: 5px 12px; border-radius: 6px; cursor: pointer;
     font-family: 'Noto Sans JP', sans-serif; transition: all 0.15s;
   }
   #refresh-btn:hover { background: var(--border2); color: var(--text); }
@@ -60,23 +48,18 @@
   }
   .column { background: var(--bg); display: flex; flex-direction: column; overflow: hidden; }
   .col-header {
-    height: 44px; background: var(--bg2);
-    border-bottom: 2px solid var(--border);
-    display: flex; align-items: center;
-    padding: 0 16px; gap: 8px; flex-shrink: 0; position: relative;
+    height: 44px; background: var(--bg2); border-bottom: 2px solid var(--border);
+    display: flex; align-items: center; padding: 0 16px; gap: 8px; flex-shrink: 0; position: relative;
   }
   .col-header::after {
-    content: ''; position: absolute; bottom: -2px; left: 0;
-    width: 40%; height: 2px;
+    content: ''; position: absolute; bottom: -2px; left: 0; width: 40%; height: 2px;
     background: linear-gradient(90deg, var(--accent), transparent);
   }
   .col-icon { font-size: 14px; }
   .col-title { font-size: 14px; font-weight: 700; letter-spacing: 0.03em; color: var(--text); }
   .col-count {
-    margin-left: auto;
-    font-family: 'JetBrains Mono', monospace; font-size: 10px;
-    color: var(--text3); background: var(--bg3);
-    padding: 2px 7px; border-radius: 10px;
+    margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--text3); background: var(--bg3); padding: 2px 7px; border-radius: 10px;
   }
   .col-body { flex: 1; overflow-y: auto; overflow-x: hidden; }
   .col-body::-webkit-scrollbar { width: 3px; }
@@ -84,46 +67,35 @@
   .col-body::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
   .tweet {
     padding: 13px 16px; border-bottom: 1px solid var(--border);
-    cursor: pointer; transition: background 0.1s;
-    animation: fadeIn 0.2s ease;
+    cursor: pointer; transition: background 0.1s; animation: fadeIn 0.2s ease;
   }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
   .tweet:hover { background: var(--bg2); }
   .tweet:last-child { border-bottom: none; }
   .tweet-user { display: flex; align-items: center; gap: 9px; margin-bottom: 7px; }
-  .avatar {
-    width: 34px; height: 34px; border-radius: 50%;
-    object-fit: cover; flex-shrink: 0; background: var(--bg3);
-  }
+  .avatar { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; flex-shrink: 0; background: var(--bg3); }
   .user-info { min-width: 0; }
   .display-name { font-size: 13px; font-weight: 700; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .screen-name { font-size: 11px; color: var(--text3); font-family: 'JetBrains Mono', monospace; }
   .tweet-time { margin-left: auto; font-size: 10px; color: var(--text3); font-family: 'JetBrains Mono', monospace; flex-shrink: 0; }
   .tweet-text { font-size: 13px; line-height: 1.65; color: var(--text); word-break: break-word; margin-bottom: 9px; }
   .tweet-text a { color: var(--accent); text-decoration: none; }
-
-  /* 画像プレビュー */
   .tweet-media { margin-bottom: 9px; }
   .tweet-media img {
-    width: 100%; max-height: 280px;
-    object-fit: cover; border-radius: 8px;
-    border: 1px solid var(--border);
-    display: block;
+    width: 100%; max-height: 280px; object-fit: cover;
+    border-radius: 8px; border: 1px solid var(--border); display: block;
   }
-  .tweet-media.multi {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3px;
-  }
+  .tweet-media.multi { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
   .tweet-media.multi img { max-height: 160px; border-radius: 4px; }
-
   .tweet-stats { display: flex; gap: 14px; }
   .stat { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--text3); font-family: 'JetBrains Mono', monospace; }
   .stat-like { color: var(--like); }
-  .stat-rt   { color: var(--rt); }
+  .stat-rt { color: var(--rt); }
   .col-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px; gap: 8px; color: var(--text3); font-size: 12px; }
   .col-error { margin: 12px; padding: 10px 12px; background: rgba(240,98,146,0.08); border: 1px solid rgba(240,98,146,0.2); border-radius: 8px; font-size: 11px; color: var(--like); word-break: break-all; }
   .skeleton { padding: 13px 16px; border-bottom: 1px solid var(--border); }
   .skel-line { height: 10px; background: var(--bg3); border-radius: 4px; margin-bottom: 6px; animation: pulse 1.4s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+  @keyframes pulse { 0%,100%{opacity:0.4;} 50%{opacity:0.8;} }
 </style>
 </head>
 <body>
@@ -135,116 +107,75 @@
 <div id="columns"></div>
 <script>
 const DATA_URL = 'data.json';
-
-function timeAgo(isoStr) {
-  if (!isoStr) return '';
-  const d = new Date(isoStr);
-  if (isNaN(d)) return isoStr;
-  const diff = Math.floor((Date.now() - d) / 1000);
-  if (diff < 60)    return diff + '秒前';
-  if (diff < 3600)  return Math.floor(diff/60) + '分前';
-  if (diff < 86400) return Math.floor(diff/3600) + '時間前';
-  return Math.floor(diff/86400) + '日前';
+function timeAgo(s) {
+  if (!s) return '';
+  const d = new Date(s); if (isNaN(d)) return s;
+  const n = Math.floor((Date.now()-d)/1000);
+  return n<60?n+'秒前':n<3600?Math.floor(n/60)+'分前':n<86400?Math.floor(n/3600)+'時間前':Math.floor(n/86400)+'日前';
 }
-
-function linkifyText(text) {
-  return text
-    .replace(/https?:\/\/[^\s]+/g, url => '<a href="' + url + '" target="_blank" rel="noopener">' + url + '</a>')
-    .replace(/@(\w+)/g, '<span style="color:var(--accent)">@$1</span>')
-    .replace(/#(\w+)/g, '<span style="color:var(--accent2)">#$1</span>');
+function linkify(t) {
+  return t
+    .replace(/https?:\/\/[^\s]+/g, u=>'<a href="'+u+'" target="_blank" rel="noopener">'+u+'</a>')
+    .replace(/@(\w+)/g,'<span style="color:var(--accent)">@$1</span>')
+    .replace(/#(\w+)/g,'<span style="color:var(--accent2)">#$1</span>');
 }
-
 function renderMedia(media) {
-  if (!media || media.length === 0) return '';
-  const cls = media.length >= 2 ? 'tweet-media multi' : 'tweet-media';
-  const imgs = media.map(url =>
-    '<img src="' + url + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'">'
-  ).join('');
-  return '<div class="' + cls + '">' + imgs + '</div>';
+  if (!media || !media.length) return '';
+  // pbs.twimg.com画像のみ表示
+  const imgs = media
+    .filter(u => u && u.includes('pbs.twimg.com'))
+    .map(u => '<img src="'+u+'" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display=\'none\'">');
+  if (!imgs.length) return '';
+  const cls = imgs.length >= 2 ? 'tweet-media multi' : 'tweet-media';
+  return '<div class="'+cls+'">'+imgs.join('')+'</div>';
 }
-
-function renderSkeleton() {
-  return Array.from({length: 5}).map(() => `
-    <div class="skeleton">
-      <div class="skel-line" style="width:55%;margin-bottom:10px"></div>
-      <div class="skel-line" style="width:92%"></div>
-      <div class="skel-line" style="width:78%"></div>
-      <div class="skel-line" style="width:38%;margin-top:10px"></div>
-    </div>
-  `).join('');
+function skeleton() {
+  return Array.from({length:5}).map(()=>`<div class="skeleton"><div class="skel-line" style="width:55%;margin-bottom:10px"></div><div class="skel-line" style="width:90%"></div><div class="skel-line" style="width:75%"></div><div class="skel-line" style="width:38%;margin-top:10px"></div></div>`).join('');
 }
-
 function renderTweet(t) {
-  return `
-    <div class="tweet" onclick="window.open('${t.url}','_blank')">
-      <div class="tweet-user">
-        <img class="avatar" src="${t.user_icon || ''}" alt=""
-             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 34 34%22><rect width=%2234%22 height=%2234%22 fill=%22%23252a3a%22/></svg>'">
-        <div class="user-info">
-          <div class="display-name">${t.user_name || ''}</div>
-          <div class="screen-name">@${t.user_screen_name || ''}</div>
-        </div>
-        <div class="tweet-time">${timeAgo(t.created_at)}</div>
-      </div>
-      <div class="tweet-text">${linkifyText(t.text || '')}</div>
-      ${renderMedia(t.media)}
-      <div class="tweet-stats">
-        <span class="stat stat-like">♥ ${(t.like_count || 0).toLocaleString()}</span>
-        <span class="stat stat-rt">↺ ${(t.retweet_count || 0).toLocaleString()}</span>
-        <span class="stat">💬 ${(t.reply_count || 0).toLocaleString()}</span>
-      </div>
+  return `<div class="tweet" onclick="window.open('${t.url}','_blank')">
+    <div class="tweet-user">
+      <img class="avatar" src="${t.user_icon||''}" alt="" referrerpolicy="no-referrer" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 34 34%22><rect width=%2234%22 height=%2234%22 fill=%22%23252a3a%22/></svg>'">
+      <div class="user-info"><div class="display-name">${t.user_name||''}</div><div class="screen-name">@${t.user_screen_name||''}</div></div>
+      <div class="tweet-time">${timeAgo(t.created_at)}</div>
     </div>
-  `;
-}
-
-function renderColumn(col) {
-  const tweetsHtml = col.tweets && col.tweets.length > 0
-    ? col.tweets.map(renderTweet).join('')
-    : '<div class="col-empty"><span>📭</span><span>ツイートなし</span></div>';
-  const errorHtml = col.error ? '<div class="col-error">⚠ ' + col.error + '</div>' : '';
-  return `
-    <div class="column" id="col-${col.id}">
-      <div class="col-header">
-        <span class="col-icon">${col.icon || '📄'}</span>
-        <span class="col-title">${col.label}</span>
-        <span class="col-count">${col.tweets ? col.tweets.length : 0}</span>
-      </div>
-      <div class="col-body">${errorHtml}${tweetsHtml}</div>
+    <div class="tweet-text">${linkify(t.text||'')}</div>
+    ${renderMedia(t.media)}
+    <div class="tweet-stats">
+      <span class="stat stat-like">♥ ${(t.like_count||0).toLocaleString()}</span>
+      <span class="stat stat-rt">↺ ${(t.retweet_count||0).toLocaleString()}</span>
+      <span class="stat">💬 ${(t.reply_count||0).toLocaleString()}</span>
     </div>
-  `;
+  </div>`;
 }
-
+function renderCol(col) {
+  const tweets = col.tweets&&col.tweets.length ? col.tweets.map(renderTweet).join('') : '<div class="col-empty"><span>📭</span><span>ツイートなし</span></div>';
+  const err = col.error ? '<div class="col-error">⚠ '+col.error+'</div>' : '';
+  return `<div class="column" id="col-${col.id}">
+    <div class="col-header"><span class="col-icon">${col.icon||'📄'}</span><span class="col-title">${col.label}</span><span class="col-count">${col.tweets?col.tweets.length:0}</span></div>
+    <div class="col-body">${err}${tweets}</div>
+  </div>`;
+}
 async function loadData() {
   const btn = document.getElementById('refresh-btn');
-  const colsEl = document.getElementById('columns');
-  btn.classList.add('loading');
-  btn.textContent = '読込中…';
-  if (!colsEl.children.length) {
-    colsEl.innerHTML = Array.from({length: 2}).map(() => `
-      <div class="column">
-        <div class="col-header"><span class="col-title" style="color:var(--text3)">読込中...</span></div>
-        <div class="col-body">${renderSkeleton()}</div>
-      </div>
-    `).join('');
+  const el = document.getElementById('columns');
+  btn.classList.add('loading'); btn.textContent='読込中…';
+  if (!el.children.length) {
+    el.innerHTML = Array.from({length:2}).map(()=>`<div class="column"><div class="col-header"><span class="col-title" style="color:var(--text3)">読込中...</span></div><div class="col-body">${skeleton()}</div></div>`).join('');
   }
   try {
-    const res = await fetch(DATA_URL + '?t=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    colsEl.innerHTML = data.columns.map(renderColumn).join('');
-    const dt = new Date(data.updated_at);
-    document.getElementById('updated-time').textContent =
-      dt.toLocaleString('ja-JP', {timeZone: 'Asia/Tokyo', hour12: false});
-  } catch (e) {
-    colsEl.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;width:100%;color:var(--text3);font-size:13px;gap:8px;"><span>⚠</span><span>data.json 読み込み失敗: ' + e.message + '</span></div>';
-  } finally {
-    btn.classList.remove('loading');
-    btn.textContent = '↻ 更新';
-  }
+    const r = await fetch(DATA_URL+'?t='+Date.now());
+    if (!r.ok) throw new Error('HTTP '+r.status);
+    const d = await r.json();
+    el.innerHTML = d.columns.map(renderCol).join('');
+    const dt = new Date(d.updated_at);
+    document.getElementById('updated-time').textContent = dt.toLocaleString('ja-JP',{timeZone:'Asia/Tokyo',hour12:false});
+  } catch(e) {
+    el.innerHTML='<div style="display:flex;align-items:center;justify-content:center;width:100%;color:var(--text3);font-size:13px;gap:8px;"><span>⚠</span><span>'+e.message+'</span></div>';
+  } finally { btn.classList.remove('loading'); btn.textContent='↻ 更新'; }
 }
-
 loadData();
-setInterval(loadData, 15 * 60 * 1000);
+setInterval(loadData,15*60*1000);
 </script>
 </body>
 </html>
