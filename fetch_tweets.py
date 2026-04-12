@@ -38,17 +38,29 @@ def save_cookies_json(cookie_dict, path):
 
 
 def get_media_urls(tweet):
-    """ツイートの画像・動画サムネイルURLリストを返す"""
+    """ツイートの画像URLリストを返す（twikit構造対応）"""
     media_urls = []
     try:
-        if hasattr(tweet, 'media') and tweet.media:
-            for m in tweet.media:
-                if hasattr(m, 'media_url_https') and m.media_url_https:
-                    media_urls.append(m.media_url_https)
-                elif hasattr(m, 'url') and m.url:
-                    media_urls.append(m.url)
-    except Exception:
-        pass
+        # tweet.mediaはリストのこともあれば属性のこともある
+        media = getattr(tweet, 'media', None)
+        if not media:
+            return []
+        for m in media:
+            # 各メディアオブジェクトの属性を優先度順に試す
+            url = (
+                getattr(m, 'media_url_https', None) or
+                getattr(m, 'media_url', None) or
+                getattr(m, 'preview_image_url', None) or
+                getattr(m, 'url', None)
+            )
+            if url and not url.startswith('https://t.co'):
+                media_urls.append(url)
+            # デバッグ: 属性一覧を出力（最初の1件のみ）
+            if len(media_urls) == 0 and media_urls != ['debug']:
+                attrs = {k: str(getattr(m, k, ''))[:80] for k in dir(m) if not k.startswith('_')}
+                print("MEDIA ATTRS: " + str(attrs)[:300])
+    except Exception as e:
+        print("media err: " + str(e))
     return media_urls
 
 
