@@ -36,14 +36,17 @@ async def main():
     client = Client("ja")
 
     if os.path.exists(COOKIES_FILE):
+        print("Loading cookies...")
         client.load_cookies(COOKIES_FILE)
     else:
+        print("Logging in...")
         await client.login(
             auth_info_1=USERNAME,
             auth_info_2=EMAIL,
             password=PASSWORD,
+            cookies_file=COOKIES_FILE,
         )
-        client.save_cookies(COOKIES_FILE)
+        print("Login successful, cookies saved.")
 
     columns = []
 
@@ -52,30 +55,42 @@ async def main():
         for_you = await client.get_timeline(count=30)
         columns.append({
             "id": "for_you",
-            "label": "\u304a\u3059\u3059\u3081",
-            "icon": "\u2728",
+            "label": "おすすめ",
+            "icon": "✨",
             "tweets": [tweet_to_dict(t) for t in for_you],
         })
         print("ok for_you: " + str(len(for_you)))
     except Exception as e:
         print("err for_you: " + str(e))
-        columns.append({"id": "for_you", "label": "\u304a\u3059\u3059\u3081", "icon": "\u2728", "tweets": [], "error": str(e)})
+        columns.append({
+            "id": "for_you",
+            "label": "おすすめ",
+            "icon": "✨",
+            "tweets": [],
+            "error": str(e),
+        })
 
     # column2: following
     try:
         following = await client.get_latest_timeline(count=30)
         columns.append({
             "id": "following",
-            "label": "\u30d5\u30a9\u30ed\u30fc\u4e2d",
-            "icon": "\U0001f465",
+            "label": "フォロー中",
+            "icon": "👥",
             "tweets": [tweet_to_dict(t) for t in following],
         })
         print("ok following: " + str(len(following)))
     except Exception as e:
         print("err following: " + str(e))
-        columns.append({"id": "following", "label": "\u30d5\u30a9\u30ed\u30fc\u4e2d", "icon": "\U0001f465", "tweets": [], "error": str(e)})
+        columns.append({
+            "id": "following",
+            "label": "フォロー中",
+            "icon": "👥",
+            "tweets": [],
+            "error": str(e),
+        })
 
-    # columns3,4: lists
+    # columns 3,4: lists
     for lst in LIST_IDS:
         list_id = lst["id"]
         list_label = lst["label"]
@@ -84,7 +99,7 @@ async def main():
             columns.append({
                 "id": "list_" + list_id,
                 "label": list_label,
-                "icon": "\U0001f4cb",
+                "icon": "📋",
                 "tweets": [tweet_to_dict(t) for t in list_tweets],
             })
             print("ok list " + list_label + ": " + str(len(list_tweets)))
@@ -93,7 +108,7 @@ async def main():
             columns.append({
                 "id": "list_" + list_id,
                 "label": list_label,
-                "icon": "\U0001f4cb",
+                "icon": "📋",
                 "tweets": [],
                 "error": str(e),
             })
