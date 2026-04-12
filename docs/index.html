@@ -7,7 +7,85 @@
 <title>X Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
+<!-- Sortable loaded dynamically -->
+<style>
+  :root {
+    --bg:#0d0f14; --bg2:#151820; --bg3:#1c2030;
+    --border:#252a3a; --border2:#2e3550;
+    --accent:#4f8ef7; --accent2:#7c5af7;
+    --text:#e8ecf4; --text2:#8890a8; --text3:#555e7a;
+    --like:#f06292; --rt:#4caf88; --header-h:52px;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body {
+    width:1080px; height:1920px; overflow:hidden;
+    background:var(--bg); color:var(--text);
+    font-family:'Noto Sans JP',sans-serif;
+    display:flex; flex-direction:column;
+  }
+  #header {
+    height:var(--header-h); background:var(--bg2);
+    border-bottom:1px solid var(--border);
+    display:flex; align-items:center; padding:0 20px; gap:16px; flex-shrink:0;
+  }
+  #header h1 {
+    font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:600; letter-spacing:0.08em;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  }
+  #updated { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text3); margin-left:auto; }
+  #updated span { color:var(--text2); }
+  #refresh-btn {
+    background:var(--bg3); border:1px solid var(--border2); color:var(--text2);
+    font-size:12px; padding:5px 12px; border-radius:6px; cursor:pointer;
+    font-family:'Noto Sans JP',sans-serif; transition:all 0.15s;
+  }
+  #refresh-btn:hover { background:var(--border2); color:var(--text); }
+  #refresh-btn.loading { opacity:0.5; cursor:default; }
+
+  /* 3カラムグリッド */
+  #columns {
+    flex:1; display:grid; grid-template-columns:1fr 1fr 1fr;
+    gap:1px; background:var(--border); overflow:hidden;
+    height:calc(1920px - var(--header-h));
+  }
+
+  .column {
+    background:var(--bg); display:flex; flex-direction:column; overflow:hidden;
+    transition:opacity 0.15s;
+  }
+  /* ドラッグ中スタイル */
+  .column.sortable-drag { opacity:0.4; }
+  .column.sortable-ghost { opacity:0.6; background:var(--bg3); }
+
+  .col-header {
+    height:44px; background:var(--bg2); border-bottom:2px solid var(--border);
+    display:flex; align-items:center; padding:0 14px; gap:8px; flex-shrink:0;
+    position:relative; cursor:grab; user-select:none;
+  }
+  .col-header:active { cursor:grabbing; }
+  .col-header::after {
+    content:''; position:absolute; bottom:-2px; left:0; width:40%; height:2px;
+    background:linear-gradient(90deg,var(--accent),transparent);
+  }
+  /* ドラッグハンドルアイコン */
+  .drag-handle {
+    color:var(--text3); font-size:12px; flex-shrink:0; opacity:0.6;
+    margin-right:2px;// Load Sortable.js dynamically
+const s = document.createElement('script');
+s.src = 'https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js';
+s.onload = () => { loadData(); };
+document.head.appendChild(s);
+tml>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<meta name="referrer" content="no-referrer">
+<title>X Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!-- Sortable loaded dynamically -->
 <style>
   :root {
     --bg:#0d0f14; --bg2:#151820; --bg3:#1c2030;
