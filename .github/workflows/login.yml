@@ -19,8 +19,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install twikit (latest git)
-        run: pip install git+https://github.com/d60/twikit.git
+      - name: Install twikit (phin fork)
+        run: pip install git+https://codeberg.org/phin/twikit.git
 
       - name: Login and generate cookies
         env:
