@@ -4,10 +4,7 @@ import os
 from datetime import datetime, timezone
 from twikit import Client
 
-# X_COOKIES: @adapyon (main) cookie string - for columns 1 & 2
-# X_COOKIES_VJ: @vj_duch cookie string - for columns 3 & 4 (lists)
-COOKIES_MAIN_STR = os.environ.get("X_COOKIES", "")
-COOKIES_VJ_STR = os.environ.get("X_COOKIES_VJ", "")
+COOKIES_STR = os.environ.get("X_COOKIES", "")
 
 LIST_IDS = [
     {"id": "181994093", "label": "節約"},
@@ -55,80 +52,38 @@ def tweet_to_dict(tweet):
     }
 
 
-async def fetch_main_columns(columns):
-    """Fetch columns 1 & 2 using @adapyon cookies"""
-    if not COOKIES_MAIN_STR:
-        print("X_COOKIES not set, skipping main columns")
-        columns.append({"id": "for_you", "label": "おすすめ", "icon": "✨", "tweets": [], "error": "X_COOKIES not set"})
-        columns.append({"id": "following", "label": "フォロー中", "icon": "👥", "tweets": [], "error": "X_COOKIES not set"})
-        return
+async def main():
+    if not COOKIES_STR:
+        raise Exception("X_COOKIES not set")
 
     client = Client("ja")
-    cookie_dict = parse_cookie_string(COOKIES_MAIN_STR)
-    save_cookies_json(cookie_dict, "cookies_main.json")
-    client.load_cookies("cookies_main.json")
+    cookie_dict = parse_cookie_string(COOKIES_STR)
+    save_cookies_json(cookie_dict, "cookies.json")
+    client.load_cookies("cookies.json")
+    print("Cookies loaded.")
 
-    try:
-        for_you = await client.get_timeline(count=30)
-        columns.append({
-            "id": "for_you",
-            "label": "おすすめ",
-            "icon": "✨",
-            "tweets": [tweet_to_dict(t) for t in for_you],
-        })
-        print("ok for_you: " + str(len(for_you)))
-    except Exception as e:
-        print("err for_you: " + str(e))
-        columns.append({"id": "for_you", "label": "おすすめ", "icon": "✨", "tweets": [], "error": str(e)})
-
-    try:
-        following = await client.get_latest_timeline(count=30)
-        columns.append({
-            "id": "following",
-            "label": "フォロー中",
-            "icon": "👥",
-            "tweets": [tweet_to_dict(t) for t in following],
-        })
-        print("ok following: " + str(len(following)))
-    except Exception as e:
-        print("err following: " + str(e))
-        columns.append({"id": "following", "label": "フォロー中", "icon": "👥", "tweets": [], "error": str(e)})
-
-
-async def fetch_list_columns(columns):
-    """Fetch columns 3 & 4 using @vj_duch cookies"""
-    cookies_str = COOKIES_VJ_STR if COOKIES_VJ_STR else COOKIES_MAIN_STR
-    if not cookies_str:
-        for lst in LIST_IDS:
-            columns.append({"id": "list_" + lst["id"], "label": lst["label"], "icon": "📋", "tweets": [], "error": "No cookies"})
-        return
-
-    client = Client("ja")
-    cookie_dict = parse_cookie_string(cookies_str)
-    save_cookies_json(cookie_dict, "cookies_vj.json")
-    client.load_cookies("cookies_vj.json")
-
+    columns = []
     for lst in LIST_IDS:
         list_id = lst["id"]
         list_label = lst["label"]
         try:
-            list_tweets = await client.get_list_tweets(list_id, count=30)
+            list_tweets = await client.get_list_tweets(list_id, count=50)
             columns.append({
                 "id": "list_" + list_id,
                 "label": list_label,
                 "icon": "📋",
                 "tweets": [tweet_to_dict(t) for t in list_tweets],
             })
-            print("ok list " + list_label + ": " + str(len(list_tweets)))
+            print("ok " + list_label + ": " + str(len(list_tweets)))
         except Exception as e:
-            print("err list " + list_label + ": " + str(e))
-            columns.append({"id": "list_" + list_id, "label": list_label, "icon": "📋", "tweets": [], "error": str(e)})
-
-
-async def main():
-    columns = []
-    await fetch_main_columns(columns)
-    await fetch_list_columns(columns)
+            print("err " + list_label + ": " + str(e))
+            columns.append({
+                "id": "list_" + list_id,
+                "label": list_label,
+                "icon": "📋",
+                "tweets": [],
+                "error": str(e),
+            })
 
     os.makedirs("docs", exist_ok=True)
     output = {
