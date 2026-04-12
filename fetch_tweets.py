@@ -4,9 +4,8 @@ import os
 from datetime import datetime, timezone
 from twikit import Client
 
-USERNAME = os.environ["X_USERNAME"]
-EMAIL = os.environ["X_EMAIL"]
-PASSWORD = os.environ["X_PASSWORD"]
+# X_COOKIES env var: cookie string from browser (e.g. "auth_token=xxx; ct0=yyy; ...")
+COOKIES_STR = os.environ.get("X_COOKIES", "")
 
 LIST_IDS = [
     {"id": "181994093", "label": "list1"},
@@ -15,6 +14,31 @@ LIST_IDS = [
 
 COOKIES_FILE = "cookies.json"
 OUTPUT_FILE = "docs/data.json"
+
+
+def parse_cookie_string(cookie_str):
+    """Parse browser cookie string into dict"""
+    cookies = {}
+    for part in cookie_str.split(";"):
+        part = part.strip()
+        if "=" in part:
+            k, v = part.split("=", 1)
+            cookies[k.strip()] = v.strip()
+    return cookies
+
+
+def save_cookies_json(cookie_dict, path):
+    """Save cookies in twikit-compatible format"""
+    cookie_list = []
+    for name, value in cookie_dict.items():
+        cookie_list.append({
+            "name": name,
+            "value": value,
+            "domain": ".x.com",
+            "path": "/",
+        })
+    with open(path, "w") as f:
+        json.dump(cookie_list, f)
 
 
 def tweet_to_dict(tweet):
@@ -35,18 +59,18 @@ def tweet_to_dict(tweet):
 async def main():
     client = Client("ja")
 
-    if os.path.exists(COOKIES_FILE):
-        print("Loading cookies...")
-        client.load_cookies(COOKIES_FILE)
+    # Build cookies.json from X_COOKIES env var
+    if COOKIES_STR:
+        print("Using X_COOKIES from environment...")
+        cookie_dict = parse_cookie_string(COOKIES_STR)
+        save_cookies_json(cookie_dict, COOKIES_FILE)
+        print("Cookies saved: " + str(list(cookie_dict.keys())))
+    elif os.path.exists(COOKIES_FILE):
+        print("Using existing cookies.json...")
     else:
-        print("Logging in...")
-        await client.login(
-            auth_info_1=USERNAME,
-            auth_info_2=EMAIL,
-            password=PASSWORD,
-            cookies_file=COOKIES_FILE,
-        )
-        print("Login successful, cookies saved.")
+        raise Exception("No cookies available. Set X_COOKIES secret.")
+
+    client.load_cookies(COOKIES_FILE)
 
     columns = []
 
@@ -62,13 +86,7 @@ async def main():
         print("ok for_you: " + str(len(for_you)))
     except Exception as e:
         print("err for_you: " + str(e))
-        columns.append({
-            "id": "for_you",
-            "label": "おすすめ",
-            "icon": "✨",
-            "tweets": [],
-            "error": str(e),
-        })
+        columns.append({"id": "for_you", "label": "おすすめ", "icon": "✨", "tweets": [], "error": str(e)})
 
     # column2: following
     try:
@@ -82,13 +100,7 @@ async def main():
         print("ok following: " + str(len(following)))
     except Exception as e:
         print("err following: " + str(e))
-        columns.append({
-            "id": "following",
-            "label": "フォロー中",
-            "icon": "👥",
-            "tweets": [],
-            "error": str(e),
-        })
+        columns.append({"id": "following", "label": "フォロー中", "icon": "👥", "tweets": [], "error": str(e)})
 
     # columns 3,4: lists
     for lst in LIST_IDS:
@@ -105,13 +117,7 @@ async def main():
             print("ok list " + list_label + ": " + str(len(list_tweets)))
         except Exception as e:
             print("err list " + list_label + ": " + str(e))
-            columns.append({
-                "id": "list_" + list_id,
-                "label": list_label,
-                "icon": "📋",
-                "tweets": [],
-                "error": str(e),
-            })
+            columns.append({"id": "list_" + list_id, "label": list_label, "icon": "📋", "tweets": [], "error": str(e)})
 
     os.makedirs("docs", exist_ok=True)
     output = {
