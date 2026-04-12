@@ -37,6 +37,21 @@ def save_cookies_json(cookie_dict, path):
         json.dump(cookie_list, f)
 
 
+def get_media_urls(tweet):
+    """ツイートの画像・動画サムネイルURLリストを返す"""
+    media_urls = []
+    try:
+        if hasattr(tweet, 'media') and tweet.media:
+            for m in tweet.media:
+                if hasattr(m, 'media_url_https') and m.media_url_https:
+                    media_urls.append(m.media_url_https)
+                elif hasattr(m, 'url') and m.url:
+                    media_urls.append(m.url)
+    except Exception:
+        pass
+    return media_urls
+
+
 def tweet_to_dict(tweet):
     return {
         "id": tweet.id,
@@ -49,6 +64,7 @@ def tweet_to_dict(tweet):
         "retweet_count": tweet.retweet_count,
         "reply_count": tweet.reply_count,
         "url": "https://x.com/" + tweet.user.screen_name + "/status/" + tweet.id,
+        "media": get_media_urls(tweet),
     }
 
 
