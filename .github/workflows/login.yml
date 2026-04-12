@@ -19,25 +19,24 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install twikit
-        run: pip install "twikit==2.3.2"
+      - name: Install twikit (latest git)
+        run: pip install git+https://github.com/d60/twikit.git
 
       - name: Login and generate cookies
         env:
-          X_USERNAME: ${{ secrets.X_USERNAME }}
           X_EMAIL: ${{ secrets.X_EMAIL }}
           X_PASSWORD: ${{ secrets.X_PASSWORD }}
         run: |
           python - <<'EOF'
-          import asyncio
+          import asyncio, os
           from twikit import Client
 
           async def main():
               client = Client("ja")
               await client.login(
                   auth_info_1="vj_duch",
-                  auth_info_2=__import__("os").environ["X_EMAIL"],
-                  password=__import__("os").environ["X_PASSWORD"],
+                  auth_info_2=os.environ["X_EMAIL"],
+                  password=os.environ["X_PASSWORD"],
               )
               client.save_cookies("cookies.json")
               print("Login successful!")
