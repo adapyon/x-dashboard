@@ -25,29 +25,15 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-twikit-2.3.2
+          key: ${{ runner.os }}-pip-twikit-phin
 
-      - name: Install dependencies
-        run: pip install "twikit==2.3.2"
-
-      - name: Restore cookies cache
-        uses: actions/cache@v4
-        with:
-          path: cookies.json
-          key: x-cookies-${{ secrets.X_USERNAME }}
+      - name: Install twikit (phin fork)
+        run: pip install git+https://codeberg.org/phin/twikit.git
 
       - name: Fetch tweets
         env:
-          X_USERNAME: ${{ secrets.X_USERNAME }}
-          X_EMAIL: ${{ secrets.X_EMAIL }}
-          X_PASSWORD: ${{ secrets.X_PASSWORD }}
+          X_COOKIES: ${{ secrets.X_COOKIES }}
         run: python fetch_tweets.py
-
-      - name: Save cookies cache
-        uses: actions/cache/save@v4
-        with:
-          path: cookies.json
-          key: x-cookies-${{ secrets.X_USERNAME }}
 
       - name: Commit and push data.json
         run: |
