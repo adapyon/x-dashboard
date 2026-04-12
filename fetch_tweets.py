@@ -9,6 +9,7 @@ COOKIES_STR = os.environ.get("X_COOKIES", "")
 LIST_IDS = [
     {"id": "181994093", "label": "節約"},
     {"id": "1054516216868392960", "label": "要チェック"},
+    {"id": "1403694821550686209", "label": "確認"},
 ]
 
 OUTPUT_FILE = "docs/data.json"
@@ -38,15 +39,12 @@ def save_cookies_json(cookie_dict, path):
 
 
 def get_media_urls(tweet):
-    """ツイートの画像URLリストを返す（twikit構造対応）"""
     media_urls = []
     try:
-        # tweet.mediaはリストのこともあれば属性のこともある
         media = getattr(tweet, 'media', None)
         if not media:
             return []
         for m in media:
-            # 各メディアオブジェクトの属性を優先度順に試す
             url = (
                 getattr(m, 'media_url_https', None) or
                 getattr(m, 'media_url', None) or
@@ -55,10 +53,6 @@ def get_media_urls(tweet):
             )
             if url and not url.startswith('https://t.co'):
                 media_urls.append(url)
-            # デバッグ: 属性一覧を出力（最初の1件のみ）
-            if len(media_urls) == 0 and media_urls != ['debug']:
-                attrs = {k: str(getattr(m, k, ''))[:80] for k in dir(m) if not k.startswith('_')}
-                print("MEDIA ATTRS: " + str(attrs)[:300])
     except Exception as e:
         print("media err: " + str(e))
     return media_urls
