@@ -14,7 +14,6 @@ LIST_IDS = [
 
 OUTPUT_FILE = "docs/data.json"
 
-
 def parse_cookie_string(cookie_str):
     cookies = {}
     for part in cookie_str.split(";"):
@@ -23,7 +22,6 @@ def parse_cookie_string(cookie_str):
             k, v = part.split("=", 1)
             cookies[k.strip()] = v.strip()
     return cookies
-
 
 def save_cookies_json(cookie_dict, path):
     cookie_list = []
@@ -37,7 +35,6 @@ def save_cookies_json(cookie_dict, path):
     with open(path, "w") as f:
         json.dump(cookie_list, f)
 
-
 def get_media_urls(tweet):
     media_urls = []
     try:
@@ -46,10 +43,10 @@ def get_media_urls(tweet):
             return []
         for m in media:
             url = (
-                getattr(m, 'media_url_https', None) or
-                getattr(m, 'media_url', None) or
-                getattr(m, 'preview_image_url', None) or
-                getattr(m, 'url', None)
+                getattr(m, 'media_url_https', None)
+                or getattr(m, 'media_url', None)
+                or getattr(m, 'preview_image_url', None)
+                or getattr(m, 'url', None)
             )
             if url and not url.startswith('https://t.co'):
                 media_urls.append(url)
@@ -57,22 +54,35 @@ def get_media_urls(tweet):
         print("media err: " + str(e))
     return media_urls
 
+def safe_get(obj, *attrs, default=None):
+    for attr in attrs:
+        try:
+            val = getattr(obj, attr, None)
+            if val is not None:
+                return val
+        except Exception:
+            pass
+    return default
 
 def tweet_to_dict(tweet):
-    return {
-        "id": tweet.id,
-        "text": tweet.text,
-        "created_at": tweet.created_at,
-        "user_name": tweet.user.name,
-        "user_screen_name": tweet.user.screen_name,
-        "user_icon": tweet.user.profile_image_url,
-        "like_count": tweet.favorite_count,
-        "retweet_count": tweet.retweet_count,
-        "reply_count": tweet.reply_count,
-        "url": "https://x.com/" + tweet.user.screen_name + "/status/" + tweet.id,
-        "media": get_media_urls(tweet),
-    }
-
+    try:
+        user = safe_get(tweet, 'user')
+        return {
+            "id": safe_get(tweet, 'id', default=''),
+            "text": safe_get(tweet, 'text', default=''),
+            "created_at": safe_get(tweet, 'created_at', default=''),
+            "user_name": safe_get(user, 'name', default='') if user else '',
+            "user_screen_name": safe_get(user, 'screen_name', default='') if user else '',
+            "user_icon": safe_get(user, 'profile_image_url', default='') if user else '',
+            "like_count": safe_get(tweet, 'favorite_count', default=0),
+            "retweet_count": safe_get(tweet, 'retweet_count', default=0),
+            "reply_count": safe_get(tweet, 'reply_count', default=0),
+            "url": "https://x.com/" + (safe_get(user, 'screen_name', default='') if user else '') + "/status/" + safe_get(tweet, 'id', default=''),
+            "media": get_media_urls(tweet),
+        }
+    except Exception as e:
+        print("tweet_to_dict err: " + str(e))
+        return None
 
 async def main():
     if not COOKIES_STR:
@@ -90,13 +100,15 @@ async def main():
         list_label = lst["label"]
         try:
             list_tweets = await client.get_list_tweets(list_id, count=50)
+            dicts = [tweet_to_dict(t) for t in list_tweets]
+            dicts = [d for d in dicts if d is not None]
             columns.append({
                 "id": "list_" + list_id,
                 "label": list_label,
                 "icon": "📋",
-                "tweets": [tweet_to_dict(t) for t in list_tweets],
+                "tweets": dicts,
             })
-            print("ok " + list_label + ": " + str(len(list_tweets)))
+            print("ok " + list_label + ": " + str(len(dicts)))
         except Exception as e:
             print("err " + list_label + ": " + str(e))
             columns.append({
@@ -115,6 +127,5 @@ async def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     print("done: " + OUTPUT_FILE)
-
 
 asyncio.run(main())
