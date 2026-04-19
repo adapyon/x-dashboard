@@ -1,6 +1,7 @@
 import asyncio
 import json
 import os
+import tempfile
 from datetime import datetime, timezone
 from twikit import Client
 
@@ -90,9 +91,17 @@ async def main():
 
     client = Client("ja")
     cookie_dict = parse_cookie_string(COOKIES_STR)
-    save_cookies_json(cookie_dict, "cookies.json")
-    client.load_cookies("cookies.json")
-    print("Cookies loaded.")
+
+    # cookies.jsonをtmpdirに保存してリポジトリに残さない
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as tmp:
+        tmp_path = tmp.name
+        save_cookies_json(cookie_dict, tmp_path)
+
+    try:
+        client.load_cookies(tmp_path)
+        print("Cookies loaded.")
+    finally:
+        os.unlink(tmp_path)
 
     columns = []
     for lst in LIST_IDS:

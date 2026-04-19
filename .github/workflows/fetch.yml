@@ -45,6 +45,10 @@ jobs:
           X_COOKIES: ${{ secrets.X_COOKIES }}
         run: python fetch_tweets.py
 
+      - name: Cleanup sensitive files
+        if: always()
+        run: rm -f cookies.json
+
       - name: Commit and push data.json
         run: |
           git config user.name "github-actions[bot]"
