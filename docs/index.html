@@ -38,9 +38,13 @@
     background:var(--bg3); border:1px solid var(--border2); color:var(--text2);
     font-size:12px; padding:5px 12px; border-radius:6px; cursor:pointer;
     font-family:'Noto Sans JP',sans-serif; transition:all 0.15s;
+    display:flex; align-items:center; gap:5px;
   }
   #refresh-btn:hover { background:var(--border2); color:var(--text); }
-  #refresh-btn.loading { opacity:0.5; cursor:default; }
+  #refresh-btn:disabled { opacity:0.5; cursor:default; }
+  .refresh-icon { display:inline-block; font-style:normal; line-height:1; }
+  @keyframes spin { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+  #refresh-btn.loading .refresh-icon { animation:spin 0.7s linear infinite; display:inline-block; }
   #columns {
     flex:1; display:grid; grid-template-columns:1fr 1fr 1fr;
     gap:1px; background:var(--border); overflow:hidden;
@@ -51,7 +55,7 @@
   .column.sortable-ghost { opacity:0.6; background:var(--bg3); }
   .col-header {
     height:44px; background:var(--bg2); border-bottom:2px solid var(--border);
-    display:flex; align-items:center; padding:0 14px; gap:8px; flex-shrink:0;
+    display:flex; align-items:center; padding:0 10px 0 14px; gap:7px; flex-shrink:0;
     position:relative; cursor:grab; user-select:none;
   }
   .col-header:active { cursor:grabbing; }
@@ -59,24 +63,51 @@
   .drag-handle { color:var(--text3); font-size:12px; flex-shrink:0; opacity:0.6; margin-right:2px; }
   .col-icon { font-size:13px; }
   .col-title { font-size:13px; font-weight:700; letter-spacing:0.03em; color:var(--text); }
+  .col-unread {
+    font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600;
+    color:#fff; background:var(--accent); padding:2px 6px; border-radius:9px;
+    min-width:20px; text-align:center; line-height:1.4;
+    transition:transform 0.15s;
+  }
   .col-count { margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text3); background:var(--bg3); padding:2px 6px; border-radius:10px; }
+  .mark-read-btn {
+    background:none; border:1px solid transparent; color:var(--text3);
+    font-size:10px; padding:3px 7px; border-radius:5px; cursor:pointer;
+    font-family:'Noto Sans JP',sans-serif; flex-shrink:0;
+    opacity:0; transition:opacity 0.15s, background 0.1s, border-color 0.1s;
+    white-space:nowrap;
+  }
+  .col-header:hover .mark-read-btn { opacity:1; }
+  .mark-read-btn:hover { background:var(--bg3); border-color:var(--border2); color:var(--text2); }
   .col-body { flex:1; overflow-y:auto; overflow-x:hidden; }
-  .col-body::-webkit-scrollbar { width:3px; }
-  .col-body::-webkit-scrollbar-track { background:transparent; }
-  .col-body::-webkit-scrollbar-thumb { background:var(--border2); border-radius:2px; }
-  .tweet { padding:11px 14px; border-bottom:1px solid var(--border); cursor:pointer; transition:background 0.1s; animation:fadeIn 0.2s ease; }
+  .col-body::-webkit-scrollbar { width:5px; }
+  .col-body::-webkit-scrollbar-track { background:var(--bg); }
+  .col-body::-webkit-scrollbar-thumb { background:var(--border2); border-radius:3px; }
+  .col-body::-webkit-scrollbar-thumb:hover { background:var(--text3); }
+  .tweet {
+    padding:11px 14px 11px 12px; border-bottom:1px solid var(--border);
+    border-left:2px solid transparent;
+    cursor:pointer; transition:background 0.1s, border-left-color 0.15s;
+    animation:fadeIn 0.2s ease;
+  }
   @keyframes fadeIn { from{opacity:0;transform:translateY(4px);} to{opacity:1;transform:translateY(0);} }
-  .tweet:hover { background:var(--bg2); }
-  .tweet.read { opacity:0.45; }
+  .tweet:not(.read) { border-left-color:var(--accent); }
+  .tweet:hover { background:var(--bg2); border-left-color:var(--accent2) !important; }
+  .tweet.read { opacity:0.55; filter:grayscale(20%); border-left-color:transparent; }
   .tweet:last-child { border-bottom:none; }
   .tweet-user { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
-  .avatar { width:32px; height:32px; border-radius:50%; object-fit:cover; flex-shrink:0; background:var(--bg3); }
+  .avatar {
+    width:32px; height:32px; border-radius:50%; object-fit:cover; flex-shrink:0;
+    background:var(--bg3); transition:box-shadow 0.15s;
+  }
+  .tweet:hover .avatar { box-shadow:0 0 0 2px var(--accent); }
   .user-info { min-width:0; }
   .display-name { font-size:12px; font-weight:700; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .screen-name { font-size:10px; color:var(--text3); font-family:'JetBrains Mono',monospace; }
   .tweet-time { margin-left:auto; font-size:10px; color:var(--text3); font-family:'JetBrains Mono',monospace; flex-shrink:0; }
   .tweet-text { font-size:12px; line-height:1.6; color:var(--text); word-break:break-word; margin-bottom:8px; }
   .tweet-text a { color:var(--accent); text-decoration:none; }
+  .tweet-text a:hover { text-decoration:underline; }
   .tweet-media { margin-bottom:8px; }
   .tweet-media img { width:100%; max-height:220px; object-fit:cover; border-radius:6px; border:1px solid var(--border); display:block; }
   .tweet-media.multi { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
@@ -96,7 +127,7 @@
 <div id="header">
   <h1>X / DASHBOARD</h1>
   <div id="updated">最終更新: <span id="updated-time">--</span></div>
-  <button id="refresh-btn" onclick="loadData()">↻ 更新</button>
+  <button id="refresh-btn" onclick="loadData()"><span class="refresh-icon">↻</span> 更新</button>
 </div>
 <div id="columns"></div>
 <script>
@@ -104,13 +135,11 @@ const DATA_URL = 'data.json';
 const ORDER_KEY = 'xdash_col_order';
 const READ_KEY = 'xdash_read';
 
-// 既読管理
 function getReadSet() {
   try { return new Set(JSON.parse(localStorage.getItem(READ_KEY) || '[]')); } catch(e) { return new Set(); }
 }
 function markRead(id) {
   const s = getReadSet(); s.add(id);
-  // 最大1000件に制限
   const arr = [...s].slice(-1000);
   try { localStorage.setItem(READ_KEY, JSON.stringify(arr)); } catch(e) {}
 }
@@ -122,7 +151,6 @@ function timeAgo(s) {
   return n<60?n+'秒前':n<3600?Math.floor(n/60)+'分前':n<86400?Math.floor(n/3600)+'時間前':Math.floor(n/86400)+'日前';
 }
 
-// XSS対策: テキストをエスケープ
 function escapeHtml(s) {
   return String(s)
     .replace(/&/g,'&amp;')
@@ -155,7 +183,7 @@ function renderTweet(t) {
   const readSet = getReadSet();
   const isRead = readSet.has(t.id);
   const safeUrl = escapeHtml(t.url || '');
-  return '<div class="tweet'+(isRead?' read':'')+'" data-id="'+escapeHtml(t.id)+'" data-url="'+safeUrl+'" onclick="openTweet(this)">'
+  return '<div class="tweet'+(isRead?' read':'\')+'" data-id="'+escapeHtml(t.id)+'" data-url="'+safeUrl+'" onclick="openTweet(this)">'
     +'<div class="tweet-user">'
     +'<img class="avatar" src="'+escapeHtml(t.user_icon||'')+'" alt="" referrerpolicy="no-referrer" onerror="this.src=\'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 fill=%22%23252a3a%22/></svg>\'">'
     +'<div class="user-info"><div class="display-name">'+escapeHtml(t.user_name||'')+'</div><div class="screen-name">@'+escapeHtml(t.user_screen_name||'')+'</div></div>'
@@ -174,21 +202,64 @@ function openTweet(el) {
   const url = el.dataset.url;
   const id = el.dataset.id;
   if (url) window.open(url, '_blank', 'noopener,noreferrer');
-  if (id) {
+  if (id && !el.classList.contains('read')) {
     markRead(id);
     el.classList.add('read');
+    updateUnreadBadge(el.closest('.column'));
   }
 }
 
+function updateUnreadBadge(colEl) {
+  if (!colEl) return;
+  const unreadCount = colEl.querySelectorAll('.tweet:not(.read)').length;
+  let badge = colEl.querySelector('.col-unread');
+  if (unreadCount > 0) {
+    if (!badge) {
+      badge = document.createElement('span');
+      badge.className = 'col-unread';
+      const colCount = colEl.querySelector('.col-count');
+      colEl.querySelector('.col-header').insertBefore(badge, colCount);
+    }
+    badge.textContent = unreadCount;
+  } else if (badge) {
+    badge.remove();
+  }
+}
+
+function markAllRead(colId, event) {
+  event.stopPropagation();
+  const col = document.getElementById('col-'+colId);
+  if (!col) return;
+  const readSet = getReadSet();
+  col.querySelectorAll('.tweet:not(.read)').forEach(el => {
+    if (el.dataset.id) {
+      readSet.add(el.dataset.id);
+      el.classList.add('read');
+    }
+  });
+  const arr = [...readSet].slice(-1000);
+  try { localStorage.setItem(READ_KEY, JSON.stringify(arr)); } catch(e) {}
+  updateUnreadBadge(col);
+}
+
 function renderCol(col) {
-  const tweets = col.tweets&&col.tweets.length?col.tweets.map(renderTweet).join(''):'<div class="col-empty"><span>📭</span><span>ツイートなし</span></div>';
-  const err = col.error?'<div class="col-error">⚠ '+escapeHtml(col.error)+'</div>':'';
+  const readSet = getReadSet();
+  const totalTweets = col.tweets ? col.tweets.length : 0;
+  const unreadCount = col.tweets ? col.tweets.filter(t => !readSet.has(t.id)).length : 0;
+
+  const tweets = totalTweets ? col.tweets.map(renderTweet).join('') : '<div class="col-empty"><span>📭</span><span>ツイートなし</span></div>';
+  const err = col.error ? '<div class="col-error">⚠ '+escapeHtml(col.error)+'</div>' : '';
+  const unreadBadge = unreadCount > 0 ? '<span class="col-unread">'+unreadCount+'</span>' : '';
+  const markReadBtn = totalTweets > 0 ? '<button class="mark-read-btn" onclick="markAllRead(\''+escapeHtml(col.id)+'\',event)" title="全て既読">✓ 全既読</button>' : '';
+
   return '<div class="column" id="col-'+escapeHtml(col.id)+'" data-id="'+escapeHtml(col.id)+'">'
     +'<div class="col-header">'
     +'<span class="drag-handle">⠿</span>'
     +'<span class="col-icon">'+(col.icon||'📄')+'</span>'
     +'<span class="col-title">'+escapeHtml(col.label)+'</span>'
-    +'<span class="col-count">'+(col.tweets?col.tweets.length:0)+'</span>'
+    +unreadBadge
+    +'<span class="col-count">'+totalTweets+'</span>'
+    +markReadBtn
     +'</div><div class="col-body">'+err+tweets+'</div></div>';
 }
 
@@ -197,7 +268,7 @@ function initSortable() {
   const el=document.getElementById('columns');
   if(sortable)sortable.destroy();
   if(typeof Sortable==='undefined')return;
-  sortable=Sortable.create(el,{animation:150,handle:'.col-header',ghostClass:'sortable-ghost',dragClass:'sortable-drag',
+  sortable=Sortable.create(el,{animation:150,handle:'.col-header',filter:'.mark-read-btn',ghostClass:'sortable-ghost',dragClass:'sortable-drag',
     onEnd:()=>{
       const order=Array.from(el.children).map(c=>c.dataset.id);
       try{localStorage.setItem(ORDER_KEY,JSON.stringify(order));}catch(e){}
@@ -219,7 +290,8 @@ function applyOrder(columns) {
 async function loadData() {
   const btn=document.getElementById('refresh-btn');
   const el=document.getElementById('columns');
-  btn.classList.add('loading');btn.textContent='読込中…';
+  btn.classList.add('loading');
+  btn.disabled=true;
   if(!el.children.length){
     el.innerHTML=Array.from({length:3}).map(()=>'<div class="column"><div class="col-header"><span class="col-title" style="color:var(--text3)">読込中...</span></div><div class="col-body">'+skeleton()+'</div></div>').join('');
   }
@@ -234,7 +306,10 @@ async function loadData() {
     document.getElementById('updated-time').textContent=dt.toLocaleString('ja-JP',{timeZone:'Asia/Tokyo',hour12:false});
   } catch(e) {
     el.innerHTML='<div style="display:flex;align-items:center;justify-content:center;width:100%;color:var(--text3);font-size:13px;gap:8px;"><span>⚠</span><span>'+escapeHtml(e.message)+'</span></div>';
-  } finally{btn.classList.remove('loading');btn.textContent='↻ 更新';}
+  } finally{
+    btn.classList.remove('loading');
+    btn.disabled=false;
+  }
 }
 
 const _s=document.createElement('script');
