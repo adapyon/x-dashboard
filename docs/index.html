@@ -127,7 +127,7 @@
 <div id="header">
   <h1>X / DASHBOARD</h1>
   <div id="updated">最終更新: <span id="updated-time">--</span></div>
-  <button id="refresh-btn" onclick="loadData()"><span class="refresh-icon">↻</span> 更新</button>
+  <button id="refresh-btn" onclick="loadData()"><span class="refresh-icon">&#x21BB;</span> 更新</button>
 </div>
 <div id="columns"></div>
 <script>
@@ -148,7 +148,7 @@ function timeAgo(s) {
   if (!s) return '';
   const d = new Date(s); if (isNaN(d)) return s;
   const n = Math.floor((Date.now()-d)/1000);
-  return n<60?n+'秒前':n<3600?Math.floor(n/60)+'分前':n<86400?Math.floor(n/3600)+'時間前':Math.floor(n/86400)+'日前';
+  return n<60?n+'\u79d2\u524d':n<3600?Math.floor(n/60)+'\u5206\u524d':n<86400?Math.floor(n/3600)+'\u6642\u9593\u524d':Math.floor(n/86400)+'\u65e5\u524d';
 }
 
 function escapeHtml(s) {
@@ -163,27 +163,28 @@ function escapeHtml(s) {
 function linkify(t) {
   const escaped = escapeHtml(t);
   return escaped
-    .replace(/https?:\/\/[^\s&]+/g, u => '<a href="'+u+'" target="_blank" rel="noopener noreferrer">'+u+'</a>')
+    .replace(/https?:\/\/[^\s&]+/g, function(u) { return '<a href="'+u+'" target="_blank" rel="noopener noreferrer">'+u+'</a>'; })
     .replace(/@(\w+)/g,'<span style="color:var(--accent)">@$1</span>')
     .replace(/#([\w\u3040-\u9fff]+)/g,'<span style="color:var(--accent2)">#$1</span>');
 }
 
 function renderMedia(media) {
   if (!media||!media.length) return '';
-  const imgs = media.filter(u=>u&&u.includes('pbs.twimg.com')).map(u=>'<img src="'+escapeHtml(u)+'" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display=\'none\'">');
+  var imgs = media.filter(function(u){return u&&u.includes('pbs.twimg.com');}).map(function(u){return '<img src="'+escapeHtml(u)+'" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display=\'none\'">';});
   if (!imgs.length) return '';
   return '<div class="'+(imgs.length>=2?'tweet-media multi':'tweet-media')+'">'+imgs.join('')+'</div>';
 }
 
 function skeleton() {
-  return Array.from({length:5}).map(()=>'<div class="skeleton"><div class="skel-line" style="width:55%;margin-bottom:9px"></div><div class="skel-line" style="width:90%"></div><div class="skel-line" style="width:72%"></div><div class="skel-line" style="width:35%;margin-top:9px"></div></div>').join('');
+  return Array.from({length:5}).map(function(){return '<div class="skeleton"><div class="skel-line" style="width:55%;margin-bottom:9px"></div><div class="skel-line" style="width:90%"></div><div class="skel-line" style="width:72%"></div><div class="skel-line" style="width:35%;margin-top:9px"></div></div>';}).join('');
 }
 
 function renderTweet(t) {
-  const readSet = getReadSet();
-  const isRead = readSet.has(t.id);
-  const safeUrl = escapeHtml(t.url || '');
-  return '<div class="tweet'+(isRead?' read':'\')+'" data-id="'+escapeHtml(t.id)+'" data-url="'+safeUrl+'" onclick="openTweet(this)">'
+  var readSet = getReadSet();
+  var isRead = readSet.has(t.id);
+  var safeUrl = escapeHtml(t.url || '');
+  var cls = isRead ? 'tweet read' : 'tweet';
+  return '<div class="'+cls+'" data-id="'+escapeHtml(t.id)+'" data-url="'+safeUrl+'" onclick="openTweet(this)">'
     +'<div class="tweet-user">'
     +'<img class="avatar" src="'+escapeHtml(t.user_icon||'')+'" alt="" referrerpolicy="no-referrer" onerror="this.src=\'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 fill=%22%23252a3a%22/></svg>\'">'
     +'<div class="user-info"><div class="display-name">'+escapeHtml(t.user_name||'')+'</div><div class="screen-name">@'+escapeHtml(t.user_screen_name||'')+'</div></div>'
@@ -192,15 +193,15 @@ function renderTweet(t) {
     +'<div class="tweet-text">'+linkify(t.text||'')+'</div>'
     +renderMedia(t.media)
     +'<div class="tweet-stats">'
-    +'<span class="stat stat-like">♥ '+(t.like_count||0).toLocaleString()+'</span>'
-    +'<span class="stat stat-rt">↺ '+(t.retweet_count||0).toLocaleString()+'</span>'
-    +'<span class="stat">💬 '+(t.reply_count||0).toLocaleString()+'</span>'
+    +'<span class="stat stat-like">&#x2665; '+(t.like_count||0).toLocaleString()+'</span>'
+    +'<span class="stat stat-rt">&#x21BA; '+(t.retweet_count||0).toLocaleString()+'</span>'
+    +'<span class="stat">&#x1F4AC; '+(t.reply_count||0).toLocaleString()+'</span>'
     +'</div></div>';
 }
 
 function openTweet(el) {
-  const url = el.dataset.url;
-  const id = el.dataset.id;
+  var url = el.dataset.url;
+  var id = el.dataset.id;
   if (url) window.open(url, '_blank', 'noopener,noreferrer');
   if (id && !el.classList.contains('read')) {
     markRead(id);
@@ -211,13 +212,13 @@ function openTweet(el) {
 
 function updateUnreadBadge(colEl) {
   if (!colEl) return;
-  const unreadCount = colEl.querySelectorAll('.tweet:not(.read)').length;
-  let badge = colEl.querySelector('.col-unread');
+  var unreadCount = colEl.querySelectorAll('.tweet:not(.read)').length;
+  var badge = colEl.querySelector('.col-unread');
   if (unreadCount > 0) {
     if (!badge) {
       badge = document.createElement('span');
       badge.className = 'col-unread';
-      const colCount = colEl.querySelector('.col-count');
+      var colCount = colEl.querySelector('.col-count');
       colEl.querySelector('.col-header').insertBefore(badge, colCount);
     }
     badge.textContent = unreadCount;
@@ -228,34 +229,34 @@ function updateUnreadBadge(colEl) {
 
 function markAllRead(colId, event) {
   event.stopPropagation();
-  const col = document.getElementById('col-'+colId);
+  var col = document.getElementById('col-'+colId);
   if (!col) return;
-  const readSet = getReadSet();
-  col.querySelectorAll('.tweet:not(.read)').forEach(el => {
+  var readSet = getReadSet();
+  col.querySelectorAll('.tweet:not(.read)').forEach(function(el) {
     if (el.dataset.id) {
       readSet.add(el.dataset.id);
       el.classList.add('read');
     }
   });
-  const arr = [...readSet].slice(-1000);
+  var arr = [...readSet].slice(-1000);
   try { localStorage.setItem(READ_KEY, JSON.stringify(arr)); } catch(e) {}
   updateUnreadBadge(col);
 }
 
 function renderCol(col) {
-  const readSet = getReadSet();
-  const totalTweets = col.tweets ? col.tweets.length : 0;
-  const unreadCount = col.tweets ? col.tweets.filter(t => !readSet.has(t.id)).length : 0;
+  var readSet = getReadSet();
+  var totalTweets = col.tweets ? col.tweets.length : 0;
+  var unreadCount = col.tweets ? col.tweets.filter(function(t){return !readSet.has(t.id);}).length : 0;
 
-  const tweets = totalTweets ? col.tweets.map(renderTweet).join('') : '<div class="col-empty"><span>📭</span><span>ツイートなし</span></div>';
-  const err = col.error ? '<div class="col-error">⚠ '+escapeHtml(col.error)+'</div>' : '';
-  const unreadBadge = unreadCount > 0 ? '<span class="col-unread">'+unreadCount+'</span>' : '';
-  const markReadBtn = totalTweets > 0 ? '<button class="mark-read-btn" onclick="markAllRead(\''+escapeHtml(col.id)+'\',event)" title="全て既読">✓ 全既読</button>' : '';
+  var tweets = totalTweets ? col.tweets.map(renderTweet).join('') : '<div class="col-empty"><span>&#x1F4ED;</span><span>\u30c4\u30a4\u30fc\u30c8\u306a\u3057</span></div>';
+  var err = col.error ? '<div class="col-error">&#x26A0; '+escapeHtml(col.error)+'</div>' : '';
+  var unreadBadge = unreadCount > 0 ? '<span class="col-unread">'+unreadCount+'</span>' : '';
+  var markReadBtn = totalTweets > 0 ? '<button class="mark-read-btn" onclick="markAllRead(\''+escapeHtml(col.id)+'\',event)" title="\u5168\u3066\u65e2\u8aad">&#x2713; \u5168\u65e2\u8aad</button>' : '';
 
   return '<div class="column" id="col-'+escapeHtml(col.id)+'" data-id="'+escapeHtml(col.id)+'">'
     +'<div class="col-header">'
-    +'<span class="drag-handle">⠿</span>'
-    +'<span class="col-icon">'+(col.icon||'📄')+'</span>'
+    +'<span class="drag-handle">&#x2837;</span>'
+    +'<span class="col-icon">'+(col.icon||'&#x1F4C4;')+'</span>'
     +'<span class="col-title">'+escapeHtml(col.label)+'</span>'
     +unreadBadge
     +'<span class="col-count">'+totalTweets+'</span>'
@@ -263,14 +264,14 @@ function renderCol(col) {
     +'</div><div class="col-body">'+err+tweets+'</div></div>';
 }
 
-let sortable=null;
+var sortable=null;
 function initSortable() {
-  const el=document.getElementById('columns');
+  var el=document.getElementById('columns');
   if(sortable)sortable.destroy();
   if(typeof Sortable==='undefined')return;
   sortable=Sortable.create(el,{animation:150,handle:'.col-header',filter:'.mark-read-btn',ghostClass:'sortable-ghost',dragClass:'sortable-drag',
-    onEnd:()=>{
-      const order=Array.from(el.children).map(c=>c.dataset.id);
+    onEnd:function(){
+      var order=Array.from(el.children).map(function(c){return c.dataset.id;});
       try{localStorage.setItem(ORDER_KEY,JSON.stringify(order));}catch(e){}
     }
   });
@@ -278,44 +279,44 @@ function initSortable() {
 
 function applyOrder(columns) {
   try {
-    const saved=JSON.parse(localStorage.getItem(ORDER_KEY)||'[]');
+    var saved=JSON.parse(localStorage.getItem(ORDER_KEY)||'[]');
     if(!saved.length)return columns;
-    const map=Object.fromEntries(columns.map(c=>[c.id,c]));
-    const ordered=saved.map(id=>map[id]).filter(Boolean);
-    columns.forEach(c=>{if(!saved.includes(c.id))ordered.push(c);});
+    var map=Object.fromEntries(columns.map(function(c){return [c.id,c];}));
+    var ordered=saved.map(function(id){return map[id];}).filter(Boolean);
+    columns.forEach(function(c){if(!saved.includes(c.id))ordered.push(c);});
     return ordered;
   } catch(e){return columns;}
 }
 
 async function loadData() {
-  const btn=document.getElementById('refresh-btn');
-  const el=document.getElementById('columns');
+  var btn=document.getElementById('refresh-btn');
+  var el=document.getElementById('columns');
   btn.classList.add('loading');
   btn.disabled=true;
   if(!el.children.length){
-    el.innerHTML=Array.from({length:3}).map(()=>'<div class="column"><div class="col-header"><span class="col-title" style="color:var(--text3)">読込中...</span></div><div class="col-body">'+skeleton()+'</div></div>').join('');
+    el.innerHTML=Array.from({length:3}).map(function(){return '<div class="column"><div class="col-header"><span class="col-title" style="color:var(--text3)">\u8aad\u8fbc\u4e2d...</span></div><div class="col-body">'+skeleton()+'</div></div>';}).join('');
   }
   try {
-    const r=await fetch(DATA_URL+'?t='+Date.now());
+    var r=await fetch(DATA_URL+'?t='+Date.now());
     if(!r.ok)throw new Error('HTTP '+r.status);
-    const d=await r.json();
-    const ordered=applyOrder(d.columns);
+    var d=await r.json();
+    var ordered=applyOrder(d.columns);
     el.innerHTML=ordered.map(renderCol).join('');
     initSortable();
-    const dt=new Date(d.updated_at);
+    var dt=new Date(d.updated_at);
     document.getElementById('updated-time').textContent=dt.toLocaleString('ja-JP',{timeZone:'Asia/Tokyo',hour12:false});
   } catch(e) {
-    el.innerHTML='<div style="display:flex;align-items:center;justify-content:center;width:100%;color:var(--text3);font-size:13px;gap:8px;"><span>⚠</span><span>'+escapeHtml(e.message)+'</span></div>';
+    el.innerHTML='<div style="display:flex;align-items:center;justify-content:center;width:100%;color:var(--text3);font-size:13px;gap:8px;"><span>&#x26A0;</span><span>'+escapeHtml(e.message)+'</span></div>';
   } finally{
     btn.classList.remove('loading');
     btn.disabled=false;
   }
 }
 
-const _s=document.createElement('script');
+var _s=document.createElement('script');
 _s.src='https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js';
-_s.onload=()=>{loadData();};
-_s.onerror=()=>{loadData();};
+_s.onload=function(){loadData();};
+_s.onerror=function(){loadData();};
 document.head.appendChild(_s);
 setInterval(loadData,15*60*1000);
 </script>
