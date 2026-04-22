@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-22T08:14:46.098803+00:00",
+  "updated_at": "2026-04-22T09:54:54.773210+00:00",
   "columns": [
     {
       "id": "list_181994093",
@@ -7,16 +7,98 @@
       "icon": "📋",
       "tweets": [
         {
-          "id": "2046865039290998985",
-          "text": "わー！これエントリーして！楽天で4/30までに1000円以上購入で1000円OFFクーポンが後日もらえる！\nhttps://t.co/cNf5Kk9yg5",
-          "created_at": "Wed Apr 22 08:13:48 +0000 2026",
+          "id": "2046882742131122449",
+          "text": "Amazon Music Unlimitedに登録すると最大3ヶ月分が無料。3/24～4/6。 https://t.co/lMxRLUjt8Q",
+          "created_at": "Wed Apr 22 09:24:09 +0000 2026",
+          "user_name": "setusoku",
+          "user_screen_name": "setusoku",
+          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "url": "https://x.com/setusoku/status/2046882742131122449",
+          "media": []
+        },
+        {
+          "id": "2046877954114736453",
+          "text": "突撃してみたら予想外で、え😇\n\n#旦那 #夫婦の日常 https://t.co/eYpmC8XHKw",
+          "created_at": "Wed Apr 22 09:05:08 +0000 2026",
+          "user_name": "Amazon.co.jp (アマゾンジャパン)",
+          "user_screen_name": "AmazonJP",
+          "user_icon": "https://pbs.twimg.com/profile_images/1912987271915241472/Rd3JbaXj_normal.jpg",
+          "like_count": 11,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "url": "https://x.com/AmazonJP/status/2046877954114736453",
+          "media": [
+            "https://pbs.twimg.com/media/HGf4preWQAAG1l0.png"
+          ]
+        },
+        {
+          "id": "2046877670114513316",
+          "text": "西鉄電車が小児用nimoca利用で小学生の運賃を実質50円に。土日祝・長期休暇全日で実施。4/29～。\nhttps://t.co/zQFVzqZ0Sa #ad",
+          "created_at": "Wed Apr 22 09:04:00 +0000 2026",
+          "user_name": "setusoku",
+          "user_screen_name": "setusoku",
+          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
+          "like_count": 3,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "url": "https://x.com/setusoku/status/2046877670114513316",
+          "media": []
+        },
+        {
+          "id": "2046869303392391302",
+          "text": "RT @emirin_osaka: 可愛くて安くて最高だけど\n値段ミスでキャンセルかなぁって\n思ってたバッグ👜\n\n発送されてたー！\n1,981円だよ！めっちゃ嬉しい！\n\n今値段見たら、18,150円に戻ってた💸 https://t.co/v5d1LVN7km",
+          "created_at": "Wed Apr 22 08:30:45 +0000 2026",
+          "user_name": "じん🕳お得セール節約散財🥺",
+          "user_screen_name": "jing1809t",
+          "user_icon": "https://pbs.twimg.com/profile_images/1534208638780583936/snXb7EBO_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 2,
+          "reply_count": 0,
+          "url": "https://x.com/jing1809t/status/2046869303392391302",
+          "media": [
+            "https://pbs.twimg.com/media/HGfwloPb0AAouPI.jpg"
+          ]
+        },
+        {
+          "id": "2046868986953150971",
+          "text": "子供服ブランドまた更新されてるから見てね！クレセントのアウターもこのリンクから発掘したよー！🥰",
+          "created_at": "Wed Apr 22 08:29:30 +0000 2026",
+          "user_name": "じん🕳お得セール節約散財🥺",
+          "user_screen_name": "jing1809t",
+          "user_icon": "https://pbs.twimg.com/profile_images/1534208638780583936/snXb7EBO_normal.jpg",
+          "like_count": 4,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "url": "https://x.com/jing1809t/status/2046868986953150971",
+          "media": []
+        },
+        {
+          "id": "2046868371078369579",
+          "text": "買ったー！90サイズ女の子！3300→805円のクレセントのアウター！\n\n可愛すぎるし次の冬に着せる😍😍\n\nhttps://t.co/3WZuvCqNme",
+          "created_at": "Wed Apr 22 08:27:03 +0000 2026",
+          "user_name": "じん🕳お得セール節約散財🥺",
+          "user_screen_name": "jing1809t",
+          "user_icon": "https://pbs.twimg.com/profile_images/1534208638780583936/snXb7EBO_normal.jpg",
+          "like_count": 4,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "url": "https://x.com/jing1809t/status/2046868371078369579",
+          "media": []
+        },
+        {
+          "id": "2046868054420894177",
+          "text": "先ほどのは対象者限定のようで消しました🙇‍♀️",
+          "created_at": "Wed Apr 22 08:25:47 +0000 2026",
           "user_name": "じん🕳お得セール節約散財🥺",
           "user_screen_name": "jing1809t",
           "user_icon": "https://pbs.twimg.com/profile_images/1534208638780583936/snXb7EBO_normal.jpg",
           "like_count": 0,
           "retweet_count": 0,
           "reply_count": 0,
-          "url": "https://x.com/jing1809t/status/2046865039290998985",
+          "url": "https://x.com/jing1809t/status/2046868054420894177",
           "media": []
         },
         {
@@ -26,7 +108,7 @@
           "user_name": "AKIBA PC Hotline! （秋葉原）",
           "user_screen_name": "watch_akiba",
           "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
-          "like_count": 2,
+          "like_count": 6,
           "retweet_count": 0,
           "reply_count": 0,
           "url": "https://x.com/watch_akiba/status/2046862864246607988",
@@ -43,7 +125,7 @@
           "user_name": "setusoku",
           "user_screen_name": "setusoku",
           "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
-          "like_count": 0,
+          "like_count": 2,
           "retweet_count": 0,
           "reply_count": 0,
           "url": "https://x.com/setusoku/status/2046861815448055849",
@@ -56,7 +138,7 @@
           "user_name": "じん🕳お得セール節約散財🥺",
           "user_screen_name": "jing1809t",
           "user_icon": "https://pbs.twimg.com/profile_images/1534208638780583936/snXb7EBO_normal.jpg",
-          "like_count": 3,
+          "like_count": 4,
           "retweet_count": 0,
           "reply_count": 0,
           "url": "https://x.com/jing1809t/status/2046853191187501063",
@@ -82,7 +164,7 @@
           "user_name": "じん🕳お得セール節約散財🥺",
           "user_screen_name": "jing1809t",
           "user_icon": "https://pbs.twimg.com/profile_images/1534208638780583936/snXb7EBO_normal.jpg",
-          "like_count": 2,
+          "like_count": 3,
           "retweet_count": 0,
           "reply_count": 0,
           "url": "https://x.com/jing1809t/status/2046832949480558732",
@@ -112,7 +194,7 @@
           "user_screen_name": "watch_akiba",
           "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
           "like_count": 0,
-          "retweet_count": 6,
+          "retweet_count": 7,
           "reply_count": 0,
           "url": "https://x.com/watch_akiba/status/2046830752592191614",
           "media": []
@@ -184,7 +266,7 @@
           "user_name": "ゲッキー🐣",
           "user_screen_name": "gekiyasu",
           "user_icon": "https://pbs.twimg.com/profile_images/1351642437375021057/JeRVdSUw_normal.jpg",
-          "like_count": 38,
+          "like_count": 41,
           "retweet_count": 14,
           "reply_count": 0,
           "url": "https://x.com/gekiyasu/status/2046801401339367843",
@@ -211,7 +293,7 @@
           "user_screen_name": "setusoku",
           "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
           "like_count": 0,
-          "retweet_count": 1,
+          "retweet_count": 0,
           "reply_count": 0,
           "url": "https://x.com/setusoku/status/2046795004933497036",
           "media": []
@@ -383,7 +465,7 @@
           "user_name": "AKIBA PC Hotline! （秋葉原）",
           "user_screen_name": "watch_akiba",
           "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
-          "like_count": 33,
+          "like_count": 34,
           "retweet_count": 15,
           "reply_count": 0,
           "url": "https://x.com/watch_akiba/status/2046750161683312690",
@@ -397,7 +479,7 @@
           "user_screen_name": "watch_akiba",
           "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
           "like_count": 6,
-          "retweet_count": 3,
+          "retweet_count": 4,
           "reply_count": 0,
           "url": "https://x.com/watch_akiba/status/2046742053149896981",
           "media": [
@@ -557,7 +639,7 @@
           "user_screen_name": "watch_akiba",
           "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
           "like_count": 13,
-          "retweet_count": 5,
+          "retweet_count": 6,
           "reply_count": 0,
           "url": "https://x.com/watch_akiba/status/2046594833981309003",
           "media": [
@@ -574,7 +656,7 @@
           "user_name": "じん🕳お得セール節約散財🥺",
           "user_screen_name": "jing1809t",
           "user_icon": "https://pbs.twimg.com/profile_images/1534208638780583936/snXb7EBO_normal.jpg",
-          "like_count": 9,
+          "like_count": 11,
           "retweet_count": 0,
           "reply_count": 6,
           "url": "https://x.com/jing1809t/status/2046592262029939045",
@@ -628,7 +710,7 @@
           "user_name": "ゲッキー🐣",
           "user_screen_name": "gekiyasu",
           "user_icon": "https://pbs.twimg.com/profile_images/1351642437375021057/JeRVdSUw_normal.jpg",
-          "like_count": 23,
+          "like_count": 24,
           "retweet_count": 3,
           "reply_count": 3,
           "url": "https://x.com/gekiyasu/status/2046581659831775523",
@@ -766,7 +848,7 @@
           "user_name": "ゲッキー🐣",
           "user_screen_name": "gekiyasu",
           "user_icon": "https://pbs.twimg.com/profile_images/1351642437375021057/JeRVdSUw_normal.jpg",
-          "like_count": 20,
+          "like_count": 21,
           "retweet_count": 2,
           "reply_count": 2,
           "url": "https://x.com/gekiyasu/status/2046564928837046338",
@@ -1198,120 +1280,6 @@
             "https://pbs.twimg.com/media/HGZUqFXboAAABKd.jpg",
             "https://pbs.twimg.com/media/HGZUqNPbsAAHoap.jpg"
           ]
-        },
-        {
-          "id": "2046413196098257277",
-          "text": "【在庫復活】ソフトバンクでSamsung Galaxy Z Flip7が実質1円、Z Fold7が実質830円端末堕ちへ。更に2万円キャッシュバック。4/14～。\nhttps://t.co/FkC9CiewMM #ad",
-          "created_at": "Tue Apr 21 02:18:21 +0000 2026",
-          "user_name": "setusoku",
-          "user_screen_name": "setusoku",
-          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
-          "like_count": 1,
-          "retweet_count": 0,
-          "reply_count": 0,
-          "url": "https://x.com/setusoku/status/2046413196098257277",
-          "media": []
-        },
-        {
-          "id": "2046411962616250828",
-          "text": "スマートニュースてカロリーメイトゼリーが10.8万名に当たる。～4/27。\nhttps://t.co/Mhn4WR6LdI #ad",
-          "created_at": "Tue Apr 21 02:13:27 +0000 2026",
-          "user_name": "setusoku",
-          "user_screen_name": "setusoku",
-          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
-          "like_count": 1,
-          "retweet_count": 0,
-          "reply_count": 0,
-          "url": "https://x.com/setusoku/status/2046411962616250828",
-          "media": []
-        },
-        {
-          "id": "2046410843320160404",
-          "text": "楽天証券でウェルスナビ×Rを1万円以上買付すると、現金最大10万円が抽選2,165名に当たる。普通、オルカンを買うよね。～7/14。\nhttps://t.co/vvgUaUjlRJ #ad",
-          "created_at": "Tue Apr 21 02:09:00 +0000 2026",
-          "user_name": "setusoku",
-          "user_screen_name": "setusoku",
-          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
-          "like_count": 1,
-          "retweet_count": 0,
-          "reply_count": 0,
-          "url": "https://x.com/setusoku/status/2046410843320160404",
-          "media": []
-        },
-        {
-          "id": "2046408610264326492",
-          "text": "更新：昭和通り沿いの「カラオケの鉄人」が3月末で閉店、運試し？「ランダムで2本出てくる」飲料自販機が登場、「重音テト焼き」販売中など～ 最近の秋葉原 飲食店編～ https://t.co/XsfS3KF3v9 #秋葉原 https://t.co/yiecuKYE00",
-          "created_at": "Tue Apr 21 02:00:07 +0000 2026",
-          "user_name": "AKIBA PC Hotline! （秋葉原）",
-          "user_screen_name": "watch_akiba",
-          "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
-          "like_count": 15,
-          "retweet_count": 7,
-          "reply_count": 0,
-          "url": "https://x.com/watch_akiba/status/2046408610264326492",
-          "media": [
-            "https://pbs.twimg.com/media/HGZNyXbbEAAkubN.jpg"
-          ]
-        },
-        {
-          "id": "2046394769061154958",
-          "text": "更新：Thermal Grizzlyの本格水冷向けフィッティングが複数入荷、マットニッケルカラーもあり https://t.co/wQsjyRg4LC https://t.co/Khc6bUQcSN",
-          "created_at": "Tue Apr 21 01:05:07 +0000 2026",
-          "user_name": "AKIBA PC Hotline! （秋葉原）",
-          "user_screen_name": "watch_akiba",
-          "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
-          "like_count": 10,
-          "retweet_count": 1,
-          "reply_count": 0,
-          "url": "https://x.com/watch_akiba/status/2046394769061154958",
-          "media": [
-            "https://pbs.twimg.com/media/HGZBMdfaMAAFoy7.jpg",
-            "https://pbs.twimg.com/media/HGZBMqga0AAYmxG.jpg"
-          ]
-        },
-        {
-          "id": "2046385953753923768",
-          "text": "更新：EverGlide×Unionwell共同開発の磁気スイッチが入荷、打鍵時の響きやノイズを抑えた設計を採用 https://t.co/ZIbXysriel https://t.co/LvxlWYaiKg",
-          "created_at": "Tue Apr 21 00:30:06 +0000 2026",
-          "user_name": "AKIBA PC Hotline! （秋葉原）",
-          "user_screen_name": "watch_akiba",
-          "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
-          "like_count": 6,
-          "retweet_count": 2,
-          "reply_count": 0,
-          "url": "https://x.com/watch_akiba/status/2046385953753923768",
-          "media": [
-            "https://pbs.twimg.com/media/HGY5LjvbMAAPJ4n.jpg"
-          ]
-        },
-        {
-          "id": "2046385706709487743",
-          "text": "RT @setusoku: COIN+/エアウォレットがもれなく貰える情報を集めるスレ。 https://t.co/Gr8lWBglIa",
-          "created_at": "Tue Apr 21 00:29:07 +0000 2026",
-          "user_name": "setusoku",
-          "user_screen_name": "setusoku",
-          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
-          "like_count": 0,
-          "retweet_count": 1,
-          "reply_count": 0,
-          "url": "https://x.com/setusoku/status/2046385706709487743",
-          "media": []
-        },
-        {
-          "id": "2046379668035752357",
-          "text": "更新：40%キーボード自作キット「GoForty v2 US」が入荷、ネジ止めだけで組み立て可能 https://t.co/wX8NRe8T0s https://t.co/NOqzlTcY5t",
-          "created_at": "Tue Apr 21 00:05:07 +0000 2026",
-          "user_name": "AKIBA PC Hotline! （秋葉原）",
-          "user_screen_name": "watch_akiba",
-          "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
-          "like_count": 52,
-          "retweet_count": 14,
-          "reply_count": 0,
-          "url": "https://x.com/watch_akiba/status/2046379668035752357",
-          "media": [
-            "https://pbs.twimg.com/media/HGYzddybIAAbr2n.jpg",
-            "https://pbs.twimg.com/media/HGYzdpebgAAvcFp.jpg"
-          ]
         }
       ]
     },
@@ -1321,15 +1289,117 @@
       "icon": "📋",
       "tweets": [
         {
+          "id": "2046881988913897902",
+          "text": "RT @Yakuri_iteminfo: 🎪イベントのお知らせ🎪\n仙台でイベント開催決定！！！！\n開催日：2026年5月23日(土)\n詳細はコチラ⬇️⬇️⬇️",
+          "created_at": "Wed Apr 22 09:21:10 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2026290838733729792/XwPM2k91_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 29,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2046881988913897902",
+          "media": []
+        },
+        {
+          "id": "2046879188683284898",
+          "text": "世界中のサイバー攻撃のトレンドを把握する方法\nラジオライフ.com｜知って得する情報を毎日更新 - https://t.co/1Qyx995qAU\n#サイバー攻撃 https://t.co/yX40A8uSO6",
+          "created_at": "Wed Apr 22 09:10:02 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2026290838733729792/XwPM2k91_normal.jpg",
+          "like_count": 4,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2046879188683284898",
+          "media": [
+            "https://pbs.twimg.com/media/HGf5xoVa0AAIaEa.jpg"
+          ]
+        },
+        {
+          "id": "2046876609609965651",
+          "text": "RT @itan_tennenbaum: Лучше бы вас пугал тот факт, что средний мужчина в нашем обществе получает настолько мало безусловной эмпатии и привяз…",
+          "created_at": "Wed Apr 22 08:59:47 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 100,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2046876609609965651",
+          "media": []
+        },
+        {
+          "id": "2046875984801255716",
+          "text": "馬連11.4倍だけ当たり。三連単惜しかった。\nこの34,200円の当たり馬券は読者プレゼント🎁\nリポストしてnoteをフォローするだけ。\n来週火曜日に抽選即発送。\n\n「この忍び、金欠につき」週刊連載\nhttps://t.co/LrjcO33Dxq https://t.co/wFMsGiWn4B",
+          "created_at": "Wed Apr 22 08:57:18 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 192,
+          "retweet_count": 201,
+          "reply_count": 29,
+          "url": "https://x.com/ShinjukuSokai/status/2046875984801255716",
+          "media": [
+            "https://pbs.twimg.com/media/HGf22fKa8AAg0XE.jpg",
+            "https://pbs.twimg.com/media/HGf22fMbgAATdjP.jpg"
+          ]
+        },
+        {
+          "id": "2046870051626827905",
+          "text": "RT @ShinjukuSokai: バースデーだから派手にタワーやってあげるねって期待させておいて、それがONICHAタワーとみそきんアタッシュだった時のキャバ嬢の顔がこちら。 https://t.co/WFquhsm5cb",
+          "created_at": "Wed Apr 22 08:33:43 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 786,
+          "reply_count": 0,
+          "url": "https://x.com/ShinjukuSokai/status/2046870051626827905",
+          "media": [
+            "https://pbs.twimg.com/amplify_video_thumb/2046582441008349184/img/yU8hBtX6L4H9Tgim.jpg"
+          ]
+        },
+        {
+          "id": "2046869782893625665",
+          "text": "串源と大阪租界炊き出しがコラボするらしい。\nここのコブクロギャングめちゃくちゃ美味い。\n生物は炊き出しできないだろうから焼き物とかになるのかな？何を出すのか楽しみだ。\n\n串源 平野総本店\nhttps://t.co/mAaxhpKT3U https://t.co/rqCuFfdSvQ",
+          "created_at": "Wed Apr 22 08:32:39 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 121,
+          "retweet_count": 5,
+          "reply_count": 8,
+          "url": "https://x.com/ShinjukuSokai/status/2046869782893625665",
+          "media": [
+            "https://pbs.twimg.com/media/HGfxKxDbkAAggQH.jpg",
+            "https://pbs.twimg.com/amplify_video_thumb/2046869722948644864/img/2_uGb7y1Sblhbv6U.jpg",
+            "https://pbs.twimg.com/amplify_video_thumb/2046869722956967936/img/_3IPrJgkFBFrKsyL.jpg"
+          ]
+        },
+        {
+          "id": "2046865736988299355",
+          "text": "RT @mangatentyou: 超特報！！\n\n#ア理科 の聖地に #薬理凶室 が帰ってくる！\n\n「アリエナイ化学実験事典」刊行記念！\n#レイユール 先生＋ #くられ 先生による特別講義トーク＆サイン会！\n開催決定！\n\n開催日は5/23！\n\n参加予約受付は4/25朝10時から…",
+          "created_at": "Wed Apr 22 08:16:35 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2026290838733729792/XwPM2k91_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 35,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2046865736988299355",
+          "media": []
+        },
+        {
           "id": "2046859425533874445",
           "text": "シャーマンズカードショップに魔法のパウダー編のカードが追加されてる。\nどういう意味なんだろう。\nもしやカードのおまけが新タイプなのかな？\n教えてシャーマン @ZUG2WANG_ 🍄\nhttps://t.co/DERe77aA2w https://t.co/N9hmM7pf6q",
           "created_at": "Wed Apr 22 07:51:30 +0000 2026",
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 13,
-          "retweet_count": 0,
-          "reply_count": 7,
+          "like_count": 26,
+          "retweet_count": 1,
+          "reply_count": 8,
           "url": "https://x.com/ShinjukuSokai/status/2046859425533874445",
           "media": [
             "https://pbs.twimg.com/media/HGfnxYNbQAAD5UV.jpg",
@@ -1343,9 +1413,9 @@
           "user_name": "滝沢ガレソ",
           "user_screen_name": "tkzwgrs",
           "user_icon": "https://pbs.twimg.com/profile_images/2007239789947277312/7V3LzQ0i_normal.png",
-          "like_count": 1030,
-          "retweet_count": 32,
-          "reply_count": 37,
+          "like_count": 6775,
+          "retweet_count": 191,
+          "reply_count": 142,
           "url": "https://x.com/tkzwgrs/status/2046858915259060570",
           "media": [
             "https://pbs.twimg.com/media/HGfnVXmaUAAmZA1.jpg",
@@ -1359,9 +1429,9 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 54,
-          "retweet_count": 6,
-          "reply_count": 10,
+          "like_count": 143,
+          "retweet_count": 13,
+          "reply_count": 16,
           "url": "https://x.com/ShinjukuSokai/status/2046856731083538584",
           "media": []
         },
@@ -1373,7 +1443,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 832,
+          "retweet_count": 1875,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046856601064382524",
           "media": []
@@ -1385,8 +1455,8 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 32,
-          "retweet_count": 0,
+          "like_count": 71,
+          "retweet_count": 1,
           "reply_count": 9,
           "url": "https://x.com/ShinjukuSokai/status/2046852549416976868",
           "media": [
@@ -1400,9 +1470,9 @@
           "user_name": "川尻こだま",
           "user_screen_name": "kakeakami",
           "user_icon": "https://pbs.twimg.com/profile_images/1611767298616078337/hTBvwBzs_normal.jpg",
-          "like_count": 3908,
-          "retweet_count": 602,
-          "reply_count": 33,
+          "like_count": 9237,
+          "retweet_count": 1266,
+          "reply_count": 52,
           "url": "https://x.com/kakeakami/status/2046852416717689201",
           "media": [
             "https://pbs.twimg.com/media/HGfhbFOacAA5WEj.jpg"
@@ -1416,7 +1486,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 3,
+          "retweet_count": 8,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046851192857460810",
           "media": []
@@ -1428,9 +1498,9 @@
           "user_name": "蔵竹子規",
           "user_screen_name": "krtksk",
           "user_icon": "https://pbs.twimg.com/profile_images/1944747566425415681/DFrV1A_w_normal.png",
-          "like_count": 144,
-          "retweet_count": 10,
-          "reply_count": 9,
+          "like_count": 562,
+          "retweet_count": 49,
+          "reply_count": 28,
           "url": "https://x.com/krtksk/status/2046850949000622163",
           "media": []
         },
@@ -1442,7 +1512,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 28,
+          "retweet_count": 37,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046850700861399252",
           "media": []
@@ -1454,9 +1524,9 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 177,
-          "retweet_count": 5,
-          "reply_count": 22,
+          "like_count": 231,
+          "retweet_count": 7,
+          "reply_count": 23,
           "url": "https://x.com/ShinjukuSokai/status/2046839436462510534",
           "media": [
             "https://pbs.twimg.com/media/HGfVnoZaAAAYJYd.jpg",
@@ -1470,8 +1540,8 @@
           "user_name": "ガレ速@みんなの体験談漫画",
           "user_screen_name": "garesoku",
           "user_icon": "https://pbs.twimg.com/profile_images/2039883400014925824/2KAXry-U_normal.jpg",
-          "like_count": 98,
-          "retweet_count": 12,
+          "like_count": 165,
+          "retweet_count": 16,
           "reply_count": 4,
           "url": "https://x.com/garesoku/status/2046839105028608388",
           "media": [
@@ -1486,7 +1556,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 348,
+          "retweet_count": 491,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046836777227575410",
           "media": []
@@ -1499,7 +1569,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 57,
+          "retweet_count": 70,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046836731333448159",
           "media": []
@@ -1511,7 +1581,7 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 9,
+          "like_count": 13,
           "retweet_count": 0,
           "reply_count": 3,
           "url": "https://x.com/hinabe_ch/status/2046836563980804180",
@@ -1525,7 +1595,7 @@
           "user_screen_name": "krtksk",
           "user_icon": "https://pbs.twimg.com/profile_images/1944747566425415681/DFrV1A_w_normal.png",
           "like_count": 0,
-          "retweet_count": 113,
+          "retweet_count": 142,
           "reply_count": 0,
           "url": "https://x.com/krtksk/status/2046836054469280025",
           "media": []
@@ -1538,7 +1608,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 187,
+          "retweet_count": 227,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046835425952891062",
           "media": []
@@ -1551,7 +1621,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 184,
+          "retweet_count": 219,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046835276761456646",
           "media": [
@@ -1565,8 +1635,8 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 22,
-          "retweet_count": 2,
+          "like_count": 29,
+          "retweet_count": 4,
           "reply_count": 2,
           "url": "https://x.com/hinabe_ch/status/2046834112363970884",
           "media": []
@@ -1579,7 +1649,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 317,
+          "retweet_count": 347,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046833917521719389",
           "media": []
@@ -1592,7 +1662,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 947,
+          "retweet_count": 1294,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046833771744555107",
           "media": [
@@ -1619,8 +1689,8 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 43,
-          "retweet_count": 11,
+          "like_count": 61,
+          "retweet_count": 14,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046831807338090971",
           "media": [
@@ -1634,7 +1704,7 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 70,
+          "like_count": 83,
           "retweet_count": 3,
           "reply_count": 11,
           "url": "https://x.com/ShinjukuSokai/status/2046831477229498863",
@@ -1649,8 +1719,8 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 67,
-          "retweet_count": 5,
+          "like_count": 75,
+          "retweet_count": 7,
           "reply_count": 1,
           "url": "https://x.com/hinabe_ch/status/2046831280118243553",
           "media": []
@@ -1662,9 +1732,9 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 39,
-          "retweet_count": 7,
-          "reply_count": 0,
+          "like_count": 66,
+          "retweet_count": 10,
+          "reply_count": 1,
           "url": "https://x.com/hinabe_ch/status/2046831133506343249",
           "media": []
         },
@@ -1675,7 +1745,7 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 24,
+          "like_count": 28,
           "retweet_count": 4,
           "reply_count": 1,
           "url": "https://x.com/hinabe_ch/status/2046830704043172273",
@@ -1688,7 +1758,7 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 25,
+          "like_count": 32,
           "retweet_count": 3,
           "reply_count": 1,
           "url": "https://x.com/hinabe_ch/status/2046830046019723681",
@@ -1701,7 +1771,7 @@
           "user_name": "蔵竹子規",
           "user_screen_name": "krtksk",
           "user_icon": "https://pbs.twimg.com/profile_images/1944747566425415681/DFrV1A_w_normal.png",
-          "like_count": 14,
+          "like_count": 18,
           "retweet_count": 0,
           "reply_count": 0,
           "url": "https://x.com/krtksk/status/2046829539406606422",
@@ -1714,9 +1784,9 @@
           "user_name": "滝沢ガレソ",
           "user_screen_name": "tkzwgrs",
           "user_icon": "https://pbs.twimg.com/profile_images/2007239789947277312/7V3LzQ0i_normal.png",
-          "like_count": 1981,
-          "retweet_count": 349,
-          "reply_count": 153,
+          "like_count": 2834,
+          "retweet_count": 454,
+          "reply_count": 193,
           "url": "https://x.com/tkzwgrs/status/2046828754648059983",
           "media": [
             "https://pbs.twimg.com/amplify_video_thumb/2046454790201511937/img/_9_7wti44A9pirkp.jpg"
@@ -1729,7 +1799,7 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 70,
+          "like_count": 77,
           "retweet_count": 3,
           "reply_count": 12,
           "url": "https://x.com/ShinjukuSokai/status/2046828342289297483",
@@ -1745,7 +1815,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 76,
+          "retweet_count": 80,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046825258397888758",
           "media": []
@@ -1758,7 +1828,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 129,
+          "retweet_count": 144,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046825211782386039",
           "media": []
@@ -1771,7 +1841,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 75,
+          "retweet_count": 79,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046825198671004093",
           "media": []
@@ -1784,7 +1854,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 67,
+          "retweet_count": 73,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046825154014298577",
           "media": []
@@ -1797,7 +1867,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 71,
+          "retweet_count": 78,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046825089069719794",
           "media": []
@@ -1810,7 +1880,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 98,
+          "retweet_count": 107,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046825071466160631",
           "media": []
@@ -1823,7 +1893,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 178,
+          "retweet_count": 192,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046825027279175803",
           "media": []
@@ -1836,7 +1906,7 @@
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
           "like_count": 0,
-          "retweet_count": 2,
+          "retweet_count": 3,
           "reply_count": 0,
           "url": "https://x.com/ShinjukuSokai/status/2046823955441602624",
           "media": []
@@ -1849,7 +1919,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 20,
+          "retweet_count": 24,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046823206800302315",
           "media": []
@@ -1862,7 +1932,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 60,
+          "retweet_count": 70,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046823071127105887",
           "media": [
@@ -1877,7 +1947,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 152,
+          "retweet_count": 164,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046822822924964078",
           "media": []
@@ -1890,7 +1960,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 419,
+          "retweet_count": 426,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046819445449101607",
           "media": [
@@ -1905,7 +1975,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 16,
+          "retweet_count": 17,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046819420153274396",
           "media": [
@@ -1920,7 +1990,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 5845,
+          "retweet_count": 5976,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046819404034478167",
           "media": [
@@ -1935,7 +2005,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 70,
+          "retweet_count": 82,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046819381599178905",
           "media": [
@@ -1949,7 +2019,7 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 188,
+          "like_count": 212,
           "retweet_count": 4,
           "reply_count": 36,
           "url": "https://x.com/ShinjukuSokai/status/2046817561850032509",
@@ -1962,8 +2032,8 @@
           "user_name": "川尻こだま",
           "user_screen_name": "kakeakami",
           "user_icon": "https://pbs.twimg.com/profile_images/1611767298616078337/hTBvwBzs_normal.jpg",
-          "like_count": 192,
-          "retweet_count": 17,
+          "like_count": 234,
+          "retweet_count": 19,
           "reply_count": 0,
           "url": "https://x.com/kakeakami/status/2046815316215542080",
           "media": []
@@ -1976,7 +2046,7 @@
           "user_screen_name": "kakeakami",
           "user_icon": "https://pbs.twimg.com/profile_images/1611767298616078337/hTBvwBzs_normal.jpg",
           "like_count": 0,
-          "retweet_count": 95,
+          "retweet_count": 136,
           "reply_count": 0,
           "url": "https://x.com/kakeakami/status/2046814706959339824",
           "media": []
@@ -1989,7 +2059,7 @@
           "user_screen_name": "kakeakami",
           "user_icon": "https://pbs.twimg.com/profile_images/1611767298616078337/hTBvwBzs_normal.jpg",
           "like_count": 0,
-          "retweet_count": 159,
+          "retweet_count": 221,
           "reply_count": 0,
           "url": "https://x.com/kakeakami/status/2046814687036318085",
           "media": []
@@ -2014,8 +2084,8 @@
           "user_name": "ラジオライフ編集部",
           "user_screen_name": "radiolife1980",
           "user_icon": "https://pbs.twimg.com/profile_images/2026290838733729792/XwPM2k91_normal.jpg",
-          "like_count": 5,
-          "retweet_count": 2,
+          "like_count": 8,
+          "retweet_count": 3,
           "reply_count": 0,
           "url": "https://x.com/radiolife1980/status/2046788595701420071",
           "media": [
@@ -2029,7 +2099,7 @@
           "user_name": "ガレ速@みんなの体験談漫画",
           "user_screen_name": "garesoku",
           "user_icon": "https://pbs.twimg.com/profile_images/2039883400014925824/2KAXry-U_normal.jpg",
-          "like_count": 165,
+          "like_count": 186,
           "retweet_count": 3,
           "reply_count": 4,
           "url": "https://x.com/garesoku/status/2046785814433026176",
@@ -2044,8 +2114,8 @@
           "user_name": "伊藤初美（ハツ）東京グルメサロン主宰",
           "user_screen_name": "hatsu823",
           "user_icon": "https://pbs.twimg.com/profile_images/1327614574472826881/erYPhz-P_normal.jpg",
-          "like_count": 95,
-          "retweet_count": 6,
+          "like_count": 108,
+          "retweet_count": 8,
           "reply_count": 0,
           "url": "https://x.com/hatsu823/status/2046745824814829801",
           "media": [
@@ -2059,9 +2129,9 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 3,
+          "like_count": 4,
           "retweet_count": 2,
-          "reply_count": 0,
+          "reply_count": 1,
           "url": "https://x.com/hinabe_ch/status/2046735073651859782",
           "media": [
             "https://pbs.twimg.com/media/HGd2s0lbQAA-yvL.jpg"
@@ -2100,7 +2170,7 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 25,
+          "like_count": 27,
           "retweet_count": 3,
           "reply_count": 1,
           "url": "https://x.com/hinabe_ch/status/2046732081074757874",
@@ -2113,8 +2183,8 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 230,
-          "retweet_count": 57,
+          "like_count": 267,
+          "retweet_count": 66,
           "reply_count": 1,
           "url": "https://x.com/hinabe_ch/status/2046731074622132680",
           "media": []
@@ -2127,7 +2197,7 @@
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
           "like_count": 0,
-          "retweet_count": 5,
+          "retweet_count": 6,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046729616992473101",
           "media": []
@@ -2182,7 +2252,7 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 56,
+          "like_count": 57,
           "retweet_count": 4,
           "reply_count": 0,
           "url": "https://x.com/hinabe_ch/status/2046720741945847849",
@@ -2195,7 +2265,7 @@
           "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
           "user_screen_name": "hinabe_ch",
           "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 28,
+          "like_count": 29,
           "retweet_count": 2,
           "reply_count": 1,
           "url": "https://x.com/hinabe_ch/status/2046715248871453175",
@@ -2209,7 +2279,7 @@
           "user_screen_name": "krtksk",
           "user_icon": "https://pbs.twimg.com/profile_images/1944747566425415681/DFrV1A_w_normal.png",
           "like_count": 0,
-          "retweet_count": 3697,
+          "retweet_count": 3710,
           "reply_count": 0,
           "url": "https://x.com/krtksk/status/2046713932681990630",
           "media": [
@@ -2277,8 +2347,8 @@
           "user_name": "ラジオライフ編集部",
           "user_screen_name": "radiolife1980",
           "user_icon": "https://pbs.twimg.com/profile_images/2026290838733729792/XwPM2k91_normal.jpg",
-          "like_count": 10,
-          "retweet_count": 2,
+          "like_count": 12,
+          "retweet_count": 3,
           "reply_count": 0,
           "url": "https://x.com/radiolife1980/status/2046698019199045936",
           "media": [
@@ -2305,8 +2375,8 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 99,
-          "retweet_count": 8,
+          "like_count": 101,
+          "retweet_count": 10,
           "reply_count": 3,
           "url": "https://x.com/ShinjukuSokai/status/2046678392138084389",
           "media": []
@@ -2318,9 +2388,9 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 109,
-          "retweet_count": 9,
-          "reply_count": 8,
+          "like_count": 117,
+          "retweet_count": 12,
+          "reply_count": 9,
           "url": "https://x.com/ShinjukuSokai/status/2046676074701132180",
           "media": []
         },
@@ -2331,9 +2401,9 @@
           "user_name": "川尻こだま",
           "user_screen_name": "kakeakami",
           "user_icon": "https://pbs.twimg.com/profile_images/1611767298616078337/hTBvwBzs_normal.jpg",
-          "like_count": 5909,
-          "retweet_count": 746,
-          "reply_count": 11,
+          "like_count": 6323,
+          "retweet_count": 800,
+          "reply_count": 12,
           "url": "https://x.com/kakeakami/status/2046670863513317666",
           "media": [
             "https://pbs.twimg.com/amplify_video_thumb/2046670764674551808/img/6Jj91PdBmlNsCcpK.jpg"
@@ -2346,7 +2416,7 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 179,
+          "like_count": 181,
           "retweet_count": 10,
           "reply_count": 11,
           "url": "https://x.com/ShinjukuSokai/status/2046657678836113657",
@@ -2361,7 +2431,7 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 234,
+          "like_count": 240,
           "retweet_count": 0,
           "reply_count": 8,
           "url": "https://x.com/ShinjukuSokai/status/2046655545420238912",
@@ -2385,21 +2455,6 @@
           "url": "https://x.com/hinabe_ch/status/2046651559652753518",
           "media": [
             "https://pbs.twimg.com/media/HGcqvxqaQAApf8e.jpg"
-          ]
-        },
-        {
-          "id": "2046647824272802015",
-          "text": "RT @ShinjukuSokai: バースデーだから派手にタワーやってあげるねって期待させておいて、それがONICHAタワーとみそきんアタッシュだった時のキャバ嬢の顔がこちら。 https://t.co/WFquhsm5cb",
-          "created_at": "Tue Apr 21 17:50:40 +0000 2026",
-          "user_name": "Z李 🇺🇦 NO WAR 🕊",
-          "user_screen_name": "ShinjukuSokai",
-          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 0,
-          "retweet_count": 736,
-          "reply_count": 0,
-          "url": "https://x.com/ShinjukuSokai/status/2046647824272802015",
-          "media": [
-            "https://pbs.twimg.com/amplify_video_thumb/2046582441008349184/img/yU8hBtX6L4H9Tgim.jpg"
           ]
         },
         {
@@ -2435,7 +2490,7 @@
           "user_name": "Z李 🇺🇦 NO WAR 🕊",
           "user_screen_name": "ShinjukuSokai",
           "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 194,
+          "like_count": 206,
           "retweet_count": 4,
           "reply_count": 8,
           "url": "https://x.com/ShinjukuSokai/status/2046634389845811500",
@@ -2455,60 +2510,6 @@
           "reply_count": 2,
           "url": "https://x.com/hinabe_ch/status/2046622018607706501",
           "media": []
-        },
-        {
-          "id": "2046618653265993877",
-          "text": "RT @hinabe_ch: @imodedareyami 西田亮介さんはまともなほうだと思うけど、\n\nここで門田隆将さんと比較してる時点で大変な侮辱ではあると感じる\n\n門田隆将さんなんて政治分野ではただの門外漢の馬鹿でしょ https://t.co/7n1UYrals0",
-          "created_at": "Tue Apr 21 15:54:45 +0000 2026",
-          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
-          "user_screen_name": "hinabe_ch",
-          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 0,
-          "retweet_count": 15,
-          "reply_count": 0,
-          "url": "https://x.com/hinabe_ch/status/2046618653265993877",
-          "media": [
-            "https://pbs.twimg.com/media/HGcMxBLbIAAL_7Z.jpg"
-          ]
-        },
-        {
-          "id": "2046617406056067257",
-          "text": "すごく優秀だけどアレオレ詐欺をやっている某編集者さんからなぜかブロックされていた\n\nワイは庇っている側だったのに… 返礼ブロックするンゴねぇ…",
-          "created_at": "Tue Apr 21 15:49:48 +0000 2026",
-          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
-          "user_screen_name": "hinabe_ch",
-          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 74,
-          "retweet_count": 5,
-          "reply_count": 1,
-          "url": "https://x.com/hinabe_ch/status/2046617406056067257",
-          "media": []
-        },
-        {
-          "id": "2046611558529446320",
-          "text": "残念だがONICHAタワーは失敗だな。\n初動のバズが過去のタワーの時と全然違う。\nいつもの初動は時速100万インプだった。\nもうリノさんもヒカキンさんもノーコールで。",
-          "created_at": "Tue Apr 21 15:26:34 +0000 2026",
-          "user_name": "Z李 🇺🇦 NO WAR 🕊",
-          "user_screen_name": "ShinjukuSokai",
-          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
-          "like_count": 827,
-          "retweet_count": 10,
-          "reply_count": 24,
-          "url": "https://x.com/ShinjukuSokai/status/2046611558529446320",
-          "media": []
-        },
-        {
-          "id": "2046607671907000670",
-          "text": "RT @CapcomPL: „Hugh! Podobno ponad MILION osób kupiło naszą grę! Czy to znaczy, że jesteśmy teraz sławni na Ziemi?”\n\n🎉 PRAGMATA sprzedała s…",
-          "created_at": "Tue Apr 21 15:11:07 +0000 2026",
-          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
-          "user_screen_name": "hinabe_ch",
-          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
-          "like_count": 0,
-          "retweet_count": 31,
-          "reply_count": 0,
-          "url": "https://x.com/hinabe_ch/status/2046607671907000670",
-          "media": []
         }
       ]
     },
@@ -2518,13 +2519,26 @@
       "icon": "📋",
       "tweets": [
         {
+          "id": "2046869087721324654",
+          "text": "募集よるからにした",
+          "created_at": "Wed Apr 22 08:29:54 +0000 2026",
+          "user_name": "あの",
+          "user_screen_name": "nyanmeronya",
+          "user_icon": "https://pbs.twimg.com/profile_images/2034827768651972608/eaeel194_normal.jpg",
+          "like_count": 23,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "url": "https://x.com/nyanmeronya/status/2046869087721324654",
+          "media": []
+        },
+        {
           "id": "2046838386888253768",
           "text": "色々あってやっと準備始めれるしスマホも触れる、連絡返せなくてごめんなさい",
           "created_at": "Wed Apr 22 06:27:54 +0000 2026",
           "user_name": "あの",
           "user_screen_name": "nyanmeronya",
           "user_icon": "https://pbs.twimg.com/profile_images/2034827768651972608/eaeel194_normal.jpg",
-          "like_count": 27,
+          "like_count": 32,
           "retweet_count": 0,
           "reply_count": 1,
           "url": "https://x.com/nyanmeronya/status/2046838386888253768",
@@ -2537,7 +2551,7 @@
           "user_name": "あの",
           "user_screen_name": "nyanmeronya",
           "user_icon": "https://pbs.twimg.com/profile_images/2034827768651972608/eaeel194_normal.jpg",
-          "like_count": 24,
+          "like_count": 27,
           "retweet_count": 1,
           "reply_count": 0,
           "url": "https://x.com/nyanmeronya/status/2046792151863042279",
@@ -2632,7 +2646,7 @@
           "user_name": "da",
           "user_screen_name": "da19917bndt",
           "user_icon": "https://pbs.twimg.com/profile_images/1559844902782914560/ULpyuo4s_normal.jpg",
-          "like_count": 2085,
+          "like_count": 2086,
           "retweet_count": 112,
           "reply_count": 39,
           "url": "https://x.com/da19917bndt/status/2046074238579478947",
@@ -2705,7 +2719,7 @@
           "user_name": "da",
           "user_screen_name": "da19917bndt",
           "user_icon": "https://pbs.twimg.com/profile_images/1559844902782914560/ULpyuo4s_normal.jpg",
-          "like_count": 53,
+          "like_count": 52,
           "retweet_count": 1,
           "reply_count": 1,
           "url": "https://x.com/da19917bndt/status/2045086037245145136",
@@ -2762,7 +2776,7 @@
           "user_name": "da",
           "user_screen_name": "da19917bndt",
           "user_icon": "https://pbs.twimg.com/profile_images/1559844902782914560/ULpyuo4s_normal.jpg",
-          "like_count": 35,
+          "like_count": 36,
           "retweet_count": 2,
           "reply_count": 0,
           "url": "https://x.com/da19917bndt/status/2044337356195717540",
@@ -2931,7 +2945,7 @@
           "user_name": "da",
           "user_screen_name": "da19917bndt",
           "user_icon": "https://pbs.twimg.com/profile_images/1559844902782914560/ULpyuo4s_normal.jpg",
-          "like_count": 114,
+          "like_count": 115,
           "retweet_count": 1,
           "reply_count": 2,
           "url": "https://x.com/da19917bndt/status/2042914113983254973",
@@ -3091,8 +3105,8 @@
           "user_name": "da",
           "user_screen_name": "da19917bndt",
           "user_icon": "https://pbs.twimg.com/profile_images/1559844902782914560/ULpyuo4s_normal.jpg",
-          "like_count": 2095,
-          "retweet_count": 86,
+          "like_count": 2094,
+          "retweet_count": 87,
           "reply_count": 15,
           "url": "https://x.com/da19917bndt/status/2041799950795931863",
           "media": [
@@ -3153,7 +3167,7 @@
           "user_name": "あの",
           "user_screen_name": "nyanmeronya",
           "user_icon": "https://pbs.twimg.com/profile_images/2034827768651972608/eaeel194_normal.jpg",
-          "like_count": 383,
+          "like_count": 385,
           "retweet_count": 4,
           "reply_count": 0,
           "url": "https://x.com/nyanmeronya/status/2041460797680074942",
@@ -3231,37 +3245,6 @@
           "media": [
             "https://pbs.twimg.com/media/HFRAslpakAAjWoG.jpg",
             "https://pbs.twimg.com/media/HFRAslqawAIsAZq.jpg"
-          ]
-        },
-        {
-          "id": "2041142605409579461",
-          "text": "RT @fracvermite1978: 今日の有益情報②\nこれってインスタブロックされてるの？垢消し？ https://t.co/1GU5gPVbd8",
-          "created_at": "Mon Apr 06 13:14:54 +0000 2026",
-          "user_name": "男の有益情報bot",
-          "user_screen_name": "bleu____Ciel",
-          "user_icon": "https://pbs.twimg.com/profile_images/1995491443390156800/1ojUvYB9_normal.jpg",
-          "like_count": 0,
-          "retweet_count": 117,
-          "reply_count": 0,
-          "url": "https://x.com/bleu____Ciel/status/2041142605409579461",
-          "media": [
-            "https://pbs.twimg.com/media/HFOXqswbUAAZR2k.jpg"
-          ]
-        },
-        {
-          "id": "2041093346962411970",
-          "text": "青春18きっぷで風俗街を巡る旅初日\n\n金津園（岐阜）\n\nソープが学生も通るこんな大通りにある街で驚いた🙀\n\n案内所が潰れてたりして、少し寂れた印象があったけど、まだ40店舗近くある大規模風俗街だなぁ https://t.co/2mRzkygDJq",
-          "created_at": "Mon Apr 06 09:59:10 +0000 2026",
-          "user_name": "da",
-          "user_screen_name": "da19917bndt",
-          "user_icon": "https://pbs.twimg.com/profile_images/1559844902782914560/ULpyuo4s_normal.jpg",
-          "like_count": 3184,
-          "retweet_count": 134,
-          "reply_count": 35,
-          "url": "https://x.com/da19917bndt/status/2041093346962411970",
-          "media": [
-            "https://pbs.twimg.com/media/HFNrkGTbsAAKI_J.jpg",
-            "https://pbs.twimg.com/media/HFNrkGUakAAFGPm.jpg"
           ]
         }
       ]
