@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-05-04T17:00:08.968093+00:00",
+  "updated_at": "2026-05-04T17:04:23.916788+00:00",
   "columns": [
     {
       "id": "list_181994093",
       "label": "節約",
       "icon": "📋",
       "tweets": [],
-      "error": "'urls'"
+      "error": "'pinned_tweet_ids_str'"
     },
     {
       "id": "list_1054516216868392960",
       "label": "要チェック",
       "icon": "📋",
       "tweets": [],
-      "error": "'urls'"
+      "error": "'pinned_tweet_ids_str'"
     },
     {
       "id": "list_1403694821550686209",
       "label": "確認",
       "icon": "📋",
       "tweets": [],
-      "error": "'urls'"
+      "error": "'pinned_tweet_ids_str'"
     }
   ]
 }
