@@ -30,15 +30,15 @@ jobs:
       - name: Install twikit
         run: pip install git+https://github.com/sakenuGOD/twikit.git@e9b5acf140492fb642b2e5322a9ad55ee10415bc
 
-      - name: Patch twikit for withheld_in_countries
+      - name: Patch twikit compatibility fixes
         run: |
           TWIKIT_DIR=$(python -c 'import twikit, os; print(os.path.dirname(twikit.__file__))')
           echo "Patching in $TWIKIT_DIR"
           sed -i "s/legacy\['withheld_in_countries'\]/legacy.get('withheld_in_countries', [])/g" "$TWIKIT_DIR/user.py"
           sed -i "s/legacy\['withheld_in_countries'\]/legacy.get('withheld_in_countries', [])/g" "$TWIKIT_DIR/guest/user.py"
+          sed -i "s/legacy\['entities'\]\['description'\]\['urls'\]/legacy['entities']['description'].get('urls', [])/g" "$TWIKIT_DIR/user.py"
           echo "Patched user.py:"
-          grep -n withheld_in_countries "$TWIKIT_DIR/user.py" || true
-          grep -n withheld_in_countries "$TWIKIT_DIR/guest/user.py" || true
+          grep -n "withheld_in_countries\|description_urls\|description.*urls" "$TWIKIT_DIR/user.py" || true
 
       - name: Fetch tweets
         env:
