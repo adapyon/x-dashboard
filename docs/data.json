@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-05-04T16:38:41.741039+00:00",
+  "updated_at": "2026-05-04T16:47:20.972122+00:00",
   "columns": [
     {
       "id": "list_181994093",
       "label": "節約",
       "icon": "📋",
       "tweets": [],
-      "error": "Couldn't get KEY_BYTE indices"
+      "error": "'urls'"
     },
     {
       "id": "list_1054516216868392960",
       "label": "要チェック",
       "icon": "📋",
       "tweets": [],
-      "error": "'ClientTransaction' object has no attribute 'key'"
+      "error": "'urls'"
     },
     {
       "id": "list_1403694821550686209",
       "label": "確認",
       "icon": "📋",
       "tweets": [],
-      "error": "'ClientTransaction' object has no attribute 'key'"
+      "error": "'urls'"
     }
   ]
 }
