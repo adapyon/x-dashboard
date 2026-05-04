@@ -1,7 +1,6 @@
 import asyncio
 import json
 import os
-import tempfile
 from datetime import datetime, timezone
 from twikit import Client
 
@@ -23,18 +22,6 @@ def parse_cookie_string(cookie_str):
             k, v = part.split("=", 1)
             cookies[k.strip()] = v.strip()
     return cookies
-
-def save_cookies_json(cookie_dict, path):
-    cookie_list = []
-    for name, value in cookie_dict.items():
-        cookie_list.append({
-            "name": name,
-            "value": value,
-            "domain": ".x.com",
-            "path": "/",
-        })
-    with open(path, "w") as f:
-        json.dump(cookie_list, f)
 
 def get_media_urls(tweet):
     media_urls = []
@@ -91,17 +78,8 @@ async def main():
 
     client = Client("ja")
     cookie_dict = parse_cookie_string(COOKIES_STR)
-
-    # cookies.jsonをtmpdirに保存してリポジトリに残さない
-    with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as tmp:
-        tmp_path = tmp.name
-        save_cookies_json(cookie_dict, tmp_path)
-
-    try:
-        client.load_cookies(tmp_path)
-        print("Cookies loaded.")
-    finally:
-        os.unlink(tmp_path)
+    client.set_cookies(cookie_dict)
+    print("Cookies loaded.")
 
     columns = []
     for lst in LIST_IDS:
