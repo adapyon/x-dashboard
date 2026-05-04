@@ -25,10 +25,10 @@ jobs:
         uses: actions/cache@v5
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-twikit-d60-v1
+          key: ${{ runner.os }}-pip-twikit-pr419-v1
 
       - name: Install twikit
-        run: pip install git+https://github.com/d60/twikit.git
+        run: pip install git+https://github.com/sakenuGOD/twikit.git@e9b5acf140492fb642b2e5322a9ad55ee10415bc
 
       - name: Patch twikit for withheld_in_countries
         run: |
