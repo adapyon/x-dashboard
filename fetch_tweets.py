@@ -1,6 +1,7 @@
 import asyncio
 import json
 import os
+import traceback
 from datetime import datetime, timezone
 from twikit import Client
 
@@ -98,6 +99,7 @@ async def main():
             print("ok " + list_label + ": " + str(len(dicts)))
         except Exception as e:
             print("err " + list_label + ": " + str(e))
+            traceback.print_exc()
             columns.append({
                 "id": "list_" + list_id,
                 "label": list_label,
