@@ -34,11 +34,21 @@ jobs:
         run: |
           TWIKIT_DIR=$(python -c 'import twikit, os; print(os.path.dirname(twikit.__file__))')
           echo "Patching in $TWIKIT_DIR"
-          sed -i "s/legacy\['withheld_in_countries'\]/legacy.get('withheld_in_countries', [])/g" "$TWIKIT_DIR/user.py"
-          sed -i "s/legacy\['withheld_in_countries'\]/legacy.get('withheld_in_countries', [])/g" "$TWIKIT_DIR/guest/user.py"
-          sed -i "s/legacy\['entities'\]\['description'\]\['urls'\]/legacy['entities']['description'].get('urls', [])/g" "$TWIKIT_DIR/user.py"
-          echo "Patched user.py:"
-          grep -n "withheld_in_countries\|description_urls\|description.*urls" "$TWIKIT_DIR/user.py" || true
+          for FILE in "$TWIKIT_DIR/user.py" "$TWIKIT_DIR/guest/user.py"; do
+            [ -f "$FILE" ] || continue
+            sed -i "s/legacy\['withheld_in_countries'\]/legacy.get('withheld_in_countries', [])/g" "$FILE"
+            sed -i "s/legacy\['entities'\]\['description'\]\['urls'\]/legacy['entities']['description'].get('urls', [])/g" "$FILE"
+            sed -i "s/legacy\['pinned_tweet_ids_str'\]/legacy.get('pinned_tweet_ids_str', [])/g" "$FILE"
+            sed -i "s/legacy\['possibly_sensitive'\]/legacy.get('possibly_sensitive', False)/g" "$FILE"
+            sed -i "s/legacy\['can_dm'\]/legacy.get('can_dm', False)/g" "$FILE"
+            sed -i "s/legacy\['can_media_tag'\]/legacy.get('can_media_tag', False)/g" "$FILE"
+            sed -i "s/legacy\['want_retweets'\]/legacy.get('want_retweets', False)/g" "$FILE"
+            sed -i "s/legacy\['has_custom_timelines'\]/legacy.get('has_custom_timelines', False)/g" "$FILE"
+            sed -i "s/legacy\['fast_followers_count'\]/legacy.get('fast_followers_count', 0)/g" "$FILE"
+            sed -i "s/legacy\['is_translator'\]/legacy.get('is_translator', False)/g" "$FILE"
+            sed -i "s/legacy\['translator_type'\]/legacy.get('translator_type', 'none')/g" "$FILE"
+            echo "Patched $FILE"
+          done
 
       - name: Fetch tweets
         env:
