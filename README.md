@@ -36,7 +36,9 @@ GitHub Actions が 15 分ごとにツイートを取得し、GitHub Pages で表
 
 1. Chrome で `https://x.com` を開き、ログイン済みであることを確認する
 2. ツールバーの **X Cookie Exporter** アイコンをクリック
-3. `auth_token` / `ct0` など必要な Cookie が ✓ で表示されていることを確認する
+3. ステータスが `✅ 必須Cookie取得OK` と表示されていることを確認する
+   - `auth_token` / `ct0`（必須）が `✓` になっていれば OK
+   - `twid` / `lang` などの任意 Cookie は `- name = (なし)` でも問題なし
 4. **「クリップボードへコピー」** ボタンを押す
 5. ポップアップが閉じたら Cookie 文字列がクリップボードに入っている
 
@@ -86,129 +88,32 @@ UTC = JST − 9 時間
 
 ## Chrome 拡張機能のセットアップ
 
-初回のみ実施します。
+初回のみ実施します。拡張ファイルはこのリポジトリの `chrome-extension/` フォルダに含まれています。
 
-1. 以下の3ファイルを同じフォルダ（例: `x-cookie-export/`）に作成する
+### インストール手順
 
-**manifest.json**
-
-```json
-{
-  "manifest_version": 3,
-  "name": "X Cookie Exporter",
-  "version": "1.0",
-  "permissions": ["cookies", "clipboardWrite"],
-  "host_permissions": ["*://*.x.com/*"],
-  "action": {
-    "default_popup": "popup.html"
-  }
-}
-```
-
-**popup.html**
-
-```html
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<style>
-  body { font-family: monospace; padding: 16px; width: 480px; background: #0d0f14; color: #e8ecf4; }
-  h2 { font-size: 14px; margin-bottom: 12px; color: #4f8ef7; }
-  #status { font-size: 12px; color: #8890a8; margin-bottom: 8px; }
-  #preview { background: #1c2030; border: 1px solid #252a3a; border-radius: 6px;
-             padding: 10px; font-size: 11px; word-break: break-all;
-             color: #555e7a; margin-bottom: 12px; min-height: 40px; }
-  .found { color: #4caf88; }
-  .missing { color: #f06292; }
-  button { background: #4f8ef7; color: #fff; border: none; padding: 8px 16px;
-           border-radius: 6px; cursor: pointer; font-size: 13px; width: 100%; }
-  button:hover { background: #7c5af7; }
-  button:disabled { background: #252a3a; color: #555e7a; cursor: default; }
-  #log { font-size: 10px; color: #555e7a; margin-top: 10px; }
-</style>
-</head>
-<body>
-<h2>X Cookie Exporter</h2>
-<div id="status">読み込み中...</div>
-<div id="preview">--</div>
-<button id="copy-btn" disabled>クリップボードへコピー</button>
-<div id="log"></div>
-<script src="popup.js"></script>
-</body>
-</html>
-```
-
-**popup.js**
-
-```javascript
-const NEEDED = ["auth_token", "ct0", "twid", "lang", "guest_id", "kdt"];
-
-let cookieString = "";
-
-function mask(value) {
-  if (!value || value.length < 6) return "***";
-  return value.slice(0, 3) + "..." + value.slice(-3);
-}
-
-async function loadCookies() {
-  const statusEl = document.getElementById("status");
-  const previewEl = document.getElementById("preview");
-  const copyBtn = document.getElementById("copy-btn");
-  const logEl = document.getElementById("log");
-
-  try {
-    const all = await chrome.cookies.getAll({ domain: "x.com" });
-    const map = {};
-    for (const c of all) map[c.name] = c.value;
-
-    const found = [], missing = [], parts = [], previewLines = [];
-
-    for (const name of NEEDED) {
-      if (map[name]) {
-        found.push(name);
-        parts.push(`${name}=${map[name]}`);
-        previewLines.push(`<span class="found">✓ ${name}</span> = ${mask(map[name])}`);
-      } else {
-        missing.push(name);
-        previewLines.push(`<span class="missing">✗ ${name}</span> = (なし)`);
-      }
-    }
-
-    cookieString = parts.join("; ");
-    previewEl.innerHTML = previewLines.join("<br>");
-
-    if (found.length === 0) {
-      statusEl.textContent = "❌ x.com にログインしていないか、Cookie が見つかりません";
-      return;
-    }
-
-    statusEl.textContent =
-      `取得: ${found.length}件  未取得: ${missing.length}件  ` +
-      `(値は伏字表示。コピー後は GitHub Secrets へ貼り付け)`;
-
-    copyBtn.disabled = false;
-    logEl.textContent = "※ Cookie の値はこのログには記録されません";
-  } catch (err) {
-    statusEl.textContent = "エラー: " + err.message;
-  }
-}
-
-document.getElementById("copy-btn").addEventListener("click", async () => {
-  if (!cookieString) return;
-  await navigator.clipboard.writeText(cookieString);
-  const btn = document.getElementById("copy-btn");
-  btn.textContent = "✓ コピー完了";
-  btn.disabled = true;
-  setTimeout(() => window.close(), 1200);
-});
-
-loadCookies();
-```
-
+1. このリポジトリをクローンまたは ZIP でダウンロードする
 2. Chrome で `chrome://extensions` を開く
 3. 右上の **デベロッパー モード** をオンにする
-4. **「パッケージ化されていない拡張機能を読み込む」** をクリックし、作成したフォルダを選択する
+4. **「パッケージ化されていない拡張機能を読み込む」** をクリックし、`chrome-extension/` フォルダを選択する
+5. ツールバーに **X Cookie Exporter** が表示されれば完了
+
+### 更新時（拡張ファイルを変更した場合）
+
+1. `git pull` でリポジトリを最新にする
+2. `chrome://extensions` を開く
+3. **X Cookie Exporter** の 🔄 アイコンをクリックして再読み込みする
+
+### 拡張の仕様（v1.1）
+
+| 項目 | 内容 |
+|---|---|
+| 対象ドメイン | x.com / twitter.com |
+| 必須 Cookie | `auth_token`, `ct0`（これが揃わないとコピー不可） |
+| 任意 Cookie | `twid`, `lang`, `guest_id`, `kdt` |
+| ステータス表示 | `✅ 必須Cookie取得OK` / `⚠ 必須Cookie不足` / `❌ 未ログイン` |
+| データ保存 | なし（ポップアップを閉じるとメモリから消える） |
+| 外部送信 | なし |
 
 ---
 
