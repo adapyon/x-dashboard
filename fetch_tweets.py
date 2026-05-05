@@ -31,6 +31,25 @@ def load_existing_output():
         return {}
 
 
+def get_previous_column(previous_output, list_id):
+    target_id = "list_" + list_id
+    for col in previous_output.get("columns", []):
+        if col.get("id") == target_id:
+            return col
+    return None
+
+
+def normalize_error_message(error):
+    raw = str(error).strip() or error.__class__.__name__
+    if raw in {"'code'", '"code"'}:
+        return "Xの応答形式が変わったか、取得先リストで一時的な取得エラーが発生しました"
+    if "Unauthorized" in raw or "401" in raw:
+        return "認証エラーです。X_COOKIES の期限切れまたは権限不足の可能性があります"
+    if "rate limit" in raw.lower() or "429" in raw:
+        return "取得回数の上限に達した可能性があります"
+    return raw
+
+
 def write_output(*, columns=None, updated_at=None, error=None, partial_error=False):
     os.makedirs("docs", exist_ok=True)
     previous = load_existing_output()
@@ -117,6 +136,7 @@ def tweet_to_dict(tweet):
 
 async def main():
     print("fetch start")
+    previous = load_existing_output()
 
     if not COOKIES_STR:
         msg = "X_COOKIES not set"
@@ -138,7 +158,7 @@ async def main():
         client.set_cookies(cookie_dict)
         print("Cookies loaded.")
     except Exception as e:
-        msg = "set_cookies failed: " + str(e)
+        msg = "set_cookies failed: " + normalize_error_message(e)
         print(msg)
         print(traceback.format_exc())
         write_output(error=msg)
@@ -166,16 +186,22 @@ async def main():
             print("ok " + list_label + ": " + str(len(dicts)))
         except Exception as e:
             partial_error = True
-            err_msg = str(e)
-            print("err " + list_label + ": " + err_msg)
+            raw_err_msg = str(e)
+            err_msg = normalize_error_message(e)
+            print("err " + list_label + ": " + raw_err_msg)
             print(traceback.format_exc())
+
+            previous_col = get_previous_column(previous, list_id)
+            fallback_tweets = previous_col.get("tweets", []) if previous_col else []
             columns.append(
                 {
                     "id": "list_" + list_id,
                     "label": list_label,
                     "icon": "📋",
-                    "tweets": [],
+                    "tweets": fallback_tweets,
                     "error": err_msg,
+                    "raw_error": raw_err_msg,
+                    "stale": True,
                 }
             )
 
@@ -196,7 +222,7 @@ if __name__ == "__main__":
         try:
             existing = load_existing_output()
             if not existing.get("error"):
-                write_output(error="fatal: " + str(e))
+                write_output(error="fatal: " + normalize_error_message(e))
         except Exception as write_err:
             print("failed to write error output: " + str(write_err))
             print(traceback.format_exc())
