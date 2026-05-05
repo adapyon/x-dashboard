@@ -14,6 +14,7 @@
     --accent:#4f8ef7; --accent2:#7c5af7;
     --text:#e8ecf4; --text2:#8890a8; --text3:#555e7a;
     --like:#f06292; --rt:#4caf88; --header-h:52px;
+    --overlay:rgba(8,10,15,0.72);
   }
   * { box-sizing:border-box; margin:0; padding:0; }
   html, body {
@@ -22,6 +23,7 @@
     font-family:'Noto Sans JP',sans-serif;
     display:flex; flex-direction:column;
   }
+  body.modal-open { overflow:hidden; }
   #header {
     height:var(--header-h); background:var(--bg2);
     border-bottom:1px solid var(--border);
@@ -45,6 +47,7 @@
   .refresh-icon { display:inline-block; font-style:normal; line-height:1; }
   @keyframes spin { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
   #refresh-btn.loading .refresh-icon { animation:spin 0.7s linear infinite; display:inline-block; }
+
   #columns {
     flex:1; display:grid; grid-template-columns:1fr 1fr 1fr;
     gap:1px; background:var(--border); overflow:hidden;
@@ -79,11 +82,17 @@
   }
   .col-header:hover .mark-read-btn { opacity:1; }
   .mark-read-btn:hover { background:var(--bg3); border-color:var(--border2); color:var(--text2); }
+
   .col-body { flex:1; overflow-y:auto; overflow-x:hidden; }
-  .col-body::-webkit-scrollbar { width:5px; }
-  .col-body::-webkit-scrollbar-track { background:var(--bg); }
-  .col-body::-webkit-scrollbar-thumb { background:var(--border2); border-radius:3px; }
-  .col-body::-webkit-scrollbar-thumb:hover { background:var(--text3); }
+  .col-body::-webkit-scrollbar,
+  .preview-body::-webkit-scrollbar { width:5px; }
+  .col-body::-webkit-scrollbar-track,
+  .preview-body::-webkit-scrollbar-track { background:var(--bg); }
+  .col-body::-webkit-scrollbar-thumb,
+  .preview-body::-webkit-scrollbar-thumb { background:var(--border2); border-radius:3px; }
+  .col-body::-webkit-scrollbar-thumb:hover,
+  .preview-body::-webkit-scrollbar-thumb:hover { background:var(--text3); }
+
   .tweet {
     padding:11px 14px 11px 12px; border-bottom:1px solid var(--border);
     border-left:2px solid transparent;
@@ -94,6 +103,7 @@
   .tweet:not(.read) { border-left-color:var(--accent); }
   .tweet:hover { background:var(--bg2); border-left-color:var(--accent2) !important; }
   .tweet.read { opacity:0.55; filter:grayscale(20%); border-left-color:transparent; }
+  .tweet.active { background:rgba(79,142,247,0.1); border-left-color:var(--accent2) !important; opacity:1; filter:none; }
   .tweet:last-child { border-bottom:none; }
   .tweet-user { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
   .avatar {
@@ -106,8 +116,8 @@
   .screen-name { font-size:10px; color:var(--text3); font-family:'JetBrains Mono',monospace; }
   .tweet-time { margin-left:auto; font-size:10px; color:var(--text3); font-family:'JetBrains Mono',monospace; flex-shrink:0; }
   .tweet-text { font-size:12px; line-height:1.6; color:var(--text); word-break:break-word; margin-bottom:8px; }
-  .tweet-text a { color:var(--accent); text-decoration:none; }
-  .tweet-text a:hover { text-decoration:underline; }
+  .tweet-text a, .preview-text a { color:var(--accent); text-decoration:none; }
+  .tweet-text a:hover, .preview-text a:hover { text-decoration:underline; }
   .tweet-media { margin-bottom:8px; }
   .tweet-media img { width:100%; max-height:220px; object-fit:cover; border-radius:6px; border:1px solid var(--border); display:block; }
   .tweet-media.multi { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
@@ -121,6 +131,62 @@
   .skeleton { padding:11px 14px; border-bottom:1px solid var(--border); }
   .skel-line { height:9px; background:var(--bg3); border-radius:4px; margin-bottom:5px; animation:pulse 1.4s ease-in-out infinite; }
   @keyframes pulse { 0%,100%{opacity:0.4;} 50%{opacity:0.8;} }
+
+  .preview-overlay {
+    position:fixed; inset:0; background:var(--overlay); display:none;
+    align-items:center; justify-content:center; padding:36px; z-index:30;
+    backdrop-filter:blur(6px);
+  }
+  .preview-overlay.open { display:flex; }
+  .preview-panel {
+    width:min(920px,100%); max-height:100%; display:flex; flex-direction:column;
+    background:linear-gradient(180deg, rgba(21,24,32,0.98), rgba(13,15,20,0.98));
+    border:1px solid var(--border2); border-radius:18px; overflow:hidden;
+    box-shadow:0 28px 80px rgba(0,0,0,0.45);
+  }
+  .preview-header {
+    display:flex; align-items:center; gap:10px; padding:16px 18px;
+    border-bottom:1px solid var(--border); background:rgba(28,32,48,0.85);
+  }
+  .preview-title-wrap { min-width:0; flex:1; }
+  .preview-title { font-size:15px; font-weight:700; color:var(--text); }
+  .preview-subtitle { margin-top:2px; font-size:11px; color:var(--text3); font-family:'JetBrains Mono',monospace; }
+  .preview-actions { display:flex; gap:8px; }
+  .preview-btn {
+    background:var(--bg3); border:1px solid var(--border2); color:var(--text2);
+    font-size:12px; padding:7px 11px; border-radius:8px; cursor:pointer;
+    font-family:'Noto Sans JP',sans-serif; text-decoration:none; display:inline-flex; align-items:center; justify-content:center;
+  }
+  .preview-btn:hover { background:var(--border2); color:var(--text); }
+  .preview-close { min-width:40px; }
+  .preview-body { overflow:auto; padding:20px 22px 22px; }
+  .preview-card {
+    background:rgba(12,15,22,0.8); border:1px solid var(--border); border-radius:16px;
+    padding:20px;
+  }
+  .preview-user { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+  .preview-avatar { width:44px; height:44px; border-radius:50%; object-fit:cover; background:var(--bg3); }
+  .preview-name { font-size:17px; font-weight:700; color:var(--text); }
+  .preview-handle { font-size:12px; color:var(--text3); font-family:'JetBrains Mono',monospace; margin-top:2px; }
+  .preview-created { margin-left:auto; font-size:11px; color:var(--text3); font-family:'JetBrains Mono',monospace; }
+  .preview-text { font-size:18px; line-height:1.8; color:var(--text); word-break:break-word; margin-bottom:18px; }
+  .preview-media { margin-bottom:18px; display:grid; gap:8px; }
+  .preview-media.two-col { grid-template-columns:1fr 1fr; }
+  .preview-media img {
+    width:100%; max-height:540px; object-fit:cover; border-radius:12px; border:1px solid var(--border);
+    display:block; background:var(--bg3);
+  }
+  .preview-meta { display:flex; flex-wrap:wrap; gap:10px; padding-top:14px; border-top:1px solid var(--border); }
+  .preview-stat {
+    display:flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px;
+    background:var(--bg3); color:var(--text2); font-size:12px; font-family:'JetBrains Mono',monospace;
+  }
+  .preview-empty { color:var(--text3); font-size:14px; padding:20px; text-align:center; }
+
+  @media (max-height: 1000px) {
+    .preview-media img { max-height:360px; }
+    .preview-text { font-size:16px; }
+  }
 </style>
 </head>
 <body>
@@ -130,29 +196,59 @@
   <button id="refresh-btn" onclick="loadData()"><span class="refresh-icon">&#x21BB;</span> 更新</button>
 </div>
 <div id="columns"></div>
+
+<div id="preview-overlay" class="preview-overlay" aria-hidden="true">
+  <div class="preview-panel" role="dialog" aria-modal="true" aria-labelledby="preview-title" onclick="event.stopPropagation()">
+    <div class="preview-header">
+      <div class="preview-title-wrap">
+        <div id="preview-title" class="preview-title">ポストプレビュー</div>
+        <div id="preview-subtitle" class="preview-subtitle">クリックしたポストをここで確認できます</div>
+      </div>
+      <div class="preview-actions">
+        <a id="preview-open-link" class="preview-btn" href="#" target="_blank" rel="noopener noreferrer">Xで開く</a>
+        <button class="preview-btn preview-close" type="button" onclick="closePreview()">✕</button>
+      </div>
+    </div>
+    <div id="preview-body" class="preview-body">
+      <div class="preview-empty">ポストを選ぶとここに詳細が表示されます。</div>
+    </div>
+  </div>
+</div>
+
 <script>
 const DATA_URL = 'data.json';
 const ORDER_KEY = 'xdash_col_order';
 const READ_KEY = 'xdash_read';
 
+let sortable = null;
+let activeTweetEl = null;
+
 function getReadSet() {
   try { return new Set(JSON.parse(localStorage.getItem(READ_KEY) || '[]')); } catch(e) { return new Set(); }
 }
 function markRead(id) {
-  const s = getReadSet(); s.add(id);
+  const s = getReadSet();
+  s.add(id);
   const arr = [...s].slice(-1000);
   try { localStorage.setItem(READ_KEY, JSON.stringify(arr)); } catch(e) {}
 }
 
 function timeAgo(s) {
   if (!s) return '';
-  const d = new Date(s); if (isNaN(d)) return s;
-  const n = Math.floor((Date.now()-d)/1000);
-  return n<60?n+'\u79d2\u524d':n<3600?Math.floor(n/60)+'\u5206\u524d':n<86400?Math.floor(n/3600)+'\u6642\u9593\u524d':Math.floor(n/86400)+'\u65e5\u524d';
+  const d = new Date(s);
+  if (isNaN(d)) return s;
+  const n = Math.floor((Date.now() - d) / 1000);
+  return n < 60 ? n + '秒前' : n < 3600 ? Math.floor(n / 60) + '分前' : n < 86400 ? Math.floor(n / 3600) + '時間前' : Math.floor(n / 86400) + '日前';
+}
+function formatDateTime(s) {
+  if (!s) return '';
+  const d = new Date(s);
+  if (isNaN(d)) return s;
+  return d.toLocaleString('ja-JP', { timeZone:'Asia/Tokyo', hour12:false });
 }
 
 function escapeHtml(s) {
-  return String(s)
+  return String(s == null ? '' : s)
     .replace(/&/g,'&amp;')
     .replace(/</g,'&lt;')
     .replace(/>/g,'&gt;')
@@ -163,51 +259,63 @@ function escapeHtml(s) {
 function linkify(t) {
   const escaped = escapeHtml(t);
   return escaped
-    .replace(/https?:\/\/[^\s&]+/g, function(u) { return '<a href="'+u+'" target="_blank" rel="noopener noreferrer">'+u+'</a>'; })
+    .replace(/https?:\/\/[^\s&]+/g, function(u) { return '<a href="' + u + '" target="_blank" rel="noopener noreferrer">' + u + '</a>'; })
     .replace(/@(\w+)/g,'<span style="color:var(--accent)">@$1</span>')
     .replace(/#([\w\u3040-\u9fff]+)/g,'<span style="color:var(--accent2)">#$1</span>');
 }
 
+function serializeTweet(t) {
+  return escapeHtml(JSON.stringify(t));
+}
+function parseTweetFromElement(el) {
+  try { return JSON.parse(el.dataset.tweet || '{}'); } catch(e) { return {}; }
+}
+
 function renderMedia(media) {
-  if (!media||!media.length) return '';
-  var imgs = media.filter(function(u){return u&&u.includes('pbs.twimg.com');}).map(function(u){return '<img src="'+escapeHtml(u)+'" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display=\'none\'">';});
+  if (!media || !media.length) return '';
+  var imgs = media
+    .filter(function(u) { return u && u.includes('pbs.twimg.com'); })
+    .map(function(u) {
+      return '<img src="' + escapeHtml(u) + '" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display=\'none\'">';
+    });
   if (!imgs.length) return '';
-  return '<div class="'+(imgs.length>=2?'tweet-media multi':'tweet-media')+'">'+imgs.join('')+'</div>';
+  return '<div class="' + (imgs.length >= 2 ? 'tweet-media multi' : 'tweet-media') + '">' + imgs.join('') + '</div>';
+}
+
+function renderPreviewMedia(media) {
+  if (!media || !media.length) return '';
+  var imgs = media
+    .filter(function(u) { return u && u.includes('pbs.twimg.com'); })
+    .map(function(u) {
+      return '<img src="' + escapeHtml(u) + '" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display=\'none\'">';
+    });
+  if (!imgs.length) return '';
+  return '<div class="preview-media' + (imgs.length >= 2 ? ' two-col' : '') + '">' + imgs.join('') + '</div>';
 }
 
 function skeleton() {
-  return Array.from({length:5}).map(function(){return '<div class="skeleton"><div class="skel-line" style="width:55%;margin-bottom:9px"></div><div class="skel-line" style="width:90%"></div><div class="skel-line" style="width:72%"></div><div class="skel-line" style="width:35%;margin-top:9px"></div></div>';}).join('');
+  return Array.from({length:5}).map(function() {
+    return '<div class="skeleton"><div class="skel-line" style="width:55%;margin-bottom:9px"></div><div class="skel-line" style="width:90%"></div><div class="skel-line" style="width:72%"></div><div class="skel-line" style="width:35%;margin-top:9px"></div></div>';
+  }).join('');
 }
 
 function renderTweet(t) {
   var readSet = getReadSet();
   var isRead = readSet.has(t.id);
-  var safeUrl = escapeHtml(t.url || '');
   var cls = isRead ? 'tweet read' : 'tweet';
-  return '<div class="'+cls+'" data-id="'+escapeHtml(t.id)+'" data-url="'+safeUrl+'" onclick="openTweet(this)">'
-    +'<div class="tweet-user">'
-    +'<img class="avatar" src="'+escapeHtml(t.user_icon||'')+'" alt="" referrerpolicy="no-referrer" onerror="this.src=\'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 fill=%22%23252a3a%22/></svg>\'">'
-    +'<div class="user-info"><div class="display-name">'+escapeHtml(t.user_name||'')+'</div><div class="screen-name">@'+escapeHtml(t.user_screen_name||'')+'</div></div>'
-    +'<div class="tweet-time">'+timeAgo(t.created_at)+'</div>'
-    +'</div>'
-    +'<div class="tweet-text">'+linkify(t.text||'')+'</div>'
-    +renderMedia(t.media)
-    +'<div class="tweet-stats">'
-    +'<span class="stat stat-like">&#x2665; '+(t.like_count||0).toLocaleString()+'</span>'
-    +'<span class="stat stat-rt">&#x21BA; '+(t.retweet_count||0).toLocaleString()+'</span>'
-    +'<span class="stat">&#x1F4AC; '+(t.reply_count||0).toLocaleString()+'</span>'
-    +'</div></div>';
-}
-
-function openTweet(el) {
-  var url = el.dataset.url;
-  var id = el.dataset.id;
-  if (url) window.open(url, '_blank', 'noopener,noreferrer');
-  if (id && !el.classList.contains('read')) {
-    markRead(id);
-    el.classList.add('read');
-    updateUnreadBadge(el.closest('.column'));
-  }
+  return '<div class="' + cls + '" data-id="' + escapeHtml(t.id || '') + '" data-url="' + escapeHtml(t.url || '') + '" data-tweet=\'' + serializeTweet(t) + '\' onclick="openTweet(this)">'
+    + '<div class="tweet-user">'
+    + '<img class="avatar" src="' + escapeHtml(t.user_icon || '') + '" alt="" referrerpolicy="no-referrer" onerror="this.src=\'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 fill=%22%23252a3a%22/></svg>\'">'
+    + '<div class="user-info"><div class="display-name">' + escapeHtml(t.user_name || '') + '</div><div class="screen-name">@' + escapeHtml(t.user_screen_name || '') + '</div></div>'
+    + '<div class="tweet-time">' + timeAgo(t.created_at) + '</div>'
+    + '</div>'
+    + '<div class="tweet-text">' + linkify(t.text || '') + '</div>'
+    + renderMedia(t.media)
+    + '<div class="tweet-stats">'
+    + '<span class="stat stat-like">&#x2665; ' + (t.like_count || 0).toLocaleString() + '</span>'
+    + '<span class="stat stat-rt">&#x21BA; ' + (t.retweet_count || 0).toLocaleString() + '</span>'
+    + '<span class="stat">&#x1F4AC; ' + (t.reply_count || 0).toLocaleString() + '</span>'
+    + '</div></div>';
 }
 
 function updateUnreadBadge(colEl) {
@@ -227,9 +335,76 @@ function updateUnreadBadge(colEl) {
   }
 }
 
+function markTweetRead(el) {
+  var id = el.dataset.id;
+  if (id && !el.classList.contains('read')) {
+    markRead(id);
+    el.classList.add('read');
+    updateUnreadBadge(el.closest('.column'));
+  }
+}
+
+function setActiveTweet(el) {
+  if (activeTweetEl && activeTweetEl !== el) activeTweetEl.classList.remove('active');
+  activeTweetEl = el;
+  if (activeTweetEl) activeTweetEl.classList.add('active');
+}
+
+function renderPreview(tweet) {
+  return '<div class="preview-card">'
+    + '<div class="preview-user">'
+    + '<img class="preview-avatar" src="' + escapeHtml(tweet.user_icon || '') + '" alt="" referrerpolicy="no-referrer" onerror="this.style.display=\'none\'">'
+    + '<div><div class="preview-name">' + escapeHtml(tweet.user_name || '') + '</div><div class="preview-handle">@' + escapeHtml(tweet.user_screen_name || '') + '</div></div>'
+    + '<div class="preview-created">' + escapeHtml(formatDateTime(tweet.created_at)) + '</div>'
+    + '</div>'
+    + '<div class="preview-text">' + linkify(tweet.text || '') + '</div>'
+    + renderPreviewMedia(tweet.media)
+    + '<div class="preview-meta">'
+    + '<div class="preview-stat">&#x2665; ' + (tweet.like_count || 0).toLocaleString() + '</div>'
+    + '<div class="preview-stat">&#x21BA; ' + (tweet.retweet_count || 0).toLocaleString() + '</div>'
+    + '<div class="preview-stat">&#x1F4AC; ' + (tweet.reply_count || 0).toLocaleString() + '</div>'
+    + (tweet.url ? '<div class="preview-stat">link</div>' : '')
+    + '</div>'
+    + '</div>';
+}
+
+function openTweet(el) {
+  var tweet = parseTweetFromElement(el);
+  var overlay = document.getElementById('preview-overlay');
+  var body = document.getElementById('preview-body');
+  var subtitle = document.getElementById('preview-subtitle');
+  var link = document.getElementById('preview-open-link');
+
+  setActiveTweet(el);
+  markTweetRead(el);
+
+  body.innerHTML = renderPreview(tweet);
+  subtitle.textContent = formatDateTime(tweet.created_at) || 'ポスト詳細';
+  if (tweet.url) {
+    link.href = tweet.url;
+    link.style.display = 'inline-flex';
+  } else {
+    link.removeAttribute('href');
+    link.style.display = 'none';
+  }
+
+  overlay.classList.add('open');
+  overlay.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+function closePreview() {
+  var overlay = document.getElementById('preview-overlay');
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  if (activeTweetEl) activeTweetEl.classList.remove('active');
+  activeTweetEl = null;
+}
+
 function markAllRead(colId, event) {
   event.stopPropagation();
-  var col = document.getElementById('col-'+colId);
+  var col = document.getElementById('col-' + colId);
   if (!col) return;
   var readSet = getReadSet();
   col.querySelectorAll('.tweet:not(.read)').forEach(function(el) {
@@ -246,79 +421,92 @@ function markAllRead(colId, event) {
 function renderCol(col) {
   var readSet = getReadSet();
   var totalTweets = col.tweets ? col.tweets.length : 0;
-  var unreadCount = col.tweets ? col.tweets.filter(function(t){return !readSet.has(t.id);}).length : 0;
+  var unreadCount = col.tweets ? col.tweets.filter(function(t) { return !readSet.has(t.id); }).length : 0;
 
-  var tweets = totalTweets ? col.tweets.map(renderTweet).join('') : '<div class="col-empty"><span>&#x1F4ED;</span><span>\u30c4\u30a4\u30fc\u30c8\u306a\u3057</span></div>';
-  var err = col.error ? '<div class="col-error">&#x26A0; '+escapeHtml(col.error)+'</div>' : '';
-  var unreadBadge = unreadCount > 0 ? '<span class="col-unread">'+unreadCount+'</span>' : '';
-  var markReadBtn = totalTweets > 0 ? '<button class="mark-read-btn" onclick="markAllRead(\''+escapeHtml(col.id)+'\',event)" title="\u5168\u3066\u65e2\u8aad">&#x2713; \u5168\u65e2\u8aad</button>' : '';
+  var tweets = totalTweets ? col.tweets.map(renderTweet).join('') : '<div class="col-empty"><span>&#x1F4ED;</span><span>ツイートなし</span></div>';
+  var err = col.error ? '<div class="col-error">&#x26A0; ' + escapeHtml(col.error) + '</div>' : '';
+  var unreadBadge = unreadCount > 0 ? '<span class="col-unread">' + unreadCount + '</span>' : '';
+  var markReadBtn = totalTweets > 0 ? '<button class="mark-read-btn" onclick="markAllRead(\'' + escapeHtml(col.id) + '\',event)" title="全て既読">&#x2713; 全既読</button>' : '';
 
-  return '<div class="column" id="col-'+escapeHtml(col.id)+'" data-id="'+escapeHtml(col.id)+'">'
-    +'<div class="col-header">'
-    +'<span class="drag-handle">&#x2837;</span>'
-    +'<span class="col-icon">'+(col.icon||'&#x1F4C4;')+'</span>'
-    +'<span class="col-title">'+escapeHtml(col.label)+'</span>'
-    +unreadBadge
-    +'<span class="col-count">'+totalTweets+'</span>'
-    +markReadBtn
-    +'</div><div class="col-body">'+err+tweets+'</div></div>';
+  return '<div class="column" id="col-' + escapeHtml(col.id) + '" data-id="' + escapeHtml(col.id) + '">'
+    + '<div class="col-header">'
+    + '<span class="drag-handle">&#x2837;</span>'
+    + '<span class="col-icon">' + (col.icon || '&#x1F4C4;') + '</span>'
+    + '<span class="col-title">' + escapeHtml(col.label) + '</span>'
+    + unreadBadge
+    + '<span class="col-count">' + totalTweets + '</span>'
+    + markReadBtn
+    + '</div><div class="col-body">' + err + tweets + '</div></div>';
 }
 
-var sortable=null;
 function initSortable() {
-  var el=document.getElementById('columns');
-  if(sortable)sortable.destroy();
-  if(typeof Sortable==='undefined')return;
-  sortable=Sortable.create(el,{animation:150,handle:'.col-header',filter:'.mark-read-btn',ghostClass:'sortable-ghost',dragClass:'sortable-drag',
-    onEnd:function(){
-      var order=Array.from(el.children).map(function(c){return c.dataset.id;});
-      try{localStorage.setItem(ORDER_KEY,JSON.stringify(order));}catch(e){}
+  var el = document.getElementById('columns');
+  if (sortable) sortable.destroy();
+  if (typeof Sortable === 'undefined') return;
+  sortable = Sortable.create(el, {
+    animation:150,
+    handle:'.col-header',
+    filter:'.mark-read-btn',
+    ghostClass:'sortable-ghost',
+    dragClass:'sortable-drag',
+    onEnd:function() {
+      var order = Array.from(el.children).map(function(c) { return c.dataset.id; });
+      try { localStorage.setItem(ORDER_KEY, JSON.stringify(order)); } catch(e) {}
     }
   });
 }
 
 function applyOrder(columns) {
   try {
-    var saved=JSON.parse(localStorage.getItem(ORDER_KEY)||'[]');
-    if(!saved.length)return columns;
-    var map=Object.fromEntries(columns.map(function(c){return [c.id,c];}));
-    var ordered=saved.map(function(id){return map[id];}).filter(Boolean);
-    columns.forEach(function(c){if(!saved.includes(c.id))ordered.push(c);});
+    var saved = JSON.parse(localStorage.getItem(ORDER_KEY) || '[]');
+    if (!saved.length) return columns;
+    var map = Object.fromEntries(columns.map(function(c) { return [c.id, c]; }));
+    var ordered = saved.map(function(id) { return map[id]; }).filter(Boolean);
+    columns.forEach(function(c) { if (!saved.includes(c.id)) ordered.push(c); });
     return ordered;
-  } catch(e){return columns;}
+  } catch(e) {
+    return columns;
+  }
 }
 
 async function loadData() {
-  var btn=document.getElementById('refresh-btn');
-  var el=document.getElementById('columns');
+  var btn = document.getElementById('refresh-btn');
+  var el = document.getElementById('columns');
   btn.classList.add('loading');
-  btn.disabled=true;
-  if(!el.children.length){
-    el.innerHTML=Array.from({length:3}).map(function(){return '<div class="column"><div class="col-header"><span class="col-title" style="color:var(--text3)">\u8aad\u8fbc\u4e2d...</span></div><div class="col-body">'+skeleton()+'</div></div>';}).join('');
+  btn.disabled = true;
+  if (!el.children.length) {
+    el.innerHTML = Array.from({length:3}).map(function() {
+      return '<div class="column"><div class="col-header"><span class="col-title" style="color:var(--text3)">読込中...</span></div><div class="col-body">' + skeleton() + '</div></div>';
+    }).join('');
   }
   try {
-    var r=await fetch(DATA_URL+'?t='+Date.now());
-    if(!r.ok)throw new Error('HTTP '+r.status);
-    var d=await r.json();
-    var ordered=applyOrder(d.columns);
-    el.innerHTML=ordered.map(renderCol).join('');
+    var r = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    var d = await r.json();
+    var ordered = applyOrder(d.columns || []);
+    el.innerHTML = ordered.map(renderCol).join('');
     initSortable();
-    var dt=new Date(d.updated_at);
-    document.getElementById('updated-time').textContent=dt.toLocaleString('ja-JP',{timeZone:'Asia/Tokyo',hour12:false});
+    var dt = new Date(d.updated_at);
+    document.getElementById('updated-time').textContent = isNaN(dt) ? '--' : dt.toLocaleString('ja-JP', { timeZone:'Asia/Tokyo', hour12:false });
   } catch(e) {
-    el.innerHTML='<div style="display:flex;align-items:center;justify-content:center;width:100%;color:var(--text3);font-size:13px;gap:8px;"><span>&#x26A0;</span><span>'+escapeHtml(e.message)+'</span></div>';
-  } finally{
+    el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;width:100%;color:var(--text3);font-size:13px;gap:8px;"><span>&#x26A0;</span><span>' + escapeHtml(e.message) + '</span></div>';
+  } finally {
     btn.classList.remove('loading');
-    btn.disabled=false;
+    btn.disabled = false;
   }
 }
 
-var _s=document.createElement('script');
-_s.src='https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js';
-_s.onload=function(){loadData();};
-_s.onerror=function(){loadData();};
+document.getElementById('preview-overlay').addEventListener('click', closePreview);
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') closePreview();
+});
+
+var _s = document.createElement('script');
+_s.src = 'https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js';
+_s.onload = function() { loadData(); };
+_s.onerror = function() { loadData(); };
 document.head.appendChild(_s);
-setInterval(loadData,15*60*1000);
+setInterval(loadData, 15 * 60 * 1000);
 </script>
 </body>
 </html>
