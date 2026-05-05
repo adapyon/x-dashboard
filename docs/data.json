@@ -1,6 +1,10 @@
 {
-  "updated_at": "2026-05-05T03:51:04.896265+00:00",
-  "last_attempt_at": "2026-05-05T03:51:04.897497+00:00",
+  "updated_at": "2026-05-05T04:42:23.731717+00:00",
+  "last_attempt_at": "2026-05-05T04:42:23.732553+00:00",
+  "last_success_at": "2026-05-05T04:42:23.731706+00:00",
+  "cookie_warning_level": "critical",
+  "cookie_warning_message": "X_COOKIES の入れ直しを推奨します（設定から372日経過）",
+  "needs_cookie_refresh": false,
   "columns": [
     {
       "id": "list_181994093",
@@ -8,33 +12,100 @@
       "icon": "📋",
       "tweets": [
         {
+          "id": "2051519872111436241",
+          "text": "ニューデイズアプリで「サントリー-196℃ ストロングゼロ ダブルレモン」が抽選で5000名に当たる。5/5～5/10。\nhttps://t.co/8R1Xau3VsM #ad",
+          "created_at": "Tue May 05 04:30:27 +0000 2026",
+          "user_name": "setusoku",
+          "user_screen_name": "setusoku",
+          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "url": "https://x.com/setusoku/status/2051519872111436241",
+          "media": []
+        },
+        {
+          "id": "2051517663000907983",
+          "text": "先着20！ペットボトルホルダー40%OFFで600円〜\n\nクーポン\nhttps://t.co/WtUyrbN3l2\n\n楽天 https://t.co/Kzja1jBvhT",
+          "created_at": "Tue May 05 04:21:40 +0000 2026",
+          "user_name": "じん🕳お得セール節約散財🥺",
+          "user_screen_name": "jing1809t",
+          "user_icon": "https://pbs.twimg.com/profile_images/1534208638780583936/snXb7EBO_normal.jpg",
+          "like_count": 2,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "url": "https://x.com/jing1809t/status/2051517663000907983",
+          "media": [
+            "https://pbs.twimg.com/media/HHh0cK6boAA6w8r.jpg"
+          ]
+        },
+        {
+          "id": "2051515153712382114",
+          "text": "おやつカンパニー ベビースター ドデカイラーメン チキン味 68g×24袋 送料込1,883円(78.5円/袋)【アタックZEROパーフェクトスティック無料】 https://t.co/aw9xLQn2YB",
+          "created_at": "Tue May 05 04:11:42 +0000 2026",
+          "user_name": "ゲッキー🐣",
+          "user_screen_name": "gekiyasu",
+          "user_icon": "https://pbs.twimg.com/profile_images/1351642437375021057/JeRVdSUw_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "url": "https://x.com/gekiyasu/status/2051515153712382114",
+          "media": []
+        },
+        {
+          "id": "2051513466247077973",
+          "text": "RT @AmazonJP: これ、誰の声で脳内再生されているか教えてください https://t.co/LbcWdokuwJ",
+          "created_at": "Tue May 05 04:05:00 +0000 2026",
+          "user_name": "Amazon.co.jp (アマゾンジャパン)",
+          "user_screen_name": "AmazonJP",
+          "user_icon": "https://pbs.twimg.com/profile_images/1912987271915241472/Rd3JbaXj_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 7,
+          "reply_count": 0,
+          "url": "https://x.com/AmazonJP/status/2051513466247077973",
+          "media": [
+            "https://pbs.twimg.com/media/HFxiURVXAAAXdQa.jpg"
+          ]
+        },
+        {
+          "id": "2051510676477350042",
+          "text": "スマホ乗り換え.comでソフバンのGalaxyS26が2年で実質1円、更に1.5万円CB＋最大24000円相当PayPayが購入前に抽選で当たる。～5/31。\nhttps://t.co/05GMry6NFE #ad",
+          "created_at": "Tue May 05 03:53:55 +0000 2026",
+          "user_name": "setusoku",
+          "user_screen_name": "setusoku",
+          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "url": "https://x.com/setusoku/status/2051510676477350042",
+          "media": []
+        },
+        {
+          "id": "2051510194254086218",
+          "text": "スギサポwalk+で毎日3,000歩歩くと、サントリー ウェルネスケア商品1本が抽選14,000名に当たる。～5/31。\nhttps://t.co/Cki8n5IaWx #ad",
+          "created_at": "Tue May 05 03:52:00 +0000 2026",
+          "user_name": "setusoku",
+          "user_screen_name": "setusoku",
+          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "url": "https://x.com/setusoku/status/2051510194254086218",
+          "media": []
+        },
+        {
           "id": "2051507342794272998",
           "text": "端午の節句にふさわしい良い天気😆\n鯉のぼり🎏も気持ちよさそうに泳いでる https://t.co/y3yX8PntL0",
           "created_at": "Tue May 05 03:40:40 +0000 2026",
           "user_name": "ゲッキー🐣",
           "user_screen_name": "gekiyasu",
           "user_icon": "https://pbs.twimg.com/profile_images/1351642437375021057/JeRVdSUw_normal.jpg",
-          "like_count": 7,
+          "like_count": 13,
           "retweet_count": 1,
           "reply_count": 0,
           "url": "https://x.com/gekiyasu/status/2051507342794272998",
           "media": [
             "https://pbs.twimg.com/media/HHhrBuabgAAe1uW.jpg"
-          ]
-        },
-        {
-          "id": "2051504691696308639",
-          "text": "またでた！先着30で日傘804円！\n\n70%OFFクーポン\nhttps://t.co/zj5lfsDAsk\n\n楽天 https://t.co/94ikyrrTNU",
-          "created_at": "Tue May 05 03:30:08 +0000 2026",
-          "user_name": "じん🕳お得セール節約散財🥺",
-          "user_screen_name": "jing1809t",
-          "user_icon": "https://pbs.twimg.com/profile_images/1534208638780583936/snXb7EBO_normal.jpg",
-          "like_count": 0,
-          "retweet_count": 0,
-          "reply_count": 0,
-          "url": "https://x.com/jing1809t/status/2051504691696308639",
-          "media": [
-            "https://pbs.twimg.com/media/HHhopHubYAATgM4.jpg"
           ]
         },
         {
@@ -128,7 +199,7 @@
           "user_name": "setusoku",
           "user_screen_name": "setusoku",
           "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
-          "like_count": 1,
+          "like_count": 2,
           "retweet_count": 0,
           "reply_count": 0,
           "url": "https://x.com/setusoku/status/2051473061942264259",
@@ -195,8 +266,8 @@
           "user_name": "AKIBA PC Hotline! （秋葉原）",
           "user_screen_name": "watch_akiba",
           "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
-          "like_count": 25,
-          "retweet_count": 11,
+          "like_count": 30,
+          "retweet_count": 13,
           "reply_count": 0,
           "url": "https://x.com/watch_akiba/status/2051453096778494277",
           "media": [
@@ -225,7 +296,7 @@
           "user_name": "AKIBA PC Hotline! （秋葉原）",
           "user_screen_name": "watch_akiba",
           "user_icon": "https://pbs.twimg.com/profile_images/875611464563687424/lVTDx6Yd_normal.jpg",
-          "like_count": 10,
+          "like_count": 11,
           "retweet_count": 0,
           "reply_count": 0,
           "url": "https://x.com/watch_akiba/status/2051421636986077368",
@@ -507,7 +578,7 @@
           "user_screen_name": "gekiyasu",
           "user_icon": "https://pbs.twimg.com/profile_images/1351642437375021057/JeRVdSUw_normal.jpg",
           "like_count": 0,
-          "retweet_count": 17338,
+          "retweet_count": 17342,
           "reply_count": 0,
           "url": "https://x.com/gekiyasu/status/2051191465272127517",
           "media": []
@@ -1176,74 +1247,6 @@
           "reply_count": 0,
           "url": "https://x.com/gekiyasu/status/2050861149059739847",
           "media": []
-        },
-        {
-          "id": "2050859154710114596",
-          "text": "バルミューダ、復活。置き時計「The Clock」が予約1,000台超えで1カ月以上待ちに。一応バッテリーで一晩だけ動くよ。\nhttps://t.co/W6YweTlt4R #ad",
-          "created_at": "Sun May 03 08:45:00 +0000 2026",
-          "user_name": "setusoku",
-          "user_screen_name": "setusoku",
-          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
-          "like_count": 1,
-          "retweet_count": 0,
-          "reply_count": 0,
-          "url": "https://x.com/setusoku/status/2050859154710114596",
-          "media": []
-        },
-        {
-          "id": "2050853114870411481",
-          "text": "JRA電話・インターネット投票で日本ダービー当日の馬券を買うと、QUOカードなどが抽選65,000名に当たる。～5/31。\nhttps://t.co/ISIhCB0Ovl #ad",
-          "created_at": "Sun May 03 08:21:00 +0000 2026",
-          "user_name": "setusoku",
-          "user_screen_name": "setusoku",
-          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
-          "like_count": 1,
-          "retweet_count": 0,
-          "reply_count": 0,
-          "url": "https://x.com/setusoku/status/2050853114870411481",
-          "media": []
-        },
-        {
-          "id": "2050841538700210217",
-          "text": "ノジマで楽天ペイ1,000円以上利用すると、10,000楽天ポイントなどが抽選7,800名に当たる。～5/31。\nhttps://t.co/PJNCYgdubP #ad",
-          "created_at": "Sun May 03 07:35:00 +0000 2026",
-          "user_name": "setusoku",
-          "user_screen_name": "setusoku",
-          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
-          "like_count": 1,
-          "retweet_count": 0,
-          "reply_count": 0,
-          "url": "https://x.com/setusoku/status/2050841538700210217",
-          "media": []
-        },
-        {
-          "id": "2050825282475761959",
-          "text": "半額で作ったシールとボールペン届いたよ🥰\nシールは6枚ずつ合計12枚入ってました😳（撮る前に2枚配っちゃった）\n\nボールペン&amp;シャーペンも安いのにオリジナルでめっちゃいい！\n\n次の半額でもまたシール作ります🤣🤣\n\nwoodgreen作成記録👇\nhttps://t.co/Cgz1pYuLtP https://t.co/rLebvCtY0d",
-          "created_at": "Sun May 03 06:30:24 +0000 2026",
-          "user_name": "じん🕳お得セール節約散財🥺",
-          "user_screen_name": "jing1809t",
-          "user_icon": "https://pbs.twimg.com/profile_images/1534208638780583936/snXb7EBO_normal.jpg",
-          "like_count": 23,
-          "retweet_count": 0,
-          "reply_count": 4,
-          "url": "https://x.com/jing1809t/status/2050825282475761959",
-          "media": [
-            "https://pbs.twimg.com/media/HHX-uNxa8AAVoED.jpg",
-            "https://pbs.twimg.com/media/HHX-uNsaEAAeBCK.jpg"
-          ]
-        },
-        {
-          "id": "2050821154235994383",
-          "text": "楽天でソーシャルギフトを1,000円以上買うと、最大100楽天ポイントが先着100万名に貰える。～5/11。\nhttps://t.co/a1ihn6FIRz #ad",
-          "created_at": "Sun May 03 06:14:00 +0000 2026",
-          "user_name": "setusoku",
-          "user_screen_name": "setusoku",
-          "user_icon": "https://pbs.twimg.com/profile_images/1804887562/setusoku_normal.jpg",
-          "like_count": 1,
-          "retweet_count": 0,
-          "reply_count": 0,
-          "url": "https://x.com/setusoku/status/2050821154235994383",
-          "media": []
         }
       ]
     },
@@ -1251,8 +1254,1257 @@
       "id": "list_1054516216868392960",
       "label": "要チェック",
       "icon": "📋",
-      "tweets": [],
-      "error": "'code'"
+      "tweets": [
+        {
+          "id": "2051499664508354590",
+          "text": "高速道路で取り締まり中の覆面パトカー内の会話\nラジオライフ.com｜知って得する情報を毎日更新 - https://t.co/UpnO44FBe1\n#高速パトカー https://t.co/MgSQMicOCN",
+          "created_at": "Tue May 05 03:10:09 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2047216447332728832/7PB4DVnz_normal.jpg",
+          "like_count": 3,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2051499664508354590",
+          "media": [
+            "https://pbs.twimg.com/media/HHhkEsla8AAbUeV.jpg"
+          ]
+        },
+        {
+          "id": "2051475242212807073",
+          "text": "自動翻訳でフィリピン🇵🇭になってるけど、パレスチナ🇵🇸のよな\nケイト・ブランシェット様さすがすぎる",
+          "created_at": "Tue May 05 01:33:06 +0000 2026",
+          "user_name": "望月もちぎ",
+          "user_screen_name": "omoti194",
+          "user_icon": "https://pbs.twimg.com/profile_images/1926905965674188800/ETYwRa01_normal.jpg",
+          "like_count": 912,
+          "retweet_count": 219,
+          "reply_count": 0,
+          "url": "https://x.com/omoti194/status/2051475242212807073",
+          "media": []
+        },
+        {
+          "id": "2051452313282199594",
+          "text": "デートで行きたい大人のチャイニーズ\n\n①エッセンス（表参道）\n②可視化飯店（茅場町）\n③エンジン（神楽坂）\n④中華Aoki（恵比寿）\n⑤関飯店（中野）\n⑥一凛（新富町）\n⑦スチーム（六本木）\n⑧南風楼（銀座）\n⑨series（六本木） https://t.co/qdhc2wlCqG",
+          "created_at": "Tue May 05 00:02:00 +0000 2026",
+          "user_name": "伊藤初美（ハツ）東京グルメサロン主宰",
+          "user_screen_name": "hatsu823",
+          "user_icon": "https://pbs.twimg.com/profile_images/1327614574472826881/erYPhz-P_normal.jpg",
+          "like_count": 94,
+          "retweet_count": 9,
+          "reply_count": 0,
+          "url": "https://x.com/hatsu823/status/2051452313282199594",
+          "media": [
+            "https://pbs.twimg.com/media/HHgdFLoacAA57mh.jpg"
+          ]
+        },
+        {
+          "id": "2051446794295595036",
+          "text": "RT @bakusai_x: 【悲報】中国のストリートや路地裏で体を売る女性たちが、格安すぎると話題に･･･\n\n1回150元(約3400円)で交渉し、性行為に及ぶ。仕事がないため、身体を売る性産業従事者が増加している模様。\n\n女の子の取り分はいくら貰えるのだろう？\n#中国 ht…",
+          "created_at": "Mon May 04 23:40:04 +0000 2026",
+          "user_name": "ナンネット～一線を越える、禁断の遊び場～",
+          "user_screen_name": "yorudeki",
+          "user_icon": "https://pbs.twimg.com/profile_images/2011991860416561153/bwdwegZd_normal.png",
+          "like_count": 0,
+          "retweet_count": 47,
+          "reply_count": 0,
+          "url": "https://x.com/yorudeki/status/2051446794295595036",
+          "media": []
+        },
+        {
+          "id": "2051409082536653230",
+          "text": "高速料金は財布を忘れても後日精算が可能だった\nラジオライフ.com｜知って得する情報を毎日更新 - https://t.co/Lvwm6bWG4N\n#高速料金後払い https://t.co/WSWKC1ShX9",
+          "created_at": "Mon May 04 21:10:13 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2047216447332728832/7PB4DVnz_normal.jpg",
+          "like_count": 14,
+          "retweet_count": 4,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2051409082536653230",
+          "media": [
+            "https://pbs.twimg.com/media/HHgRsIdaAAA9azA.jpg"
+          ]
+        },
+        {
+          "id": "2051348557895217292",
+          "text": "RT @HikaruIjuin: まだまだー  #ijuin https://t.co/u7Q9eMEYaI",
+          "created_at": "Mon May 04 17:09:43 +0000 2026",
+          "user_name": "北村ヂン",
+          "user_screen_name": "punxjk",
+          "user_icon": "https://pbs.twimg.com/profile_images/1468130850357186565/c3Nz2h1f_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 161,
+          "reply_count": 0,
+          "url": "https://x.com/punxjk/status/2051348557895217292",
+          "media": [
+            "https://pbs.twimg.com/media/HHfYIzsbcAA4iIi.jpg"
+          ]
+        },
+        {
+          "id": "2051345950313214287",
+          "text": "SALOMON、MM6コラボモデルは通常モデルよりもめちゃ高くなるかわりに特別デザインになるけど、XT15に関してはガチでロゴ以外なんも変わらんから本当に金の無駄\n\nちなデザインは旧XT15の方がすき https://t.co/ct0dEj06Rh",
+          "created_at": "Mon May 04 16:59:21 +0000 2026",
+          "user_name": "蔵竹子規",
+          "user_screen_name": "krtksk",
+          "user_icon": "https://pbs.twimg.com/profile_images/1944747566425415681/DFrV1A_w_normal.png",
+          "like_count": 20,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "url": "https://x.com/krtksk/status/2051345950313214287",
+          "media": [
+            "https://pbs.twimg.com/media/HHfYRLDbIAAM8YF.jpg",
+            "https://pbs.twimg.com/media/HHfYRLBagAAbB9W.jpg"
+          ]
+        },
+        {
+          "id": "2051344062582804661",
+          "text": "別に練習するわけでもないのに、TikTokでムーンウォークのやり方説明動画が流れてきたら保存してしまう",
+          "created_at": "Mon May 04 16:51:51 +0000 2026",
+          "user_name": "蔵竹子規",
+          "user_screen_name": "krtksk",
+          "user_icon": "https://pbs.twimg.com/profile_images/1944747566425415681/DFrV1A_w_normal.png",
+          "like_count": 26,
+          "retweet_count": 0,
+          "reply_count": 1,
+          "url": "https://x.com/krtksk/status/2051344062582804661",
+          "media": []
+        },
+        {
+          "id": "2051339212507718101",
+          "text": "なんということでしょう！",
+          "created_at": "Mon May 04 16:32:34 +0000 2026",
+          "user_name": "北村ヂン",
+          "user_screen_name": "punxjk",
+          "user_icon": "https://pbs.twimg.com/profile_images/1468130850357186565/c3Nz2h1f_normal.jpg",
+          "like_count": 12,
+          "retweet_count": 6,
+          "reply_count": 0,
+          "url": "https://x.com/punxjk/status/2051339212507718101",
+          "media": []
+        },
+        {
+          "id": "2051330052210467092",
+          "text": "「地獄に堕ちるわよ、幼少期の細木数子の実家が実際は売春宿だったのにおでん屋に改編されててクソすぎる！」ってポストが流れてきた。おれ第1話しか観てないけど、普通に売春描写あったくね？客のジジイに従業員の女が「ほら、そろそろ行こうか」みたいなこと言われるシーン",
+          "created_at": "Mon May 04 15:56:10 +0000 2026",
+          "user_name": "蔵竹子規",
+          "user_screen_name": "krtksk",
+          "user_icon": "https://pbs.twimg.com/profile_images/1944747566425415681/DFrV1A_w_normal.png",
+          "like_count": 5178,
+          "retweet_count": 165,
+          "reply_count": 299,
+          "url": "https://x.com/krtksk/status/2051330052210467092",
+          "media": []
+        },
+        {
+          "id": "2051327394091593800",
+          "text": "ゴールデンウィーク芝浦さんぽ。\nエシャロット、ぬか漬け、豚レバー、マグロキムチ。 https://t.co/yhsahLYPgZ",
+          "created_at": "Mon May 04 15:45:37 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 367,
+          "retweet_count": 3,
+          "reply_count": 10,
+          "url": "https://x.com/ShinjukuSokai/status/2051327394091593800",
+          "media": [
+            "https://pbs.twimg.com/media/HHfHZBGbYAAOKCv.jpg",
+            "https://pbs.twimg.com/media/HHfHZBGa0AAQajD.jpg"
+          ]
+        },
+        {
+          "id": "2051324119158034613",
+          "text": "RT @sokai_ads: 明日の5月5日　GOGOの日\n@Deluyoko_7\nデラックス7西横浜でピエロさん一択だが\n\n広島の皆がGOGOするのは\n\nトーヨー中央店\nhttps://t.co/MlvqMB84Vd\n\n去年のデータ見せてもらったら凄かった。\nG○Dですごいの…",
+          "created_at": "Mon May 04 15:32:36 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 8,
+          "reply_count": 0,
+          "url": "https://x.com/ShinjukuSokai/status/2051324119158034613",
+          "media": []
+        },
+        {
+          "id": "2051323673529757729",
+          "text": "【朗報】俺達の田中圭さん、800名が出場するポーカー大会で上位11名に残る\nこのまま優勝できれば賞金7000万円をゲットへ\n\n※🇦🇺オーストラリアで開催中のポーカー大会「Aussie Millions」にて https://t.co/9YVT2nMZTT",
+          "created_at": "Mon May 04 15:30:50 +0000 2026",
+          "user_name": "滝沢ガレソ",
+          "user_screen_name": "tkzwgrs",
+          "user_icon": "https://pbs.twimg.com/profile_images/2007239789947277312/7V3LzQ0i_normal.png",
+          "like_count": 8182,
+          "retweet_count": 407,
+          "reply_count": 101,
+          "url": "https://x.com/tkzwgrs/status/2051323673529757729",
+          "media": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/2051323635298627585/pu/img/FXn4v4MA493TKAB8.jpg"
+          ]
+        },
+        {
+          "id": "2051323477010071951",
+          "text": "【笑撃】ヤマダデンキの公式裏アカ、シャンパンコールならぬ洗濯機コールで派手におふざけしている様子ｗ\n\n「姫のおかげで今月の僕の売り上げはNo.1です」と感謝のコールを披露。\n\n姫の家、家電まみれになっちゃうよｗｗｗ\n#ヤマダデンキ #ホスト\nhttps://t.co/Xovmbu0GR4",
+          "created_at": "Mon May 04 15:30:03 +0000 2026",
+          "user_name": "ナンネット～一線を越える、禁断の遊び場～",
+          "user_screen_name": "yorudeki",
+          "user_icon": "https://pbs.twimg.com/profile_images/2011991860416561153/bwdwegZd_normal.png",
+          "like_count": 48,
+          "retweet_count": 5,
+          "reply_count": 1,
+          "url": "https://x.com/yorudeki/status/2051323477010071951",
+          "media": [
+            "https://pbs.twimg.com/amplify_video_thumb/2050701243493015552/img/ZvEue2lo7c4ybJCj.jpg"
+          ]
+        },
+        {
+          "id": "2051320583082905710",
+          "text": "RT @Saga_Keisuke: 美味いので買ってください。\n今月のマグロは取引ある業者じゃないと買わせてもらえないところから買わせてもらってます。\n\n刺身、漬け、マグロ丼、炙り、山芋ネギトロ丼。色んな食べ方ができますよ。\n\nhttps://t.co/aYeVpjnf93",
+          "created_at": "Mon May 04 15:18:33 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 11,
+          "reply_count": 0,
+          "url": "https://x.com/ShinjukuSokai/status/2051320583082905710",
+          "media": []
+        },
+        {
+          "id": "2051314322681524344",
+          "text": "まあ上の不始末で騒ぎが大きくなっているのに、なんの帳尻を合わせる話し合いもせずに公式に否定しちゃうもんだから、本来ならすぐに流せる話も後からどんどん出てくることになるんすよね",
+          "created_at": "Mon May 04 14:53:40 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 116,
+          "retweet_count": 21,
+          "reply_count": 3,
+          "url": "https://x.com/hinabe_ch/status/2051314322681524344",
+          "media": []
+        },
+        {
+          "id": "2051313824939253866",
+          "text": "マジかよ",
+          "created_at": "Mon May 04 14:51:42 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 171,
+          "retweet_count": 39,
+          "reply_count": 2,
+          "url": "https://x.com/hinabe_ch/status/2051313824939253866",
+          "media": []
+        },
+        {
+          "id": "2051307118364635605",
+          "text": "RT @sorena_co_jp: 「陰（静止・暗・冷・女）」と「陽（活動・明・熱・男）」という対立する二つのエネルギーから成り立ち、互いに補完・循環し合いながらバランスを保っているという中国古代の自然哲学。 \n\n深いよな。  \n\nそれな",
+          "created_at": "Mon May 04 14:25:03 +0000 2026",
+          "user_name": "ナンネット～一線を越える、禁断の遊び場～",
+          "user_screen_name": "yorudeki",
+          "user_icon": "https://pbs.twimg.com/profile_images/2011991860416561153/bwdwegZd_normal.png",
+          "like_count": 0,
+          "retweet_count": 2,
+          "reply_count": 0,
+          "url": "https://x.com/yorudeki/status/2051307118364635605",
+          "media": []
+        },
+        {
+          "id": "2051304377353445647",
+          "text": "RT @mangatentyou: 5月23日、#喜久屋書店仙台店 では、\n#レイユール 先生＋ #くられ 先生による特別講義トーク＆サイン会を開催します！\n\n#ア理科 グッズ、書籍多数取り揃えて皆様をお待ちしています！\n\n#薬理凶室 の聖地で、先生方と濃い時間を過ごしましょう…",
+          "created_at": "Mon May 04 14:14:09 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2047216447332728832/7PB4DVnz_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 18,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2051304377353445647",
+          "media": []
+        },
+        {
+          "id": "2051303591848386916",
+          "text": "RT @reraku: ネット「〜は実は危ない！」という情報を見たときのための予備録…",
+          "created_at": "Mon May 04 14:11:02 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2047216447332728832/7PB4DVnz_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 1044,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2051303591848386916",
+          "media": []
+        },
+        {
+          "id": "2051291149948887269",
+          "text": "ADHDやASDの人には\n【言語性IQ&gt;動作性IQ】タイプが多い。\n\nその特徴は、\n\n❶マルチタスクが苦手で、世の中に多い飲食店の接客業やサービス業などが壊滅的にできない\n❷整理整頓•実技•機械操作なども苦手\n❸手順を見て瞬時に習得するのが難しい\n❹現実的な作業より、概念的•哲学的な思考を好む",
+          "created_at": "Mon May 04 13:21:35 +0000 2026",
+          "user_name": "黒@アスペ女",
+          "user_screen_name": "kuroASDgirl",
+          "user_icon": "https://pbs.twimg.com/profile_images/1724665487840403456/-9V_Sgzd_normal.jpg",
+          "like_count": 1299,
+          "retweet_count": 174,
+          "reply_count": 17,
+          "url": "https://x.com/kuroASDgirl/status/2051291149948887269",
+          "media": []
+        },
+        {
+          "id": "2051283231862137306",
+          "text": "ありがとうヨッピー",
+          "created_at": "Mon May 04 12:50:08 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 56,
+          "retweet_count": 6,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2051283231862137306",
+          "media": []
+        },
+        {
+          "id": "2051279833192423580",
+          "text": "これは監視っていうより「見てるぞ」ってメッセージな気がするな。\n本気の出入りチェックならバレないようにやるから。",
+          "created_at": "Mon May 04 12:36:37 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 734,
+          "retweet_count": 39,
+          "reply_count": 15,
+          "url": "https://x.com/ShinjukuSokai/status/2051279833192423580",
+          "media": []
+        },
+        {
+          "id": "2051276908168699906",
+          "text": "マリファナマーチで小学生が行進してた。\nでもいいものか悪いものかはちびっこが自分の人生で考えてほしいよな。",
+          "created_at": "Mon May 04 12:25:00 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 337,
+          "retweet_count": 13,
+          "reply_count": 10,
+          "url": "https://x.com/ShinjukuSokai/status/2051276908168699906",
+          "media": []
+        },
+        {
+          "id": "2051275209295229121",
+          "text": "かわいそうに。\n32,370円あげてキリよくしてあげたい。",
+          "created_at": "Mon May 04 12:18:15 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 236,
+          "retweet_count": 13,
+          "reply_count": 3,
+          "url": "https://x.com/ShinjukuSokai/status/2051275209295229121",
+          "media": []
+        },
+        {
+          "id": "2051269404843970845",
+          "text": "ケプラー452bには何かしらいそうだよな。\n\n生命存在の可能性が高い45個の系外惑星、科学者が探すべき最新リストを特定 | 宇宙 | https://t.co/W5zRdfR9n9",
+          "created_at": "Mon May 04 11:55:11 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 144,
+          "retweet_count": 4,
+          "reply_count": 6,
+          "url": "https://x.com/ShinjukuSokai/status/2051269404843970845",
+          "media": []
+        },
+        {
+          "id": "2051262687905296696",
+          "text": "RT @primebase00: 初回の生配信を終えて\n色々な改善点を考えていました🧐\n\n皆様が安心して楽しめるサービスを\n提供できるよう努めるのはもちろん‼️\n\n今回ならC等のパックは\n未開封BOXから剥いて吊るしているので\n\n開封を楽しんでもらう目的でしたが\n\n高額な激レア…",
+          "created_at": "Mon May 04 11:28:30 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 6,
+          "reply_count": 0,
+          "url": "https://x.com/ShinjukuSokai/status/2051262687905296696",
+          "media": []
+        },
+        {
+          "id": "2051261052650967515",
+          "text": "明日は5月5日。\n広島県民は打ちに行く店決めてるか？🎰\n\n間違いなくトーヨー中央店《広島》がオススメだ。PR\n\n今回はあえて色々言わないことにするが、去年の5月5日の結果だけ共有しておく📈\n\n朝イチから頼むぞ。\nパチスロの子供たち、大丈夫だから。 https://t.co/wSZtl7SUsQ",
+          "created_at": "Mon May 04 11:22:00 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 293,
+          "retweet_count": 18,
+          "reply_count": 12,
+          "url": "https://x.com/ShinjukuSokai/status/2051261052650967515",
+          "media": [
+            "https://pbs.twimg.com/media/HHeLDiObAAASssa.jpg",
+            "https://pbs.twimg.com/media/HHeLDiKbwAA8m0V.jpg",
+            "https://pbs.twimg.com/media/HHeLDiRasAApe0A.jpg"
+          ]
+        },
+        {
+          "id": "2051256033893564760",
+          "text": "RT @Athletics: 🙌 https://t.co/xGuQdsJIZZ",
+          "created_at": "Mon May 04 11:02:03 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 117,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2051256033893564760",
+          "media": [
+            "https://pbs.twimg.com/media/HHbZvRaboAASm21.jpg"
+          ]
+        },
+        {
+          "id": "2051255941258264864",
+          "text": "RT @Psikobilim_: Genç kadın sendromu:\nKadınlar tarihte ilk kez eş seçiminde tam bağımsızlığa ve sınırsız seçeneğe sahip oldular. Bu özgürlü…",
+          "created_at": "Mon May 04 11:01:41 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 667,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2051255941258264864",
+          "media": []
+        },
+        {
+          "id": "2051250928213487863",
+          "text": "羽田盃での痛恨の３着抜けで、ついに闇バイトに手を出してしまったとの噂の寅三郎。\n第8話、そろそろ本当にまずい三人組は船橋駅で待ち合わせをしていた。\n\nこの忍び、金欠につき〜土壇場のかしわ記念編〜｜この忍び、金欠につき〜地方競馬不死鳥編〜 https://t.co/2YzKfQ7YBA",
+          "created_at": "Mon May 04 10:41:46 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 116,
+          "retweet_count": 10,
+          "reply_count": 4,
+          "url": "https://x.com/ShinjukuSokai/status/2051250928213487863",
+          "media": []
+        },
+        {
+          "id": "2051247999502946467",
+          "text": "【悲報】大久保公園の立〇んぼエリア、現在はおじさんが大量発生中\n\n女性は警察に「疲れて休んでるだけ」と言い訳し、男性は増えすぎておじさん同士で情報共有して仲良くなっているとか。\n\n美人局とかも多発してそうだしね。\n#大久保公園 #歌舞伎町\nhttps://t.co/OsP8Z5eiO5",
+          "created_at": "Mon May 04 10:30:08 +0000 2026",
+          "user_name": "ナンネット～一線を越える、禁断の遊び場～",
+          "user_screen_name": "yorudeki",
+          "user_icon": "https://pbs.twimg.com/profile_images/2011991860416561153/bwdwegZd_normal.png",
+          "like_count": 237,
+          "retweet_count": 28,
+          "reply_count": 4,
+          "url": "https://x.com/yorudeki/status/2051247999502946467",
+          "media": [
+            "https://pbs.twimg.com/amplify_video_thumb/2050512546239848449/img/Lt9h0cnq1amSW0ty.jpg",
+            "https://pbs.twimg.com/media/HHTiS_YbcAA71De.jpg"
+          ]
+        },
+        {
+          "id": "2051245536750207063",
+          "text": "RT @aiaicreate: Stable Diffusion新モデル\n「Sulphur 2」「LTX 2.3 10Eros」公開。\n10ErosはSulphur 2のI2V特化ファインチューン、\nSulphur 2はI2VとT2Vに対応。\n両モデルは特にNSFWコンテンツ生…",
+          "created_at": "Mon May 04 10:20:20 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 12,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2051245536750207063",
+          "media": []
+        },
+        {
+          "id": "2051244697088377186",
+          "text": "ほらな。これで5勝2着1回。\nみどりの日、みどり帽ラッシュが止まらない。 https://t.co/sg5wRLbrwK",
+          "created_at": "Mon May 04 10:17:00 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 124,
+          "retweet_count": 1,
+          "reply_count": 3,
+          "url": "https://x.com/ShinjukuSokai/status/2051244697088377186",
+          "media": [
+            "https://pbs.twimg.com/media/HHd8LUKakAAW476.jpg"
+          ]
+        },
+        {
+          "id": "2051242133840134294",
+          "text": "RT @ZLi_365: https://t.co/kLSlmYGqq7",
+          "created_at": "Mon May 04 10:06:49 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 4,
+          "reply_count": 0,
+          "url": "https://x.com/ShinjukuSokai/status/2051242133840134294",
+          "media": [
+            "https://pbs.twimg.com/media/HHdZT9ma8AAj6IJ.jpg"
+          ]
+        },
+        {
+          "id": "2051241292487893259",
+          "text": "昨日の夜、インスタで宇宙の動画を見てたらこれが出てきて、気付いたら購入してた。\nこれ知ってる？ハンドパンってやつ。 https://t.co/M6yGUKwQME",
+          "created_at": "Mon May 04 10:03:29 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 415,
+          "retweet_count": 10,
+          "reply_count": 30,
+          "url": "https://x.com/ShinjukuSokai/status/2051241292487893259",
+          "media": [
+            "https://pbs.twimg.com/amplify_video_thumb/2051241205179219968/img/SYyeAMRvSyEsWYEw.jpg",
+            "https://pbs.twimg.com/media/HHd5AhVbkAASfmh.jpg",
+            "https://pbs.twimg.com/media/HHd5AhhaAAA25wY.jpg",
+            "https://pbs.twimg.com/media/HHd5AhdaYAEOY2F.jpg"
+          ]
+        },
+        {
+          "id": "2051238650823037431",
+          "text": "緑の日の船橋、ここまで6枠が4勝2着1回。\nこうなると次の9Rみどりの日特別も6枠か？",
+          "created_at": "Mon May 04 09:52:59 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 61,
+          "retweet_count": 0,
+          "reply_count": 4,
+          "url": "https://x.com/ShinjukuSokai/status/2051238650823037431",
+          "media": []
+        },
+        {
+          "id": "2051228439068483778",
+          "text": "当たったけどめちゃくちゃ安いな。\nボートやるしかない。 https://t.co/Mu0pnQbMsd",
+          "created_at": "Mon May 04 09:12:24 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 158,
+          "retweet_count": 2,
+          "reply_count": 5,
+          "url": "https://x.com/ShinjukuSokai/status/2051228439068483778",
+          "media": [
+            "https://pbs.twimg.com/media/HHdtZGdaEAA0eHj.jpg"
+          ]
+        },
+        {
+          "id": "2051227840310583680",
+          "text": "軍用機も民間機も指示に従う「#航空路管制」とは\nラジオライフ.com｜知って得する情報を毎日更新 - https://t.co/g6bj9snWJA\n#航空路管制 https://t.co/5DDdYf5xjg",
+          "created_at": "Mon May 04 09:10:01 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2047216447332728832/7PB4DVnz_normal.jpg",
+          "like_count": 8,
+          "retweet_count": 4,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2051227840310583680",
+          "media": [
+            "https://pbs.twimg.com/media/HHds2dkawAAwOrn.jpg"
+          ]
+        },
+        {
+          "id": "2051206169297883586",
+          "text": "【※音量注意】高速道路を走行中のトラックに米ユナイテッド航空機が衝突\n衝突の瞬間のドラレコ映像がヤバいと話題に\n\n※トラック運転手は命に別状なし https://t.co/zvRiFLC2CS",
+          "created_at": "Mon May 04 07:43:54 +0000 2026",
+          "user_name": "滝沢ガレソ",
+          "user_screen_name": "tkzwgrs",
+          "user_icon": "https://pbs.twimg.com/profile_images/2007239789947277312/7V3LzQ0i_normal.png",
+          "like_count": 2548,
+          "retweet_count": 140,
+          "reply_count": 41,
+          "url": "https://x.com/tkzwgrs/status/2051206169297883586",
+          "media": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/2051051577285197824/pu/img/NmEQEFRHqPEcncDU.jpg"
+          ]
+        },
+        {
+          "id": "2051205225256714489",
+          "text": "さすがにゴールデンウィーク、高速道路はサンデードライバーが多くて怖いから、サタデーナイトフィーバードライバーの俺は焦らずに電車と徒歩でどこだここ",
+          "created_at": "Mon May 04 07:40:09 +0000 2026",
+          "user_name": "望月もちぎ",
+          "user_screen_name": "omoti194",
+          "user_icon": "https://pbs.twimg.com/profile_images/1926905965674188800/ETYwRa01_normal.jpg",
+          "like_count": 631,
+          "retweet_count": 22,
+          "reply_count": 0,
+          "url": "https://x.com/omoti194/status/2051205225256714489",
+          "media": []
+        },
+        {
+          "id": "2051204323082928382",
+          "text": "ヨシタクが強すぎるせいで郡司が外まで振った隙を一発で見極めて踏んできた古性さん。 https://t.co/Gsn2rYq5zC",
+          "created_at": "Mon May 04 07:36:34 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 188,
+          "retweet_count": 3,
+          "reply_count": 7,
+          "url": "https://x.com/ShinjukuSokai/status/2051204323082928382",
+          "media": [
+            "https://pbs.twimg.com/media/HHdXddea4AAcD6i.jpg"
+          ]
+        },
+        {
+          "id": "2051202366687588357",
+          "text": "ビックサイトで開催の「文学フリマ」にやってきました。\n16時半からは無料で入れるんで、それ狙いですが、それ狙いの人って、けっこういるんやね https://t.co/suqT6NEUb1",
+          "created_at": "Mon May 04 07:28:48 +0000 2026",
+          "user_name": "仙頭正教",
+          "user_screen_name": "sento1025",
+          "user_icon": "https://pbs.twimg.com/profile_images/636097688442826753/MQ0awzRs_normal.jpg",
+          "like_count": 35,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "url": "https://x.com/sento1025/status/2051202366687588357",
+          "media": [
+            "https://pbs.twimg.com/media/HHdVrFcasAAm2Wr.jpg",
+            "https://pbs.twimg.com/media/HHdVq-JbkAAf-lC.jpg"
+          ]
+        },
+        {
+          "id": "2051200406500614196",
+          "text": "タワマンだけでなく高級賃貸は所得審査がまずまず厳格で、\n\n背伸びして入居しようとするやつなんてそもそも入居させねえよ",
+          "created_at": "Mon May 04 07:21:01 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 71,
+          "retweet_count": 9,
+          "reply_count": 1,
+          "url": "https://x.com/hinabe_ch/status/2051200406500614196",
+          "media": []
+        },
+        {
+          "id": "2051196198124707937",
+          "text": "平塚11Rゴールデンレーサー賞、ヨシタクのデキが抜群だが深谷からの郡司に、後ろに古性が入ったりすると苦戦しそうな気もするが。\n深谷が特攻して1-6で発射する目は買いたいが、激荒れしてもおかしくない。ヨシタクが強すぎるゆえに南関とやり合って単騎とか。",
+          "created_at": "Mon May 04 07:04:17 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 96,
+          "retweet_count": 1,
+          "reply_count": 5,
+          "url": "https://x.com/ShinjukuSokai/status/2051196198124707937",
+          "media": []
+        },
+        {
+          "id": "2051195820603789652",
+          "text": "春日部大凧マラソン。\nめっちゃ暑かった。だから、給水所が嬉しくて、それは全部で6か所あったんだけど、そこに寄るたびに思ったのは、６か所のスタッフの総勢何十人もが、見た感じ全員中学生なんです。\nえー、キミら、GWに何で駆り出されてんの、部活の社会貢献的な?\nちょい気の毒で、でも感謝でした https://t.co/r5xTXm2PTF",
+          "created_at": "Mon May 04 07:02:47 +0000 2026",
+          "user_name": "仙頭正教",
+          "user_screen_name": "sento1025",
+          "user_icon": "https://pbs.twimg.com/profile_images/636097688442826753/MQ0awzRs_normal.jpg",
+          "like_count": 29,
+          "retweet_count": 0,
+          "reply_count": 1,
+          "url": "https://x.com/sento1025/status/2051195820603789652",
+          "media": [
+            "https://pbs.twimg.com/media/HHdPuTuaIAAqoLt.jpg"
+          ]
+        },
+        {
+          "id": "2051188071392281009",
+          "text": "RT @primebase00: ただいま集荷中🐈‍⬛\n\n当日梱包〜翌日配送完了☑️\n\nGW期間中につき\n遅延する場合ございますとの事でしたので\n\n到着がまばらになる\n可能性ございます事を\n\nご報告させていただきます🙇\n\n※沖縄県の方は到着まで\n約3日〜7日程度の見込みとのこと…",
+          "created_at": "Mon May 04 06:32:00 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "url": "https://x.com/ShinjukuSokai/status/2051188071392281009",
+          "media": []
+        },
+        {
+          "id": "2051180241851404582",
+          "text": "ん？",
+          "created_at": "Mon May 04 06:00:53 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 8,
+          "retweet_count": 2,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2051180241851404582",
+          "media": []
+        },
+        {
+          "id": "2051176605536616651",
+          "text": "水がある惑星の事調べてたら寝るの朝になって今起きた。平塚競輪に行く予定だったのに。",
+          "created_at": "Mon May 04 05:46:26 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 224,
+          "retweet_count": 4,
+          "reply_count": 11,
+          "url": "https://x.com/ShinjukuSokai/status/2051176605536616651",
+          "media": []
+        },
+        {
+          "id": "2051158226083917849",
+          "text": "RT @SinjowKazma: というのは、ある時期までは\n「ロードスこそラノベ！」\nとさえ言われてたわけで…やはり世代感覚の変遷みたいなものを丹念に追わないと何事も一概には言えない…\n#昨今のライトノベル状況\n#物語考古学",
+          "created_at": "Mon May 04 04:33:24 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 9,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2051158226083917849",
+          "media": []
+        },
+        {
+          "id": "2051157894117331387",
+          "text": "RT @yominokuni140: 【悲報】\n\nNPO法人インターナショナルフレンドシップクラブによる\n\n・ジャップ\n・ニホンザルのおさるさん\n・日本猿のイエローモンキー\n\n等の反日差別発言が話題に\n↓\n貸借対照表がオール０だったり、事務所やホームページのヤバさも色々と指摘さ…",
+          "created_at": "Mon May 04 04:32:05 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 4812,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2051157894117331387",
+          "media": []
+        },
+        {
+          "id": "2051157867324203519",
+          "text": "いや、まあ言いたいことはわかるけどw",
+          "created_at": "Mon May 04 04:31:58 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 8,
+          "retweet_count": 2,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2051157867324203519",
+          "media": []
+        },
+        {
+          "id": "2051146264075780513",
+          "text": "RT @nishy03: カザフスタンでの大統領との会談、中国北京での自動運転・ロボットなどの視察を終え昨夜無事帰国しました。今日(5/4)夜には、アメリカとコスタリカに向けて出発します。…",
+          "created_at": "Mon May 04 03:45:52 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 148,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2051146264075780513",
+          "media": []
+        },
+        {
+          "id": "2051146214553641285",
+          "text": "小池百合子の悪口はやめろ",
+          "created_at": "Mon May 04 03:45:40 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 66,
+          "retweet_count": 6,
+          "reply_count": 1,
+          "url": "https://x.com/hinabe_ch/status/2051146214553641285",
+          "media": []
+        },
+        {
+          "id": "2051145770418778246",
+          "text": "RT @hinabe_ch: @AkiHatsushika ああ初鹿明博さんは議員辞職されてそのままご勇退でしたね\n\n大変失礼しました\n\nということは、一般の方ですね",
+          "created_at": "Mon May 04 03:43:54 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 10,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2051145770418778246",
+          "media": []
+        },
+        {
+          "id": "2051145539962675570",
+          "text": "受け売りだけど、最近のチェーン店は客層判断して岩波新書とか置く店置かない店判定して仕入れてるみたいで、システム作ってるやつが岩波とか静山社ぐらいだけ仕入れ条件違いすぎて例外処理だってキレてたw\n\n個人的にはそういう客商売なんだから我慢してやれよと",
+          "created_at": "Mon May 04 03:42:59 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 48,
+          "retweet_count": 10,
+          "reply_count": 1,
+          "url": "https://x.com/hinabe_ch/status/2051145539962675570",
+          "media": []
+        },
+        {
+          "id": "2051144165740966041",
+          "text": "井荻も上井草も周辺住民は出てもせいぜい荻窪あたりじゃないのか\n\nそまそも西武新宿線沿線に住む人で吉祥寺住みだとか自称する若い人見たことない…",
+          "created_at": "Mon May 04 03:37:32 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 52,
+          "retweet_count": 8,
+          "reply_count": 4,
+          "url": "https://x.com/hinabe_ch/status/2051144165740966041",
+          "media": []
+        },
+        {
+          "id": "2051137463725535270",
+          "text": "ちゃんとした「保留」は、思考停止や後回しとは違うので、俺たちはもっと臆せずに保留していっていい。\nSNSのアレコレにすぐに反応しなくていい、すぐに反応してしまっても後から撤回したり、考えを変えてもいい。沈思黙考でいい。俺たちの人生は思ってるより長いので、ちょっとくらい影を潜めてもいい",
+          "created_at": "Mon May 04 03:10:54 +0000 2026",
+          "user_name": "望月もちぎ",
+          "user_screen_name": "omoti194",
+          "user_icon": "https://pbs.twimg.com/profile_images/1926905965674188800/ETYwRa01_normal.jpg",
+          "like_count": 888,
+          "retweet_count": 119,
+          "reply_count": 0,
+          "url": "https://x.com/omoti194/status/2051137463725535270",
+          "media": []
+        },
+        {
+          "id": "2051137309630951485",
+          "text": "覆面パトカーの高速道路での速度違反の捕まえ方\nラジオライフ.com｜知って得する情報を毎日更新 - https://t.co/YXMdfapulS\n#覆面パトカー https://t.co/TeJxRu6wlH",
+          "created_at": "Mon May 04 03:10:17 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2047216447332728832/7PB4DVnz_normal.jpg",
+          "like_count": 17,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2051137309630951485",
+          "media": [
+            "https://pbs.twimg.com/media/HHcag37bsAAF2YO.jpg"
+          ]
+        },
+        {
+          "id": "2051134468606533990",
+          "text": "#歴史珍事件 https://t.co/mDIjVHUmXW",
+          "created_at": "Mon May 04 02:59:00 +0000 2026",
+          "user_name": "ガレ速@みんなの体験談漫画",
+          "user_screen_name": "garesoku",
+          "user_icon": "https://pbs.twimg.com/profile_images/2039883400014925824/2KAXry-U_normal.jpg",
+          "like_count": 3325,
+          "retweet_count": 164,
+          "reply_count": 76,
+          "url": "https://x.com/garesoku/status/2051134468606533990",
+          "media": [
+            "https://pbs.twimg.com/media/HHSwDTTa0AA7He-.jpg"
+          ]
+        },
+        {
+          "id": "2051127907993714769",
+          "text": "「私がこうすることで喜ばぬ女はいなかった」って言われたら、「はいじゃあ私が喜ばぬ女 第1号でーーーーーす‼️‼️‼️」つって両の拳を振り抜きたくなりませんか？ 俺だけですか？ なら俺が先陣を切って切り込み隊長になります",
+          "created_at": "Mon May 04 02:32:56 +0000 2026",
+          "user_name": "望月もちぎ",
+          "user_screen_name": "omoti194",
+          "user_icon": "https://pbs.twimg.com/profile_images/1926905965674188800/ETYwRa01_normal.jpg",
+          "like_count": 3453,
+          "retweet_count": 323,
+          "reply_count": 0,
+          "url": "https://x.com/omoti194/status/2051127907993714769",
+          "media": []
+        },
+        {
+          "id": "2051121149992677501",
+          "text": "素晴らしい！ https://t.co/WGKjVTiSYa",
+          "created_at": "Mon May 04 02:06:04 +0000 2026",
+          "user_name": "仙頭正教",
+          "user_screen_name": "sento1025",
+          "user_icon": "https://pbs.twimg.com/profile_images/636097688442826753/MQ0awzRs_normal.jpg",
+          "like_count": 18,
+          "retweet_count": 0,
+          "reply_count": 2,
+          "url": "https://x.com/sento1025/status/2051121149992677501",
+          "media": [
+            "https://pbs.twimg.com/amplify_video_thumb/2051121043348283392/img/QpiaaInft5qy9EC1.jpg"
+          ]
+        },
+        {
+          "id": "2051106605912256910",
+          "text": "【GPSライブ】\n春日部大凧マラソン、10:09スタートhttps://t.co/dzE4V1rbxX https://t.co/YWAH2wkZP9",
+          "created_at": "Mon May 04 01:08:17 +0000 2026",
+          "user_name": "仙頭正教",
+          "user_screen_name": "sento1025",
+          "user_icon": "https://pbs.twimg.com/profile_images/636097688442826753/MQ0awzRs_normal.jpg",
+          "like_count": 15,
+          "retweet_count": 0,
+          "reply_count": 1,
+          "url": "https://x.com/sento1025/status/2051106605912256910",
+          "media": [
+            "https://pbs.twimg.com/media/HHb-kzsbAAAi3OO.jpg"
+          ]
+        },
+        {
+          "id": "2051089925425054004",
+          "text": "コスパ抜群のモダンフレンチ爆誕。南青山L'AS監修の「Près de LAS」。原宿駅前、ビル6階からの眺めは圧巻。120席という空間も開放感たっぷり。\nコースは7品で5,500円。+1,100円で追加できるフォアグラサンドは必食。デザートはワゴンから好きなケーキ＆焼き菓子を選べちゃう。 https://t.co/lU44tuJU6X",
+          "created_at": "Mon May 04 00:02:00 +0000 2026",
+          "user_name": "伊藤初美（ハツ）東京グルメサロン主宰",
+          "user_screen_name": "hatsu823",
+          "user_icon": "https://pbs.twimg.com/profile_images/1327614574472826881/erYPhz-P_normal.jpg",
+          "like_count": 170,
+          "retweet_count": 9,
+          "reply_count": 0,
+          "url": "https://x.com/hatsu823/status/2051089925425054004",
+          "media": [
+            "https://pbs.twimg.com/media/HHbWNsoaoAADbnZ.jpg",
+            "https://pbs.twimg.com/amplify_video_thumb/2051062241953554432/img/gWMJw-94ZIl17cza.jpg",
+            "https://pbs.twimg.com/amplify_video_thumb/2051062333611634688/img/TMoOYUdrM6MkxLJE.jpg"
+          ]
+        },
+        {
+          "id": "2051073538224963599",
+          "text": "RT @shukan_bunshun: 《衝撃》高市早苗陣営が野党中傷動画を投稿していた　今年の衆院選期間中に中道大物候補を「一度国を壊した素人」、野党批判ショート動画を続々と作成\n\n記事はこちら↓\nhttps://t.co/3uzrM6GUp6\n#週刊文春",
+          "created_at": "Sun May 03 22:56:53 +0000 2026",
+          "user_name": "望月もちぎ",
+          "user_screen_name": "omoti194",
+          "user_icon": "https://pbs.twimg.com/profile_images/1926905965674188800/ETYwRa01_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 10901,
+          "reply_count": 0,
+          "url": "https://x.com/omoti194/status/2051073538224963599",
+          "media": []
+        },
+        {
+          "id": "2051068014439571726",
+          "text": "【悲報】低レベルすぎる強盗、見つかる\n\n■Rebecca(42)容疑者\n・🇺🇸ウェストバージニア州のガソリンスタンドで強盗\n・店主に「強盗したいんだけど」と斬新な切り口で話しかけてしまい気まずい空気に\n・店主は咄嗟に「店主は裏にいる」と嘘をついて難を逃れる\n・女性は証拠隠滅のため監視カメラに発砲す https://t.co/y0tI40j9YH",
+          "created_at": "Sun May 03 22:34:56 +0000 2026",
+          "user_name": "滝沢ガレソ",
+          "user_screen_name": "tkzwgrs",
+          "user_icon": "https://pbs.twimg.com/profile_images/2007239789947277312/7V3LzQ0i_normal.png",
+          "like_count": 4451,
+          "retweet_count": 211,
+          "reply_count": 90,
+          "url": "https://x.com/tkzwgrs/status/2051068014439571726",
+          "media": [
+            "https://pbs.twimg.com/ext_tw_video_thumb/2051067906343989248/pu/img/KXXC9U5SJmut5VQu.jpg"
+          ]
+        },
+        {
+          "id": "2051046665570963910",
+          "text": "ETCカード差し忘れでゲートに侵入…どうなる？\nラジオライフ.com｜知って得する情報を毎日更新 - https://t.co/hZS30t1U77\n#ETCカード差し忘れ https://t.co/TlSrnk6MbF",
+          "created_at": "Sun May 03 21:10:06 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2047216447332728832/7PB4DVnz_normal.jpg",
+          "like_count": 11,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2051046665570963910",
+          "media": [
+            "https://pbs.twimg.com/media/HHbIEtXboAALrty.jpg"
+          ]
+        },
+        {
+          "id": "2051031546153378018",
+          "text": "微熱で済んでたのにマイコー聴きつつﾋｰﾋｰ言いながらマイコーダンスしてたら発熱して終わった\n許せねえよマイコー",
+          "created_at": "Sun May 03 20:10:01 +0000 2026",
+          "user_name": "蔵竹子規",
+          "user_screen_name": "krtksk",
+          "user_icon": "https://pbs.twimg.com/profile_images/1944747566425415681/DFrV1A_w_normal.png",
+          "like_count": 34,
+          "retweet_count": 0,
+          "reply_count": 5,
+          "url": "https://x.com/krtksk/status/2051031546153378018",
+          "media": []
+        },
+        {
+          "id": "2050983257735667787",
+          "text": "でも宇宙全体の100垓〜1𥝱個の星の中で、地球って住みやすさ何位くらいなんだろうな。\nもっといい星たくさんありそうだよな。\n俺の予想だと80兆位くらいな気がする。\n惑星が10万京個くらいあるからその中でも下。",
+          "created_at": "Sun May 03 16:58:08 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 358,
+          "retweet_count": 12,
+          "reply_count": 38,
+          "url": "https://x.com/ShinjukuSokai/status/2050983257735667787",
+          "media": []
+        },
+        {
+          "id": "2050981238211834088",
+          "text": "宇宙には約2兆個以上の銀河が存在すると推定されていて、1銀河あたり約2000億〜4000億個の星があるから星は宇宙全体で100垓〜1𥝱個もあるって考えると、地球に生まれてるのってめちゃくちゃすごいんだよな。\n怒涛の剣のロングフリーズが20億分の1だけど、その500兆倍の確率だからな。 https://t.co/mknY61XlRf",
+          "created_at": "Sun May 03 16:50:07 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 510,
+          "retweet_count": 28,
+          "reply_count": 19,
+          "url": "https://x.com/ShinjukuSokai/status/2050981238211834088",
+          "media": [
+            "https://pbs.twimg.com/media/HHaMkKyaUAAlhIB.jpg"
+          ]
+        },
+        {
+          "id": "2050976962613825672",
+          "text": "あまり強くいう気はないが、馬鹿なのかな",
+          "created_at": "Sun May 03 16:33:07 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 38,
+          "retweet_count": 4,
+          "reply_count": 0,
+          "url": "https://x.com/hinabe_ch/status/2050976962613825672",
+          "media": []
+        },
+        {
+          "id": "2050971058182983953",
+          "text": "アダアフィ月間三桁プレイヤーの人で、MAX吉田の師匠になってくれる人を募集中。複数アカウントでスパムしまくりみたいな感じの手法ではなく、個の力でエロビをたくさん売ってる人の意見を吉田に聞かせたい。\n謝礼やお礼拡散あり。 @sokai_ads までDMください。",
+          "created_at": "Sun May 03 16:09:40 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 142,
+          "retweet_count": 7,
+          "reply_count": 2,
+          "url": "https://x.com/ShinjukuSokai/status/2050971058182983953",
+          "media": []
+        },
+        {
+          "id": "2050970875533598863",
+          "text": "RT @kaiji_shindan: 開示請求診断\n\n簡単3ステップで〝訴えたいアカウント〟または〝訴えられるかもしれない自分の可能性〟を見ることが可能です。\n\n現在、完全無料でフル機能をご利用いただけます。\n\n『匿名で誹謗中傷する人間に終わりと苦しみを』\n\n▶︎診断してみる…",
+          "created_at": "Sun May 03 16:08:56 +0000 2026",
+          "user_name": "新宿の女（official）",
+          "user_screen_name": "bakausapipi2",
+          "user_icon": "https://pbs.twimg.com/profile_images/1323588367569727489/yEaOMF___normal.jpg",
+          "like_count": 0,
+          "retweet_count": 38,
+          "reply_count": 0,
+          "url": "https://x.com/bakausapipi2/status/2050970875533598863",
+          "media": []
+        },
+        {
+          "id": "2050969744472170899",
+          "text": "お茶っ葉を色々買ってお気に入りを探すというOLみたいなことしてます最近\n今のお気に入りはルイボス×チャイと柚子ウーロンです",
+          "created_at": "Sun May 03 16:04:26 +0000 2026",
+          "user_name": "蔵竹子規",
+          "user_screen_name": "krtksk",
+          "user_icon": "https://pbs.twimg.com/profile_images/1944747566425415681/DFrV1A_w_normal.png",
+          "like_count": 39,
+          "retweet_count": 0,
+          "reply_count": 5,
+          "url": "https://x.com/krtksk/status/2050969744472170899",
+          "media": []
+        },
+        {
+          "id": "2050968396523802804",
+          "text": "馴染んできた。\n細かい付着肉も分解されていくはず。 https://t.co/IADUOm8VvI",
+          "created_at": "Sun May 03 15:59:05 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 277,
+          "retweet_count": 6,
+          "reply_count": 9,
+          "url": "https://x.com/ShinjukuSokai/status/2050968396523802804",
+          "media": [
+            "https://pbs.twimg.com/amplify_video_thumb/2050968336121700352/img/5cgbNQq-i8kep0A5.jpg"
+          ]
+        },
+        {
+          "id": "2050965094776074476",
+          "text": "金取り戻したから平塚行くのやめるかも。\n買いたかったのは松浦のレース。\n初日古性の横であれだけやれたなら海也のハコなら勝ち負けで、坂井の攻めに乗った鈴木直線強襲の2-9マルチが紙で買いたかった。",
+          "created_at": "Sun May 03 15:45:58 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 167,
+          "retweet_count": 4,
+          "reply_count": 2,
+          "url": "https://x.com/ShinjukuSokai/status/2050965094776074476",
+          "media": []
+        },
+        {
+          "id": "2050961102268481602",
+          "text": "【驚愕】ラストコール出演・キャバ嬢の南ゆずずさん、まさかの税金対策は無し\n\n税金対策は面倒くさくてやってないらしく、納税額は1億はいくという。\n\nTikTokライブ収入化しない人気者っているんだｗ\n#1億決算書プレイヤー #南ゆずず\nhttps://t.co/bLH4JPGH1C",
+          "created_at": "Sun May 03 15:30:06 +0000 2026",
+          "user_name": "ナンネット～一線を越える、禁断の遊び場～",
+          "user_screen_name": "yorudeki",
+          "user_icon": "https://pbs.twimg.com/profile_images/2011991860416561153/bwdwegZd_normal.png",
+          "like_count": 61,
+          "retweet_count": 5,
+          "reply_count": 3,
+          "url": "https://x.com/yorudeki/status/2050961102268481602",
+          "media": [
+            "https://pbs.twimg.com/amplify_video_thumb/2050232461033123840/img/0cV6P8ERKqHqIY_i.jpg"
+          ]
+        },
+        {
+          "id": "2050961078784532599",
+          "text": "RT @teco_g2026: 【‼️‼️日給15万保証‼️‼️】   \n  \nteco東京・大阪・福岡・愛知・神奈川FC   \n   \n①6時間17万平均の稼ぎ💵   \n②1:1の案件のみOK🙆‍♀️身バレ対策完璧🤫\n③シフトや待機完全自由‼️🆓 \n④お酒が飲めなくてもOK…",
+          "created_at": "Sun May 03 15:30:00 +0000 2026",
+          "user_name": "新宿の女（official）",
+          "user_screen_name": "bakausapipi2",
+          "user_icon": "https://pbs.twimg.com/profile_images/1323588367569727489/yEaOMF___normal.jpg",
+          "like_count": 0,
+          "retweet_count": 3,
+          "reply_count": 0,
+          "url": "https://x.com/bakausapipi2/status/2050961078784532599",
+          "media": []
+        },
+        {
+          "id": "2050956801072611645",
+          "text": "ChatGPT image2、かわいいねってマスピ素材を作るのには凄く適しているのだが、ちょっとでも込み入ったものを作ろうとすると「お前これセクシーやがな（実際には男女いる居酒屋画像）」とか「詐欺詐取の疑いや！（実際にはimage2が出してきた提案スクリプト）」なんてのが多すぎる…　馬鹿なのか",
+          "created_at": "Sun May 03 15:13:00 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 23,
+          "retweet_count": 5,
+          "reply_count": 1,
+          "url": "https://x.com/hinabe_ch/status/2050956801072611645",
+          "media": []
+        },
+        {
+          "id": "2050947729166348331",
+          "text": "中央競馬86万負け回収完了。\n遅くまで応援ありがとうございました。\n深夜残業しなくていいように、来週は馬券でばっちり当てて16時からゆっくりするんだ。\nそろそろまた確変ぶち込むから引き続きよろしく。 https://t.co/AmfIXOERia",
+          "created_at": "Sun May 03 14:36:58 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 276,
+          "retweet_count": 3,
+          "reply_count": 6,
+          "url": "https://x.com/ShinjukuSokai/status/2050947729166348331",
+          "media": [
+            "https://pbs.twimg.com/media/HHZuFo1bgAATvoH.jpg",
+            "https://pbs.twimg.com/media/HHZuFo2boAAO4ze.jpg"
+          ]
+        },
+        {
+          "id": "2050945015376179499",
+          "text": "これをこう。電車賃10万円残し。 https://t.co/DPOO3SaJCL",
+          "created_at": "Sun May 03 14:26:11 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 101,
+          "retweet_count": 0,
+          "reply_count": 11,
+          "url": "https://x.com/ShinjukuSokai/status/2050945015376179499",
+          "media": [
+            "https://pbs.twimg.com/media/HHZrnvDbYAAD_ZE.jpg",
+            "https://pbs.twimg.com/media/HHZrnu5a0AASF6j.jpg"
+          ]
+        },
+        {
+          "id": "2050944006373441953",
+          "text": "RT @bakausapipi2: 【匿名で誹謗中傷する人間が不安で眠れない夜が続く時代が到来したと話題】\n\n▶︎大手プロダクト開発を主とする法人から〝開示請求診断〟なるウェブサービスが登場\n▶︎全然PRしなくても勝手に流行りそうなので断ったが、金がよかったので詳細説明へ\n▶︎…",
+          "created_at": "Sun May 03 14:22:10 +0000 2026",
+          "user_name": "新宿の女（official）",
+          "user_screen_name": "bakausapipi2",
+          "user_icon": "https://pbs.twimg.com/profile_images/1323588367569727489/yEaOMF___normal.jpg",
+          "like_count": 0,
+          "retweet_count": 110,
+          "reply_count": 0,
+          "url": "https://x.com/bakausapipi2/status/2050944006373441953",
+          "media": []
+        },
+        {
+          "id": "2050942461896450389",
+          "text": "これ当てて久留米の吉野にオールインしたい。 https://t.co/ivzLWycSPm",
+          "created_at": "Sun May 03 14:16:02 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 116,
+          "retweet_count": 2,
+          "reply_count": 10,
+          "url": "https://x.com/ShinjukuSokai/status/2050942461896450389",
+          "media": [
+            "https://pbs.twimg.com/media/HHZpTGua4AA84o5.jpg"
+          ]
+        },
+        {
+          "id": "2050931714332221944",
+          "text": "RT @deathdolnote: 【知名度B-】\n\ntecogroup\n\n備考 : \n▶︎AI×SNS×アダルトで業界最先端をいく（自称）日本一スタッフ採用のレベルが高いナイトワーク会社\n▶︎35歳より上やナイトワーク歴3年以上はスタッフ応募不可\n▶︎インターンは関東GMAR…",
+          "created_at": "Sun May 03 13:33:19 +0000 2026",
+          "user_name": "新宿の女（official）",
+          "user_screen_name": "bakausapipi2",
+          "user_icon": "https://pbs.twimg.com/profile_images/1323588367569727489/yEaOMF___normal.jpg",
+          "like_count": 0,
+          "retweet_count": 13,
+          "reply_count": 0,
+          "url": "https://x.com/bakausapipi2/status/2050931714332221944",
+          "media": []
+        },
+        {
+          "id": "2050931647529595172",
+          "text": "RT @atago12ban: インターホンの音に起こされて出てみたら警察だった😇\n警察手帳見せられたときにめっちゃ変な汗出た💦\n警察側の違法取締りの件ですべて取り消す旨を伝えられた\n菓子折り無いの？って言ったらめっちゃ苦笑いしてたw\n警察に謝罪されたの初めてかも\nあいつら普段…",
+          "created_at": "Sun May 03 13:33:03 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2047216447332728832/7PB4DVnz_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 1314,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2050931647529595172",
+          "media": []
+        },
+        {
+          "id": "2050931643213611349",
+          "text": "RT @bakausapipi2: 【六本木の高級キャバクラにて素飲みした男が裏アカウントに領収書を載せると、瞬く間にインスタグラムまで特定されてしまいSNSにプライバシーがなさすぎると話題】\n\n▶︎現在日本でもっとも勢いがあり、大阪北新地エリアにも新店舗がオープンした高級キャ…",
+          "created_at": "Sun May 03 13:33:02 +0000 2026",
+          "user_name": "新宿の女（official）",
+          "user_screen_name": "bakausapipi2",
+          "user_icon": "https://pbs.twimg.com/profile_images/1323588367569727489/yEaOMF___normal.jpg",
+          "like_count": 0,
+          "retweet_count": 152,
+          "reply_count": 0,
+          "url": "https://x.com/bakausapipi2/status/2050931643213611349",
+          "media": []
+        },
+        {
+          "id": "2050931614184813012",
+          "text": "RT @tecogroupCEO: tecogroupのサービス一覧\n👇\nhttps://t.co/o6r7dNGfQU\n\ntecopicks × Youtube（groupを映像で知る）\n👇\nhttps://t.co/v21HjPQiZm\n\ntecopicks（groupを記…",
+          "created_at": "Sun May 03 13:32:55 +0000 2026",
+          "user_name": "新宿の女（official）",
+          "user_screen_name": "bakausapipi2",
+          "user_icon": "https://pbs.twimg.com/profile_images/1323588367569727489/yEaOMF___normal.jpg",
+          "like_count": 0,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "url": "https://x.com/bakausapipi2/status/2050931614184813012",
+          "media": []
+        },
+        {
+          "id": "2050931338111602753",
+          "text": "RT @Dream_Library_: 大型連休中は、青梅市の「マイコン博物館」を予約無しで利用できます。\n5月3日(日)、4日(月)、5日(火)、6日(水)は、予約無しで利用できます。\nPET2001、PC-8001等のレトロマイコン無料体験を提供します。\nERIS7400に…",
+          "created_at": "Sun May 03 13:31:50 +0000 2026",
+          "user_name": "ラジオライフ編集部",
+          "user_screen_name": "radiolife1980",
+          "user_icon": "https://pbs.twimg.com/profile_images/2047216447332728832/7PB4DVnz_normal.jpg",
+          "like_count": 0,
+          "retweet_count": 24,
+          "reply_count": 0,
+          "url": "https://x.com/radiolife1980/status/2050931338111602753",
+          "media": []
+        },
+        {
+          "id": "2050920498171945020",
+          "text": "見てください。",
+          "created_at": "Sun May 03 12:48:45 +0000 2026",
+          "user_name": "Z李 🇺🇦 NO WAR 🕊",
+          "user_screen_name": "ShinjukuSokai",
+          "user_icon": "https://pbs.twimg.com/profile_images/1495699872288161793/va6kMPsg_normal.jpg",
+          "like_count": 196,
+          "retweet_count": 9,
+          "reply_count": 3,
+          "url": "https://x.com/ShinjukuSokai/status/2050920498171945020",
+          "media": []
+        },
+        {
+          "id": "2050917487857017264",
+          "text": "現場が「そうじゃない」って言ってるのに上から「なんでこうしないんだ」ってのが降りてきて、局長が上に迎合して「ですよねー」って安請け合いし、後から「上がやれって言っとるんや頑張ってやれ」ってなって、なんだよそれって思って手配した後に上に確認すると「そんなこと言ってない」とか言われる",
+          "created_at": "Sun May 03 12:36:47 +0000 2026",
+          "user_name": "🇯🇵火鍋チャンネル跡地🇯🇵",
+          "user_screen_name": "hinabe_ch",
+          "user_icon": "https://pbs.twimg.com/profile_images/1935729846912790528/HRV2ZFFm_normal.jpg",
+          "like_count": 155,
+          "retweet_count": 22,
+          "reply_count": 5,
+          "url": "https://x.com/hinabe_ch/status/2050917487857017264",
+          "media": []
+        }
+      ]
     },
     {
       "id": "list_1403694821550686209",
@@ -1266,7 +2518,7 @@
           "user_name": "𝑀𝑜𝑚𝑖𝑗𝑖 🍁",
           "user_screen_name": "_sakurami_",
           "user_icon": "https://pbs.twimg.com/profile_images/2048058381731246080/kTPGEtSt_normal.jpg",
-          "like_count": 1,
+          "like_count": 2,
           "retweet_count": 0,
           "reply_count": 0,
           "url": "https://x.com/_sakurami_/status/2051506809274548300",
@@ -1309,7 +2561,7 @@
           "user_name": "𝑀𝑜𝑚𝑖𝑗𝑖 🍁",
           "user_screen_name": "_sakurami_",
           "user_icon": "https://pbs.twimg.com/profile_images/2048058381731246080/kTPGEtSt_normal.jpg",
-          "like_count": 11,
+          "like_count": 10,
           "retweet_count": 1,
           "reply_count": 0,
           "url": "https://x.com/_sakurami_/status/2051458484890370448",
@@ -1701,7 +2953,7 @@
           "user_name": "da",
           "user_screen_name": "da19917bndt",
           "user_icon": "https://pbs.twimg.com/profile_images/1559844902782914560/ULpyuo4s_normal.jpg",
-          "like_count": 4005,
+          "like_count": 4004,
           "retweet_count": 143,
           "reply_count": 59,
           "url": "https://x.com/da19917bndt/status/2049046977464394078",
@@ -1792,6 +3044,5 @@
         }
       ]
     }
-  ],
-  "partial_error": true
+  ]
 }
