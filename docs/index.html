@@ -15,6 +15,7 @@
     --text:#e8ecf4; --text2:#8890a8; --text3:#555e7a;
     --like:#f06292; --rt:#4caf88; --header-h:52px;
     --overlay:rgba(8,10,15,0.72);
+    --ok:#4caf88; --warn:#ffb74d; --danger:#f06292;
   }
   * { box-sizing:border-box; margin:0; padding:0; }
   html, body {
@@ -24,6 +25,7 @@
     display:flex; flex-direction:column;
   }
   body.modal-open { overflow:hidden; }
+
   #header {
     height:var(--header-h); background:var(--bg2);
     border-bottom:1px solid var(--border);
@@ -48,10 +50,30 @@
   @keyframes spin { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
   #refresh-btn.loading .refresh-icon { animation:spin 0.7s linear infinite; display:inline-block; }
 
+  #status-bar {
+    min-height:38px; display:flex; align-items:center; gap:10px;
+    padding:7px 20px; background:rgba(28,32,48,0.72);
+    border-bottom:1px solid var(--border); flex-shrink:0;
+    font-size:12px;
+  }
+  .status-pill {
+    display:inline-flex; align-items:center; gap:6px;
+    border:1px solid var(--border2); border-radius:999px;
+    background:var(--bg3); color:var(--text2);
+    padding:5px 10px; font-family:'JetBrains Mono',monospace; flex-shrink:0;
+  }
+  .status-pill.ok { border-color:rgba(76,175,136,0.35); color:#b9f2d4; background:rgba(76,175,136,0.10); }
+  .status-pill.warn { border-color:rgba(255,183,77,0.35); color:#ffd9a3; background:rgba(255,183,77,0.10); }
+  .status-pill.error { border-color:rgba(240,98,146,0.35); color:#ffc4d7; background:rgba(240,98,146,0.10); }
+  #status-detail {
+    min-width:0; color:var(--text2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  }
+  #status-detail.error-text { color:#ffc4d7; }
+
   #columns {
     flex:1; display:grid; grid-template-columns:1fr 1fr 1fr;
     gap:1px; background:var(--border); overflow:hidden;
-    height:calc(1920px - var(--header-h));
+    height:calc(1920px - var(--header-h) - 38px);
   }
   .column { background:var(--bg); display:flex; flex-direction:column; overflow:hidden; transition:opacity 0.15s; }
   .column.sortable-drag { opacity:0.4; }
@@ -195,6 +217,10 @@
   <div id="updated">最終更新: <span id="updated-time">--</span></div>
   <button id="refresh-btn" onclick="loadData()"><span class="refresh-icon">&#x21BB;</span> 更新</button>
 </div>
+<div id="status-bar">
+  <div id="status-pill" class="status-pill">● 状態確認中</div>
+  <div id="status-detail">最後の取得状況を確認しています...</div>
+</div>
 <div id="columns"></div>
 
 <div id="preview-overlay" class="preview-overlay" aria-hidden="true">
@@ -241,7 +267,7 @@ function timeAgo(s) {
   return n < 60 ? n + '秒前' : n < 3600 ? Math.floor(n / 60) + '分前' : n < 86400 ? Math.floor(n / 3600) + '時間前' : Math.floor(n / 86400) + '日前';
 }
 function formatDateTime(s) {
-  if (!s) return '';
+  if (!s) return '--';
   const d = new Date(s);
   if (isNaN(d)) return s;
   return d.toLocaleString('ja-JP', { timeZone:'Asia/Tokyo', hour12:false });
@@ -368,6 +394,15 @@ function renderPreview(tweet) {
     + '</div>';
 }
 
+function closePreview() {
+  var overlay = document.getElementById('preview-overlay');
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  if (activeTweetEl) activeTweetEl.classList.remove('active');
+  activeTweetEl = null;
+}
+
 function openTweet(el) {
   var tweet = parseTweetFromElement(el);
   var overlay = document.getElementById('preview-overlay');
@@ -393,29 +428,34 @@ function openTweet(el) {
   document.body.classList.add('modal-open');
 }
 
-function closePreview() {
-  var overlay = document.getElementById('preview-overlay');
-  overlay.classList.remove('open');
-  overlay.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('modal-open');
-  if (activeTweetEl) activeTweetEl.classList.remove('active');
-  activeTweetEl = null;
-}
+function updateStatusBar(data) {
+  var pill = document.getElementById('status-pill');
+  var detail = document.getElementById('status-detail');
+  var hasError = !!data.error;
+  var partialError = !!data.partial_error;
+  var attemptText = '最終試行: ' + formatDateTime(data.last_attempt_at);
 
-function markAllRead(colId, event) {
-  event.stopPropagation();
-  var col = document.getElementById('col-' + colId);
-  if (!col) return;
-  var readSet = getReadSet();
-  col.querySelectorAll('.tweet:not(.read)').forEach(function(el) {
-    if (el.dataset.id) {
-      readSet.add(el.dataset.id);
-      el.classList.add('read');
-    }
-  });
-  var arr = [...readSet].slice(-1000);
-  try { localStorage.setItem(READ_KEY, JSON.stringify(arr)); } catch(e) {}
-  updateUnreadBadge(col);
+  pill.className = 'status-pill';
+  detail.className = '';
+
+  if (hasError) {
+    pill.classList.add('error');
+    pill.textContent = '● 取得失敗';
+    detail.textContent = attemptText + ' / ' + (data.error || '不明なエラー');
+    detail.classList.add('error-text');
+    return;
+  }
+
+  if (partialError) {
+    pill.classList.add('warn');
+    pill.textContent = '● 一部失敗';
+    detail.textContent = attemptText + ' / 一部カラムで取得に失敗しました';
+    return;
+  }
+
+  pill.classList.add('ok');
+  pill.textContent = '● 正常';
+  detail.textContent = attemptText + ' / 取得は正常です';
 }
 
 function renderCol(col) {
@@ -437,6 +477,22 @@ function renderCol(col) {
     + '<span class="col-count">' + totalTweets + '</span>'
     + markReadBtn
     + '</div><div class="col-body">' + err + tweets + '</div></div>';
+}
+
+function markAllRead(colId, event) {
+  event.stopPropagation();
+  var col = document.getElementById('col-' + colId);
+  if (!col) return;
+  var readSet = getReadSet();
+  col.querySelectorAll('.tweet:not(.read)').forEach(function(el) {
+    if (el.dataset.id) {
+      readSet.add(el.dataset.id);
+      el.classList.add('read');
+    }
+  });
+  var arr = [...readSet].slice(-1000);
+  try { localStorage.setItem(READ_KEY, JSON.stringify(arr)); } catch(e) {}
+  updateUnreadBadge(col);
 }
 
 function initSortable() {
@@ -486,9 +542,14 @@ async function loadData() {
     var ordered = applyOrder(d.columns || []);
     el.innerHTML = ordered.map(renderCol).join('');
     initSortable();
-    var dt = new Date(d.updated_at);
-    document.getElementById('updated-time').textContent = isNaN(dt) ? '--' : dt.toLocaleString('ja-JP', { timeZone:'Asia/Tokyo', hour12:false });
+    document.getElementById('updated-time').textContent = formatDateTime(d.updated_at);
+    updateStatusBar(d);
   } catch(e) {
+    document.getElementById('updated-time').textContent = '--';
+    document.getElementById('status-pill').className = 'status-pill error';
+    document.getElementById('status-pill').textContent = '● 読込失敗';
+    document.getElementById('status-detail').textContent = 'data.json の読込に失敗しました: ' + e.message;
+    document.getElementById('status-detail').className = 'error-text';
     el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;width:100%;color:var(--text3);font-size:13px;gap:8px;"><span>&#x26A0;</span><span>' + escapeHtml(e.message) + '</span></div>';
   } finally {
     btn.classList.remove('loading');
