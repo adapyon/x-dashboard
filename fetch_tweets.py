@@ -1,7 +1,10 @@
 import asyncio
 import json
 import os
+import sys
+import traceback
 from datetime import datetime, timezone
+
 from twikit import Client
 
 COOKIES_STR = os.environ.get("X_COOKIES", "")
@@ -14,6 +17,37 @@ LIST_IDS = [
 
 OUTPUT_FILE = "docs/data.json"
 
+
+def now_iso():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def load_existing_output():
+    try:
+        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return data if isinstance(data, dict) else {}
+    except Exception:
+        return {}
+
+
+def write_output(*, columns=None, updated_at=None, error=None, partial_error=False):
+    os.makedirs("docs", exist_ok=True)
+    previous = load_existing_output()
+    output = {
+        "updated_at": updated_at or previous.get("updated_at"),
+        "last_attempt_at": now_iso(),
+        "columns": columns if columns is not None else previous.get("columns", []),
+    }
+    if partial_error:
+        output["partial_error"] = True
+    if error:
+        output["error"] = error
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+    print("done: " + OUTPUT_FILE)
+
+
 def parse_cookie_string(cookie_str):
     cookies = {}
     for part in cookie_str.split(";"):
@@ -23,24 +57,27 @@ def parse_cookie_string(cookie_str):
             cookies[k.strip()] = v.strip()
     return cookies
 
+
 def get_media_urls(tweet):
     media_urls = []
     try:
-        media = getattr(tweet, 'media', None)
+        media = getattr(tweet, "media", None)
         if not media:
             return []
         for m in media:
             url = (
-                getattr(m, 'media_url_https', None)
-                or getattr(m, 'media_url', None)
-                or getattr(m, 'preview_image_url', None)
-                or getattr(m, 'url', None)
+                getattr(m, "media_url_https", None)
+                or getattr(m, "media_url", None)
+                or getattr(m, "preview_image_url", None)
+                or getattr(m, "url", None)
             )
-            if url and not url.startswith('https://t.co'):
+            if url and not url.startswith("https://t.co"):
                 media_urls.append(url)
     except Exception as e:
         print("media err: " + str(e))
+        print(traceback.format_exc())
     return media_urls
+
 
 def safe_get(obj, *attrs, default=None):
     for attr in attrs:
@@ -52,67 +89,115 @@ def safe_get(obj, *attrs, default=None):
             pass
     return default
 
+
 def tweet_to_dict(tweet):
     try:
-        user = safe_get(tweet, 'user')
+        user = safe_get(tweet, "user")
         return {
-            "id": safe_get(tweet, 'id', default=''),
-            "text": safe_get(tweet, 'text', default=''),
-            "created_at": safe_get(tweet, 'created_at', default=''),
-            "user_name": safe_get(user, 'name', default='') if user else '',
-            "user_screen_name": safe_get(user, 'screen_name', default='') if user else '',
-            "user_icon": safe_get(user, 'profile_image_url', default='') if user else '',
-            "like_count": safe_get(tweet, 'favorite_count', default=0),
-            "retweet_count": safe_get(tweet, 'retweet_count', default=0),
-            "reply_count": safe_get(tweet, 'reply_count', default=0),
-            "url": "https://x.com/" + (safe_get(user, 'screen_name', default='') if user else '') + "/status/" + safe_get(tweet, 'id', default=''),
+            "id": safe_get(tweet, "id", default=""),
+            "text": safe_get(tweet, "text", default=""),
+            "created_at": safe_get(tweet, "created_at", default=""),
+            "user_name": safe_get(user, "name", default="") if user else "",
+            "user_screen_name": safe_get(user, "screen_name", default="") if user else "",
+            "user_icon": safe_get(user, "profile_image_url", default="") if user else "",
+            "like_count": safe_get(tweet, "favorite_count", default=0),
+            "retweet_count": safe_get(tweet, "retweet_count", default=0),
+            "reply_count": safe_get(tweet, "reply_count", default=0),
+            "url": "https://x.com/"
+            + (safe_get(user, "screen_name", default="") if user else "")
+            + "/status/"
+            + safe_get(tweet, "id", default=""),
             "media": get_media_urls(tweet),
         }
     except Exception as e:
         print("tweet_to_dict err: " + str(e))
+        print(traceback.format_exc())
         return None
 
+
 async def main():
+    print("fetch start")
+
     if not COOKIES_STR:
-        raise Exception("X_COOKIES not set")
+        msg = "X_COOKIES not set"
+        print(msg)
+        write_output(error=msg)
+        raise RuntimeError(msg)
+
+    cookie_dict = parse_cookie_string(COOKIES_STR)
+    if not cookie_dict:
+        msg = "X_COOKIES could not be parsed"
+        print(msg)
+        write_output(error=msg)
+        raise RuntimeError(msg)
+
+    print("X_COOKIES detected")
 
     client = Client("ja")
-    cookie_dict = parse_cookie_string(COOKIES_STR)
-    client.set_cookies(cookie_dict)
-    print("Cookies loaded.")
+    try:
+        client.set_cookies(cookie_dict)
+        print("Cookies loaded.")
+    except Exception as e:
+        msg = "set_cookies failed: " + str(e)
+        print(msg)
+        print(traceback.format_exc())
+        write_output(error=msg)
+        raise
 
     columns = []
+    partial_error = False
+
     for lst in LIST_IDS:
         list_id = lst["id"]
         list_label = lst["label"]
+        print("fetch list start: " + list_label + " (" + list_id + ")")
         try:
             list_tweets = await client.get_list_tweets(list_id, count=50)
             dicts = [tweet_to_dict(t) for t in list_tweets]
             dicts = [d for d in dicts if d is not None]
-            columns.append({
-                "id": "list_" + list_id,
-                "label": list_label,
-                "icon": "📋",
-                "tweets": dicts,
-            })
+            columns.append(
+                {
+                    "id": "list_" + list_id,
+                    "label": list_label,
+                    "icon": "📋",
+                    "tweets": dicts,
+                }
+            )
             print("ok " + list_label + ": " + str(len(dicts)))
         except Exception as e:
-            print("err " + list_label + ": " + str(e))
-            columns.append({
-                "id": "list_" + list_id,
-                "label": list_label,
-                "icon": "📋",
-                "tweets": [],
-                "error": str(e),
-            })
+            partial_error = True
+            err_msg = str(e)
+            print("err " + list_label + ": " + err_msg)
+            print(traceback.format_exc())
+            columns.append(
+                {
+                    "id": "list_" + list_id,
+                    "label": list_label,
+                    "icon": "📋",
+                    "tweets": [],
+                    "error": err_msg,
+                }
+            )
 
-    os.makedirs("docs", exist_ok=True)
-    output = {
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "columns": columns,
-    }
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
-    print("done: " + OUTPUT_FILE)
+    write_output(
+        columns=columns,
+        updated_at=now_iso(),
+        partial_error=partial_error,
+    )
+    print("fetch end")
 
-asyncio.run(main())
+
+if __name__ == "__main__":
+    try:
+        asyncio.run(main())
+    except Exception as e:
+        print("fatal: " + str(e))
+        print(traceback.format_exc())
+        try:
+            existing = load_existing_output()
+            if not existing.get("error"):
+                write_output(error="fatal: " + str(e))
+        except Exception as write_err:
+            print("failed to write error output: " + str(write_err))
+            print(traceback.format_exc())
+        sys.exit(1)
