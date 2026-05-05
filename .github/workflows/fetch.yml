@@ -53,6 +53,7 @@ jobs:
       - name: Fetch tweets
         env:
           X_COOKIES: ${{ secrets.X_COOKIES }}
+          X_COOKIES_SET_AT: ${{ vars.X_COOKIES_SET_AT }}
         run: python fetch_tweets.py
 
       - name: Cleanup sensitive files

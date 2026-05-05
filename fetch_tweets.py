@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 from twikit import Client
 
 COOKIES_STR = os.environ.get("X_COOKIES", "")
+COOKIES_SET_AT = os.environ.get("X_COOKIES_SET_AT", "")
 
 LIST_IDS = [
     {"id": "181994093", "label": "節約"},
@@ -39,6 +40,33 @@ def get_previous_column(previous_output, list_id):
     return None
 
 
+def get_cookie_age_days():
+    if not COOKIES_SET_AT:
+        return None
+    try:
+        set_at = datetime.fromisoformat(COOKIES_SET_AT.replace("Z", "+00:00"))
+        return max(0, (datetime.now(timezone.utc) - set_at).days)
+    except Exception:
+        return None
+
+
+def is_auth_error(e):
+    msg = str(e)
+    return "Unauthorized" in msg or "401" in msg
+
+
+def compute_cookie_warning(age_days, auth_failed):
+    if auth_failed:
+        return "critical", "X_COOKIES を入れ直してください", True
+    if age_days is None:
+        return "none", "", False
+    if age_days >= 10:
+        return "critical", f"X_COOKIES の入れ直しを推奨します（設定から{age_days}日経過）", False
+    if age_days >= 7:
+        return "warning", f"X_COOKIES の入れ直しを推奨します（設定から{age_days}日経過）", False
+    return "none", "", False
+
+
 def normalize_error_message(error):
     raw = str(error).strip() or error.__class__.__name__
     if raw in {"'code'", '"code"'}:
@@ -50,12 +78,26 @@ def normalize_error_message(error):
     return raw
 
 
-def write_output(*, columns=None, updated_at=None, error=None, partial_error=False):
+def write_output(
+    *,
+    columns=None,
+    updated_at=None,
+    error=None,
+    partial_error=False,
+    last_success_at=None,
+    cookie_warning_level="none",
+    cookie_warning_message="",
+    needs_cookie_refresh=False,
+):
     os.makedirs("docs", exist_ok=True)
     previous = load_existing_output()
     output = {
         "updated_at": updated_at or previous.get("updated_at"),
         "last_attempt_at": now_iso(),
+        "last_success_at": last_success_at or previous.get("last_success_at"),
+        "cookie_warning_level": cookie_warning_level,
+        "cookie_warning_message": cookie_warning_message,
+        "needs_cookie_refresh": needs_cookie_refresh,
         "columns": columns if columns is not None else previous.get("columns", []),
     }
     if partial_error:
@@ -154,18 +196,28 @@ async def main():
     print("X_COOKIES detected")
 
     client = Client("ja")
+    auth_failed = False
     try:
         client.set_cookies(cookie_dict)
         print("Cookies loaded.")
     except Exception as e:
-        msg = "set_cookies failed: " + normalize_error_message(e)
+        auth_failed = True
+        msg = "set_cookies failed (details hidden)"
         print(msg)
         print(traceback.format_exc())
-        write_output(error=msg)
+        age_days = get_cookie_age_days()
+        w_level, w_msg, needs_refresh = compute_cookie_warning(age_days, auth_failed=True)
+        write_output(
+            error=normalize_error_message(e),
+            cookie_warning_level=w_level,
+            cookie_warning_message=w_msg,
+            needs_cookie_refresh=needs_refresh,
+        )
         raise
 
     columns = []
     partial_error = False
+    had_any_success = False
 
     for lst in LIST_IDS:
         list_id = lst["id"]
@@ -183,9 +235,12 @@ async def main():
                     "tweets": dicts,
                 }
             )
+            had_any_success = True
             print("ok " + list_label + ": " + str(len(dicts)))
         except Exception as e:
             partial_error = True
+            if is_auth_error(e):
+                auth_failed = True
             raw_err_msg = str(e)
             err_msg = normalize_error_message(e)
             print("err " + list_label + ": " + raw_err_msg)
@@ -205,10 +260,18 @@ async def main():
                 }
             )
 
+    age_days = get_cookie_age_days()
+    w_level, w_msg, needs_refresh = compute_cookie_warning(age_days, auth_failed)
+    last_success_at = now_iso() if had_any_success else None
+
     write_output(
         columns=columns,
         updated_at=now_iso(),
         partial_error=partial_error,
+        last_success_at=last_success_at,
+        cookie_warning_level=w_level,
+        cookie_warning_message=w_msg,
+        needs_cookie_refresh=needs_refresh,
     )
     print("fetch end")
 

@@ -433,6 +433,9 @@ function updateStatusBar(data) {
   var detail = document.getElementById('status-detail');
   var hasError = !!data.error;
   var partialError = !!data.partial_error;
+  var cookieLevel = data.cookie_warning_level || 'none';
+  var cookieMsg = data.cookie_warning_message || '';
+  var needsRefresh = !!data.needs_cookie_refresh;
   var attemptText = '最終試行: ' + formatDateTime(data.last_attempt_at);
 
   pill.className = 'status-pill';
@@ -443,6 +446,21 @@ function updateStatusBar(data) {
     pill.textContent = '● 取得失敗';
     detail.textContent = attemptText + ' / ' + (data.error || '不明なエラー');
     detail.classList.add('error-text');
+    return;
+  }
+
+  if (needsRefresh || cookieLevel === 'critical') {
+    pill.classList.add('error');
+    pill.textContent = '● 要対応';
+    detail.textContent = cookieMsg || 'X_COOKIES を入れ直してください';
+    detail.classList.add('error-text');
+    return;
+  }
+
+  if (cookieLevel === 'warning') {
+    pill.classList.add('warn');
+    pill.textContent = '● 更新推奨';
+    detail.textContent = cookieMsg || 'X_COOKIES の入れ直しを推奨します';
     return;
   }
 
